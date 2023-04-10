@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 83ab8938-f287-4a0d-9365-f010ed540e4d # Humans
+handle: causeOfDeath
+instructions: null
+name: 'Cause of Death'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: 1
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'How did they die?'
+  showSiteMenu: true
+  sources:
+    - 'section:4118eb52-3c43-406c-bf9f-01c4542c8331' # Cause of Death
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

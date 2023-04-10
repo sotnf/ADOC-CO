@@ -1,0 +1,132 @@
+field: 767004c4-3598-46a3-ad68-bdfb06930ab5 # Contacts
+fieldLayouts:
+  4ee08054-d5f8-42b9-93b8-9c08000be823:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 53d0b91e-8add-4ac6-89a0-d53e998fa5ce # First Name
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1619a070-9b15-4281-a332-3b5884a8b289
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9d1171fc-9c98-4610-988a-dc9d91b86151 # Last Name
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0ebda31a-94dc-45bd-97ca-29c092547760
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3ab0260c-3549-45c5-910d-d432011521f1 # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a2d03814-91a6-402b-a467-cf3f0ab7d596
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: deacb3ec-310f-4577-9d5d-933ea4b08178 # Phone
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a8d1f5cc-1960-4eca-970a-4faee0315ae4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f12afbc6-a612-4821-a6de-a16925e58bb2
+        userCondition: null
+fields:
+  3ab0260c-3549-45c5-910d-d432011521f1: # Email
+    columnSuffix: lmxvlmyu
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: email
+    instructions: null
+    name: Email
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - email
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  9d1171fc-9c98-4610-988a-dc9d91b86151: # Last Name
+    columnSuffix: ojbxgpyp
+    contentColumnType: text
+    fieldGroup: null
+    handle: lastName
+    instructions: null
+    name: 'Last Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  53d0b91e-8add-4ac6-89a0-d53e998fa5ce: # First Name
+    columnSuffix: yjhkkrvg
+    contentColumnType: text
+    fieldGroup: null
+    handle: firstName
+    instructions: null
+    name: 'First Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  deacb3ec-310f-4577-9d5d-933ea4b08178: # Phone
+    columnSuffix: xlnreuji
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: phone
+    instructions: null
+    name: Phone
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - tel
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: warden
+name: Warden
+sortOrder: 1

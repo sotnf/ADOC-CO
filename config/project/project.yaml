@@ -1,0 +1,32 @@
+dateModified: 1681093812
+email:
+  fromEmail: jared@sotnf.com
+  fromName: adoc-co
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: $DDEV_FILES_DIR
+    type: craft\fs\Local
+    url: '@primarySiteUrl/assets/uploads/'
+meta:
+  __names__:
+    1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094: adoc-co # adoc-co
+    4cda9b6f-f2fa-44ce-bc23-2c1b24cc4b1d: Common # Common
+    7babb8bc-f92d-42f6-9be7-fe2c12f147ac: adoc-co # adoc-co
+    e170055a-d66a-4ff3-ae78-b62e4de3fe25: Images # Images
+system:
+  edition: solo
+  live: true
+  name: adoc-co
+  retryDuration: null
+  schemaVersion: 4.4.0.4
+  timeZone: America/Chicago
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

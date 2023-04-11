@@ -1,3 +1,13 @@
+{% block head %}
+	{{ parent() }}
+{% endblock %}
+
 {% extends "index.twig" %}
 {% set docTitle = "UPDATE TITLE" %}
 
+
+
+
+{% block body %}
+{{ parent() }}
+{% endblock %}

@@ -516,48 +516,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-grow {
-  flex-grow: 1;
-}
-
-.underline {
-  text-decoration-line: underline;
+.mt-2 {
+  margin-top: 0.5rem;
 }

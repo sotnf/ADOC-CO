@@ -1,4 +1,4 @@
-dateModified: 1681102945
+dateModified: 1681182315
 email:
   fromEmail: jared@sotnf.com
   fromName: adoc-co
@@ -11,6 +11,10 @@ fs:
       path: $DDEV_FILES_DIR
     type: craft\fs\Local
     url: '@primarySiteUrl/assets/uploads/'
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 meta:
   __names__:
     0b837dae-5965-4957-abf2-903eccda8b7b: Facilities # Facilities
@@ -40,6 +44,7 @@ meta:
     180a6f6d-ba8c-4567-97e5-4a0dcc491507: Phone # Phone
     208f9b3c-0d64-40df-8ac3-bb5d65015616: 'Date of Death' # Date of Death
     260e937f-426c-4da5-b2d4-260e4c279ebf: Facilities # Facilities
+    323be661-9ee7-4f57-976a-4a5032821248: Homepage # Homepage
     563c0bfc-c323-44b4-864d-04e0a0bd573c: Email # Email
     610bfe49-b3ec-40ee-8377-62b1f63a8539: Website # Website
     618ad16d-5035-4fbe-967a-2caf444256d9: Email # Email
@@ -61,6 +66,8 @@ meta:
     d3c9ee5b-6826-4dd6-8ae6-b12ecd483794: Email # Email
     da98bab4-69f8-4168-b0bb-18e3b1405043: 'First Name' # First Name
     deacb3ec-310f-4577-9d5d-933ea4b08178: Phone # Phone
+    e5affbb1-ce5b-4a8f-a04c-b64edca2e94e: Homepage # Homepage
+    e54fbb1c-4ada-45eb-85b1-5ff583ee3d8a: 'Public Schema' # Public Schema
     e170055a-d66a-4ff3-ae78-b62e4de3fe25: Images # Images
     f6d97247-dc2b-4576-bb40-a61f43a7d835: 'Last Name' # Last Name
     f7dd2378-fc93-4bf2-bd9d-e26856ca790e: Reports # Reports

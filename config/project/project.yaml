@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+dateModified: 1681182045
+=======
 dateModified: 1681102945
+>>>>>>> Craft/Sections/Base
 email:
   fromEmail: jared@sotnf.com
   fromName: adoc-co
@@ -11,6 +15,10 @@ fs:
       path: $DDEV_FILES_DIR
     type: craft\fs\Local
     url: '@primarySiteUrl/assets/uploads/'
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 meta:
   __names__:
     0b837dae-5965-4957-abf2-903eccda8b7b: Facilities # Facilities
@@ -61,6 +69,10 @@ meta:
     d3c9ee5b-6826-4dd6-8ae6-b12ecd483794: Email # Email
     da98bab4-69f8-4168-b0bb-18e3b1405043: 'First Name' # First Name
     deacb3ec-310f-4577-9d5d-933ea4b08178: Phone # Phone
+<<<<<<< HEAD
+    e54fbb1c-4ada-45eb-85b1-5ff583ee3d8a: 'Public Schema'
+=======
+>>>>>>> Craft/Sections/Base
     e170055a-d66a-4ff3-ae78-b62e4de3fe25: Images # Images
     f6d97247-dc2b-4576-bb40-a61f43a7d835: 'Last Name' # Last Name
     f7dd2378-fc93-4bf2-bd9d-e26856ca790e: Reports # Reports

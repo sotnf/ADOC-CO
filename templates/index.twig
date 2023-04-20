@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="en-US">
-	{% block head %}
-		<head>
-			Index HEAD content.
-		</head>
-	{% endblock %}
-	{% block body %}
-		<body>
+<html lang="{{ craft.app.language }}">
+
+	<head>
+		<meta charset="utf-8"/>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<link href="/dist/output.css" rel="stylesheet">
+
+		inject:{% block head %}
+ <p class="text-red-500">Index HEAD content.</p>
+		{% endblock %}
+	</head>
+	<body>
+		inject:{% block body %}
 			<div id="main" class="mb-2 mt-2">
 				<p>Index Body Content</p>
 			</div>
-            {% block footer %}
-                <p>Footer Parent Content</p>
+            inject:{% block footer %}
+                <p>Index FOOTER Content</p>
             {% endblock %}
-
-		</body>
-	{% endblock %}
+			entry:<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+		{% endblock %}
+	</body>	
 </html>
 

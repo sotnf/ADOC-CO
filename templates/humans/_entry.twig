@@ -1,17 +1,17 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="/dist/output.css" rel="stylesheet">
-	</head>
-	<body>
-		<h1 class="text-3xl font-bold underline">
-			{{ entry.title }}
-		</h1>
-        <h2 class="text-lg text-blue-200">
-        {{entry.ais}}
-        </h2>
+{% extends "index.twig" %}
+{% set docTitle = { entry.Title } %}
 
-	</body>
-</html>
+{% block head %}
+	Homepage HEAD content for Homepage
+	<br>
+	{{parent()}}
+
+{% endblock %}
+
+{% block body %}
+	<div><span class="text-red-500"> Homepage BODY content.</span></div>
+	{% block footer %}
+		{{parent()}}
+	{% endblock %}
+{% endblock %}
+

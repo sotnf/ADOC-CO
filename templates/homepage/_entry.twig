@@ -1,18 +1,12 @@
 {% extends "index.twig" %}
-{% set docTitle = "UPDATE TITLE" %}
 
 {% block head %}
     <title>{{ entry.title }}</title>
-    <div>Homepage HEAD content for Homepage</div>
+    <meta content="{{entry.title}} HEAD content">
 	<div>{{parent()}}</div>
-    
-
 {% endblock %}
 
 {% block body %}
-<div>Homepage BODY content.</div>
-    {% block footer %}
-        {{parent()}}
-    {% endblock %}
+{{parent()}}
 {% endblock %}
 

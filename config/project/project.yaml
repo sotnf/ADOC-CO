@@ -15,6 +15,10 @@ graphql:
   publicToken:
     enabled: false
     expiryDate: null
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 meta:
   __names__:
     0b837dae-5965-4957-abf2-903eccda8b7b: Facility # Facility

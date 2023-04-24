@@ -22,8 +22,9 @@ module.exports = {
       minWidth: {
         'kanban': '28rem'
       },
-    },
-  },
+  content: ["./templates/**/*.{html,js,twig}"],
+  theme: {
+    extend: {},
     plugins: [
       require('flowbite/plugin'),
       require('flowbite-typography')

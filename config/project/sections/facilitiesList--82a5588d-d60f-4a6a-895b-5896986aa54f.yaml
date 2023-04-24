@@ -1,12 +1,12 @@
 defaultPlacement: end
 enableVersioning: true
-handle: humans
-name: Humans
+handle: facilitiesList
+name: 'Facilities List'
 propagationMethod: all
 siteSettings:
   7babb8bc-f92d-42f6-9be7-fe2c12f147ac: # adoc-co
     enabledByDefault: true
     hasUrls: true
-    template: human/_entry
-    uriFormat: 'human/{slug}'
-type: channel
+    template: facility/_list.twig
+    uriFormat: facilities
+type: single

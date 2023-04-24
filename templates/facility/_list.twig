@@ -1,0 +1,92 @@
+{% extends "index.twig" %}
+
+{%~ block head %}
+{{parent()}}{% endblock %}{% block body %}
+
+{% block header %}
+	{{parent()}}
+{% endblock %}
+
+{% block article %}
+	<section class="bg-white dark:bg-gray-900">
+		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+			<div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+				<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Those we've lost.</h2>
+				<p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">These are the humans taken from us by the ADOC.</p>
+			</div>
+			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+				{% for entry in craft.entries
+						.section("humans")
+						.all()
+					%}
+					{% set humanImage = entry.photos.one() %}
+					{% set humanAdocFacility = entry.facility.one() %}
+					{% set humanDOD = entry.dateOfDeath %}
+					{% set humanNote = entry.note %}
+					{% set humanAdocCOD = entry.causeOfDeath.one() %}
+					{% set humanAdocReports = entry.reports.type('report') %}
+					{% set humanUrl = entry.url %}
+
+					<div class="bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700">
+						<a href="{{ entry.url }}">
+							{% if humanImage %}
+								<img class="p-4 w-full rounded-lg" src="{{ humanImage.url }}" alt="{{ humanImage.title }}">
+							{% else %}
+								<img class="p-4 w-full rounded-lg" src="/assets/uploads/Humans/barbed-wire-g55336ea27_1920-1.jpg" alt="placeholder, no photo available">
+							{% endif %}
+						</a>
+						<div class="px-5 pb-5">
+							<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+								<a href="{{ entry.url }}">{{ entry.lastName }},
+									{{entry.firstName}}
+								</a>
+							</h3>
+							<p class="my-1 text-lg text-gray-500">
+								<strong>AIS#</strong>
+								{{entry.ais}}</p>
+							{% if humanAdocFacility %}
+								<span class="text-gray-500 text-lg">
+									<strong>Facility:</strong>
+									<a class="underline" href="{{ humanAdocFacility.url }}">{{ humanAdocFacility.title }}</a>
+								</span>
+							{% endif %}
+							{% if humanNote %}
+								<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+									<span class="font-medium">Details:</span>
+									{{humanNote}}
+								</p>
+							{% endif %}
+							{% if humanAdocCOD %}
+								<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+									<span class="font-medium">COD:</span>
+									{{humanAdocCOD}}
+								</p>
+							{% endif %}
+							{% if humanAdocReports|length %}
+								<h2 class="my-2 text-xl text-gray-500 dark:text-gray-400 font-bold">Reports</h2>
+								<ul class="ml-4">
+									{% for humanAdocReports in humanAdocReports %}
+										<li class="list-decimal">
+											{% set reportLink = humanAdocReports.reportLink %}
+											{% if reportLink %}
+												<a href="{{ reportLink }}">
+													<h3 class="ml-2 mt-2 mb-1 underline font-light text-gray-500 dark:text-gray-400">{{ humanAdocReports.reportType.one().title }}</h3>
+												</a>
+											{% else %}
+												<h3 class="ml-2 mt-2 mb-1 underline font-light text-gray-500 dark:text-gray-400">{{ humanAdocReports.reportType.one().title }}</h3>
+											{% endif %}
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+						</p>
+					</div>
+				</div>
+			{% endfor %}
+
+		</div>
+	</div>
+</section>{% endblock %}{% block footer %}
+{{parent()}}{% endblock %}{% endblock %}
+

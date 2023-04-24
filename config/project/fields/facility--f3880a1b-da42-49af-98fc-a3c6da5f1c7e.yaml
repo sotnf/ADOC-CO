@@ -26,7 +26,7 @@ settings:
   selectionLabel: 'Link to Facility'
   showSiteMenu: true
   sources:
-    - 'section:0b837dae-5965-4957-abf2-903eccda8b7b' # Facilities
+    - 'section:0b837dae-5965-4957-abf2-903eccda8b7b' # Facility
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

@@ -1,0 +1,43 @@
+fieldLayouts:
+  904a39f7-77ac-44ba-a6b3-649ae7e7d065:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3264cba3-ef73-440a-a779-b7ddc6f062e5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b2ab535d-266a-4b72-8e55-c9e80866e67b
+        userCondition: null
+handle: humanList
+hasTitleField: false
+name: 'Humans List'
+section: 19a6fa2e-899b-4c96-a230-0f486ae0295b # Humans List
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

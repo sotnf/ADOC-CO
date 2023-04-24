@@ -21,11 +21,11 @@ module.exports = {
       textDecoration: ['active'],
       minWidth: {
         'kanban': '28rem'
-      },
+      }
     },
-  },
     plugins: [
       require('flowbite/plugin'),
       require('flowbite-typography')
     ],
   }
+}

@@ -4,7 +4,7 @@ module.exports = {
       "./node_modules/flowbite/**/*.js",
       "./templates/**/*.{html,js,twig}",
     ],
-    // darkMode: 'class',
+    darkMode: 'class',
     theme: {
     extend: {
       colors: {

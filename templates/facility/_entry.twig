@@ -17,7 +17,8 @@
 		{% set facilityState = entry.state %}
 		{% set facilityZip = entry.zip %}
 		{% set facilityNote = entry.note %}
-		{% set facilityContacts = entry.contacts.type('') %}
+		{% set facilityAdvocate = entry.contacts.type('advocate') %}
+		{% set facilityWarden = entry.contacts.type('warden') %}
 
 		<section class="bg-white dark:bg-gray-900">
 			<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
@@ -34,13 +35,16 @@
 
 
 					<div class="px-5 pb-5">
-						<h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-							<strong>Address: </strong></h2>
-							<p>{{facilityAddress1}}<br>
-							{% if facilityAddress2 %}
-							{{facilityAddress2}}<br>
-							{% endif %}
-							{{facilityCity}}, {{facilityState}} {{facilityZip}}</p>
+						{% set address_parts = [facilityAddress1, facilityAddress2, facilityCity ~ ', ' ~ facilityState ~ ' ' ~ facilityZip] %}
+						{% set address = address_parts|filter|join('<br>') %}
+
+						{% if address %}
+							<h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+								<strong>Address:
+								</strong>
+							</h2>
+							<p>{{ address|raw }}</p>
+						{% endif %}
 						
 						{% if facilityEmail %}
 							<span class="text-gray-500 text-lg">
@@ -60,6 +64,63 @@
 								<a class="underline" href="{{facilityWebsite}}">{{facilityWebsite}}</a>
 							</p>
 						{% endif %}
+
+
+						{% set contacts = entry.contacts.all() %}
+						{% if contacts|length %}
+							<h2 class="font-bold text-xl">Facility Contacts:</h2>
+							{% for block in contacts %}
+								{% set isWarden = block.type.handle == 'warden' %}
+								{% set isAdvocate = block.type.handle == 'advocate' %}
+								{% if isWarden %}
+									{% set email = block.firstName ~ '.' ~ block.lastName ~ '@doc.alabama.gov' %}
+									<h3 class="mt-2 font-semibold text-lg">Warden:</h3>
+									<div class="ml-2">
+										<p class="text-lg">{{ block.firstName }}
+											{{ block.lastName }}</p>
+										{% if email %}
+											<p><span class="font-bold">Email:</span>
+												<a class="underline" href="mailto:{{ email }}">{{ email }}</a>
+											</p>
+										{% endif %}
+										{% if block.phone %}
+											<p><span class="font-bold">Phone:</span>
+											{% set formattedPhone = block.phone|replace({'tel:':'', '-':''})|replace({"(\\d{3})(\\d{3})(\\d{4})": "$1-$2-$3"}) %}
+												<a class="underline" href="tel:{{ block.phone }}">{{ formattedPhone }}</a>
+
+											</p>
+										{% endif %}
+									</div>
+								{% elseif isAdvocate %}
+									<h3 class="mt-2 font-semibold text-lg">Advocate:</h3>
+									<div class="ml-2">
+										<p class="text-lg">{{ block.firstName }}
+											{% if block.nickName %}"{{ block.nickName }}"
+											{% endif %}
+											{{ block.lastName }}</p>
+										{% if block.email %}
+											<p>
+												<span class="font-bold">Email:</span>
+												<a href="mailto:{{ block.email }}">{{ block.email }}</a>
+											</p>
+										{% endif %}
+										{% if block.phone %}
+											<p><span class="font-bold">Phone:</span>
+												{% set formattedPhone = block.phone|replace({'tel:':'', '-':''})|replace({"(\\d{3})(\\d{3})(\\d{4})": "$1-$2-$3"}) %}
+												<a class="underline" href="tel:{{ block.phone }}">{{ formattedPhone }}</a>
+										{% endif %}
+										{% if block.website %}
+											<p><span class="font-bold">Website:</span>
+											<a class="underline"  href="{{ block.website }}">{{ block.website }}</a>
+
+											</p>
+										{% endif %}
+									</div>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+
+
 						{# {% if facilityContacts|length %}
 							<h2 class="my-2 text-xl text-gray-500 dark:text-gray-400 font-bold">Contacts</h2>
 							<ul class="ml-4">
@@ -67,7 +128,7 @@
 									<li class="list-decimal">
 										{% set facilityWarden = facilityContacts.warden %}
 										{% if facilityWarden %}
-											<h3 class="ml-2 mt-2 mb-1 underline font-light text-gray-500 dark:text-gray-400">{{ facilityContacts.contactType.one().title }}</h3>
+											<h3 class="ml-2 mt-2 mb-1 underline font-light text-gray-500 dark:text-gray-400">Warden: {{ facilityContacts.contactType.one().title }}</h3>
 										{% else %}
 											<h3 class="ml-2 mt-2 mb-1 underline font-light text-gray-500 dark:text-gray-400">{{ facilityContacts.contactType.one().title }}</h3>
 										{% endif %} 

@@ -150,6 +150,15 @@
 						{{facilityAdocFacility}}
 					</a> #}
 				</div>
+				{% set address_parts = [facilityAddress1, facilityAddress2, facilityCity ~ ', ' ~ facilityState ~ ' ' ~ facilityZip] %}
+					{% set address = address_parts|join(', ') %}
+
+					{% if address %}
+						<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+							<iframe width="100%" height="auto" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+							src="https://maps.google.com/maps?q={{ address|url_encode() }}&amp;output=embed&zoom=100"></iframe>
+						</div>
+					{% endif %}
 				{# {% if facilityImage %}
 					<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
 						<img src=" {{ facilityImage.url }} " alt="{{facilityImage.alt}}">

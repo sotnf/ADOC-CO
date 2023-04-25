@@ -11,25 +11,17 @@
 	<section class="bg-white dark:bg-gray-900">
 		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
 			<div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-				<h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{{ entry.title }}</h1>
+				<h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+				{% if entry.alternateHeadline %}
+				{{ entry.alternateHeadline }}
+				{% else %}
+				{{ entry.title}} </h1>
+				{% endif %}
 				<p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400"> {{ entry.note }} </p>
 			</div>
 			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-
-				{# HUMAN VARIABLES 
-					{% set facility = entry.facility.one() %}
-						{% set humanDOD = entry.dateOfDeath %}
-						{% set humanNote = entry.note %}
-						{% set humanAdocCOD = entry.causeOfDeath.one() %}
-						{% set humanAdocReports = entry.reports.type('report') %}
-						{% set humanUrl = entry.url %}
-
-					{% endfor %} #}
-
-
-
-			{% for entry in craft.entries.section("facility").all() %}
+				{% for entry in craft.entries.section("facility").all() %}
 				{% set facilityEmail = entry.email %}
 				{% set facilityPhone = entry.phone %}
 				{% set facilityWebsite = entry.website %}
@@ -42,48 +34,50 @@
 				{% set facilityAdvocate = entry.contacts.type('advocate') %}
 				{% set facilityWarden = entry.contacts.type('warden') %}
 
-					<div class="bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700">
-						<div class="px-5 pb-5">
-							{% set address_parts = [facilityAddress1, facilityAddress2, facilityCity ~ ', ' ~ facilityState ~ ' ' ~ facilityZip] %}
-							{% set address = address_parts|filter|join('<br>') %}
-							<h2 class="mt-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-								<a href="{{ entry.url }}">{{entry.title}}</a>
-							</h2>
-							{% if address %}
-								<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-									<strong>Address:
-									</strong>
-								</h3>
-								<p>{{ address|raw }}</p>
-							{% endif %}
+				<div class="bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700">
+					<div class="px-5 pb-5">
+						{% set address_parts = [facilityAddress1, facilityAddress2, facilityCity ~ ', ' ~ facilityState ~ ' ' ~ facilityZip] %}
+						{% set address = address_parts|filter|join('<br>') %}
+						<h2 class="mt-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							<a href="{{ entry.url }}">{{entry.title}}</a>
+						</h2>
+						{% if address %}
+							<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Address:
+							</h3>
+							<p class="ml-2">{{ address|raw }}</p>
+						{% endif %}
 
-							{% if facilityEmail %}
-								<span class="text-gray-500 text-lg">
-									<strong>Email:
-									</strong>
-									<a class="underline" href="mailto:{{facilityEmail}}">{{facilityEmail}}</a>
-								</span>
-							{% endif %}
-							{% if facilityPhone %}
-								<p class="my-2 font-light text-gray-500 dark:text-gray-400">
-									<span class="font-medium">Phone:</span>
-									<a class="underline" href="tel:{{facilityPhone}}">{{facilityPhone}}</a>
-								</p>
-							{% endif %}
-							{% if facilityWebsite %}
-								<p class="my-2 font-light text-gray-500 dark:text-gray-400">
-									<span class="font-medium">Website:</span>
-									<a class="underline" href="{{facilityWebsite}}">{{facilityWebsite}}</a>
-								</p>
-							{% endif %}
+						{% if facilityEmail %}
+							<span class="text-gray-500 text-lg">
+								<strong>Email:
+								</strong>
+								<a class="underline" href="mailto:{{facilityEmail}}">{{facilityEmail}}</a>
+							</span>
+						{% endif %}
+						{% if facilityPhone %}
+							<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+								<span class="font-medium">Phone:</span>
+								<a class="underline" href="tel:{{facilityPhone}}">{{facilityPhone}}</a>
+							</p>
+						{% endif %}
+						{% if facilityWebsite %}
+							<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+								<span class="font-medium">Website:</span>
+								<a class="underline" href="{{facilityWebsite}}">http://www.doc.state.al.us/facility...</a>
 
-							{% set relatedHumans = craft.entries.section('humans').relatedTo({ targetElement: entry, field: 'facility' }).all() %}
-								<p>Reported Deaths: <a class="underline" href="{{ entry.url }}">{{ relatedHumans|length }}</a>
-								</p>
+							</p>
+						{% endif %}
 
-							</div>
-						</div>
-					{% endfor %}
+						{% set relatedHumans = craft.entries.section('humans').relatedTo({ targetElement: entry, field: 'facility' }).all() %}
+						{% if relatedHumans|length %}
+							<p><span class="font-medium">Reported Deaths:</span> <a class="underline" href="{{ entry.url }}">{{ relatedHumans|length }}</a>
+							</p>
+						{% endif %}
+
+					</div>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>{% endblock %}{% block footer %}

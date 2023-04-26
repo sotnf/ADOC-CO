@@ -23,11 +23,21 @@
 			<p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">These are the humans taken from us by the ADOC.</p>
 		</div>
 			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+				{# Pagination Setup Start #}
+					{% set entriesPerPage = 10 %}
+					{% set currentPage = craft.app.request.getPageNum() %}
 
-					{% for entry in craft.entries
-						.section("humans")
+					{% set humans = craft.entries
+						.section('humans')
+						.limit(entriesPerPage)
+						.offset((currentPage - 1) * entriesPerPage)
 						.all()
 					%}
+
+					{# Pagination Setup End #}
+
+					{% for entry in humans %}
+
 						{% set humanImage = entry.photos.one() %}
 						{% set humanAdocFacility = entry.facility.one() %}
 						{% set humanDOD = entry.dateOfDeath %}
@@ -103,6 +113,35 @@
 							</div>
 						</div>
 					{% endfor %}
+				{# Pagination Start #}
+					{% if craft.app.request.isAjax %}
+						{% exit 0 %}
+					{% endif %}
+
+					{% set totalHumans = craft.entries.section('humans').count() %}
+					{% set totalPages = (totalHumans / entriesPerPage)|round(0, 'ceil') %}
+
+					{% if totalPages > 1 %}
+						<nav class="pagination">
+							{% if currentPage > 1 %}
+								<a href="{{ craft.app.request.pathInfo }}?page={{ currentPage - 1 }}">Previous</a>
+							{% endif %}
+
+							{% for i in 1..totalPages %}
+								{% if i == currentPage %}
+									<span class="current-page">{{ i }}</span>
+								{% else %}
+									<a href="{{ craft.app.request.pathInfo }}?page={{ i }}">{{ i }}</a>
+								{% endif %}
+							{% endfor %}
+
+							{% if currentPage < totalPages %}
+								<a href="{{ craft.app.request.pathInfo }}?page={{ currentPage + 1 }}">Next</a>
+							{% endif %}
+						</nav>
+					{% endif %}
+
+					{# Pagination End #}
 
 	</div>
 </div>

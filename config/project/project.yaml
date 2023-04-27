@@ -86,10 +86,6 @@ fs:
       path: $DDEV_FILES_DIR
     type: craft\fs\Local
     url: '@primarySiteUrl/assets/transforms'
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 meta:
   __names__:
     0b837dae-5965-4957-abf2-903eccda8b7b: Facility # Facility
@@ -104,6 +100,7 @@ meta:
     4f8df9ae-e832-4225-9456-4ab722757c6c: Advocate # Advocate
     5d8a0be5-824b-40ba-8e7d-25573f254bd5: 'Address 2' # Address 2
     05fd0cd6-a8af-4734-90bf-6131cbedfbe1: 'Internal Link' # Internal Link
+    6bc9b592-26cf-436d-a594-9e321e2334d6: 'Public Schema' # Public Schema
     6e2fc37c-e5a0-49f2-b595-2a3789708767: 'Middle Name' # Middle Name
     7babb8bc-f92d-42f6-9be7-fe2c12f147ac: adoc-co # adoc-co
     7d3ad6ba-4819-4bba-ad5a-0ea7eba95175: Phone # Phone

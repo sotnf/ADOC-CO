@@ -1,6 +1,6 @@
 defaultPlacement: end
 enableVersioning: true
-handle: humans
+handle: human
 name: Humans
 propagationMethod: all
 siteSettings:

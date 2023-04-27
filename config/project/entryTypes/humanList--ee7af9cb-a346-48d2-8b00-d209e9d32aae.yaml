@@ -33,7 +33,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: c506c8b9-2ee8-49d6-8734-615445bf46b1 # Alternate Headline
-            instructions: null
+            instructions: 'This will be appended with " ... currently reported: ###" giving a running total of reported lives lost.'
             label: null
             required: false
             tip: null

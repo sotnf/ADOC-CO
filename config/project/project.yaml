@@ -1,4 +1,4 @@
-dateModified: 1682581777
+dateModified: 1682814603
 elementSources:
   craft\elements\Entry:
     -
@@ -163,7 +163,7 @@ plugins:
     enabled: true
     schemaVersion: 5.1.0.0
 system:
-  edition: solo
+  edition: pro
   live: true
   name: adoc-co
   retryDuration: null

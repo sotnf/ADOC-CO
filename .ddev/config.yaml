@@ -9,12 +9,11 @@ xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
 database:
-  type: mariadb
-  version: "10.4"
+  type: mysql
+  version: "5.7"
 nfs_mount_enabled: false
 mutagen_enabled: false
 upload_dir: assets/uploads
-image_transforms: assets/transforms
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []

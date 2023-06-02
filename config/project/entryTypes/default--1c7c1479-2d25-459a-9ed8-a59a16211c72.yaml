@@ -162,7 +162,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 0b837dae-5965-4957-abf2-903eccda8b7b # Facilities
+section: 0b837dae-5965-4957-abf2-903eccda8b7b # Facility
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

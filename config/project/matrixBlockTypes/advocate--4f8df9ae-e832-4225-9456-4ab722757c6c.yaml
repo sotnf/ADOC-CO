@@ -130,7 +130,7 @@ fields:
     columnSuffix: ixhmlzrp
     contentColumnType: text
     fieldGroup: null
-    handle: nickname
+    handle: nickName
     instructions: null
     name: Nickname
     searchable: true

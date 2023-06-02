@@ -1,0 +1,106 @@
+{% extends "index.twig" %}
+
+{%~ block head %}
+{{parent()}}{% endblock %}{% block body %}
+
+{% block header %}
+	{{parent()}}
+{% endblock %}
+
+{% block article %}
+	<section class="bg-white dark:bg-gray-900">
+		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+			<div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+				<h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+				{% if entry.alternateHeadline %}
+				{{ entry.alternateHeadline }}
+				{% else %}
+				{{ entry.title}} </h1>
+				{% endif %}
+				<p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400"> {{ entry.note }} </p>
+			</div>
+			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+				{% for entry in craft.entries.section("facility").all() %}
+				{% set facilityEmail = entry.email %}
+				{% set facilityPhone = entry.phone %}
+				{% set facilityWebsite = entry.website %}
+				{% set facilityAddress1 = entry.address1 %}
+				{% set facilityAddress2 = entry.address2 %}
+				{% set facilityCity = entry.city %}
+				{% set facilityState = entry.state %}
+				{% set facilityZip = entry.zip %}
+				{% set facilityNote = entry.note %}
+				{% set facilityAdvocate = entry.contacts.type('advocate') %}
+				{% set facilityWarden = entry.contacts.type('warden') %}
+
+				{% set currentFacility = entry %}
+
+				{% if currentFacility and currentFacility.section.handle == 'facility' %}
+					{% set humans = craft.entries()
+						.section('human')
+						.relatedTo(currentFacility)
+					%}
+				{% endif %}
+
+				<div class="bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700">
+					<div class="px-5 pb-5">
+						{% set address_parts = [facilityAddress1, facilityAddress2, facilityCity ~ ', ' ~ facilityState ~ ' ' ~ facilityZip] %}
+						{% set address = address_parts|filter|join('<br>') %}
+						<h2 class="mt-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+							<a href="{{ entry.url }}">{{entry.title}}</a>
+						</h2>
+						{% if address %}
+							<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+								Address:
+							</h3>
+							<p class="ml-2">{{ address|raw }}</p>
+						{% endif %}
+
+						{% if facilityEmail %}
+							<span class="text-gray-500 text-lg">
+								<strong>Email:
+								</strong>
+								<a class="underline" href="mailto:{{facilityEmail}}">{{facilityEmail}}</a>
+							</span>
+						{% endif %}
+						{% if facilityPhone %}
+							<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+								<span class="font-medium">Phone:</span>
+								<a class="underline" href="tel:{{facilityPhone}}">{{facilityPhone}}</a>
+							</p>
+						{% endif %}
+						{% if facilityWebsite %}
+							<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+								<span class="font-medium">Website:</span>
+								<a class="underline" href="{{facilityWebsite}}">http://www.doc.state.al.us/facility...</a>
+
+							</p>
+						{% endif %}
+
+						{% set relatedHumans = craft.entries.section('humans').relatedTo({ targetElement: entry, field: 'facility' }).all() %}
+						{% if relatedHumans|length %}
+							<p><span class="font-medium">Reported Deaths:</span> <a class="underline" href="{{ entry.url }}">{{ relatedHumans|length }}</a>
+							</p>
+						{% endif %}
+						{% if humans.count() > 0 %}
+						<a href="{{ siteUrl }}humans/?facility={{ entry.id }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+							View {{ humans.count() }} Human(s) Lost
+						</a>
+						{% else %}
+						<div href="{{ siteUrl }}humans/?facility={{ entry.id }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:focus:ring-gray-800">
+							{{ humans.count() }} Humans Lost
+						</div>
+						
+
+						
+					{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+{% endblock %}{% block footer %}
+{{parent()}}{% endblock %}{% endblock %}
+

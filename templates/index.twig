@@ -63,7 +63,10 @@
 						document.write(new Date().getFullYear());
 					</script>
 					|
-					SOTNF - <a href="{{siteUrl}}" class="hover:underline uppercase" target="_blank">{{siteName}}</a>
+					{% block footerSiteName %}
+					{% endblock %}
+					<a href="{{siteUrl}}" class="hover:underline uppercase" target="_blank">{{siteName}}</a>
+					
 					| All rights reserved.
 				</p>
 			</footer>

@@ -1,0 +1,21 @@
+{% extends "/homepage/_entry.twig" %}
+
+{% block head %}
+	<title>{{ entry.title }}</title>
+	<meta content="{{entry.title}} HEAD content">
+	<div>{{parent()}}</div>
+{% endblock %}
+
+{% block body %}
+
+	{% block header %}
+		{{parent()}}
+	{% endblock %}
+
+
+	{% block footer %}
+		{{parent()}}
+	{% endblock %}
+
+{% endblock %}
+

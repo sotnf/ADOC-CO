@@ -2,3 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    h1 {
+        @apply text-4xl mb-6;
+    }
+
+    h2 {
+        @apply text-3xl mb-5;
+    }
+
+    h3 {
+        @apply text-2xl mb-4;
+    }
+
+    h4 {
+        @apply text-xl mb-3;
+    }
+    ul {
+        @apply list-disc list-inside ml-1 mb-2;
+    }
+
+    ol {
+        @apply list-decimal list-inside ml-1 mb-2;
+    }
+
+    li {
+        @apply ml-2;
+    }
+
+    a {
+        @apply text-red-800 underline underline-offset-2;
+    }
+
+    p {
+        @apply mb-4;
+    }
+
+    a:hover {
+       @apply decoration-2 underline-offset-4;
+    }
+
+    img {
+        @apply mb-4;
+    }
+
+    a.ck-btn {
+        @apply inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover: bg-primary-800 focus:ring-4 focus:ring-primary-300;
+    }
+    /* ... */
+}
+
+@layer utilities {
+    a.ck-btn {
+        @apply inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover: bg-primary-800 focus:ring-4 focus:ring-primary-300;
+    }
+}

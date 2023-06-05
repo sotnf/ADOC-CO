@@ -90,7 +90,7 @@
 						<div class="bg-white rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700" id="{{ loop.index }}">
 							{% if humanImage %}
 								<a href="{{ entry.url }}">
-								{% do humanImage.setTransform('humanThumbnail') %}
+								{% do humanImage.setTransform('crop300x200') %}
 									<img class="p-4 w-full rounded-lg" src="{{ humanImage.url }}"
 									width="{{ humanImage.width }}"
 									height="{{ humanImage.height }}" alt="{{ humanImage.title }}">

@@ -1,4 +1,4 @@
-dateModified: 1685926837
+dateModified: 1686001262
 elementSources:
   craft\elements\Entry:
     -
@@ -40,6 +40,7 @@ elementSources:
       key: 'section:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans
       tableAttributes:
         - 'field:18f58c1c-5fe3-4755-b144-58ecd20650e3' # AIS#
+        - 'field:08d0c3ed-94bf-4311-a7a5-c99f216a0217' # Photo(s)
         - postDate
         - dateUpdated
         - 'field:3df31a47-abd9-48f5-b236-0d7178731bfb' # Note
@@ -66,6 +67,15 @@ elementSources:
         - 'field:05fd0cd6-a8af-4734-90bf-6131cbedfbe1' # Internal Link
         - 'field:610bfe49-b3ec-40ee-8377-62b1f63a8539' # Website
         - link
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      key: 'section:becc8c09-e2cc-4316-bfe4-614c5d4e708a' # Social Media
+      type: native
+    -
+      key: 'section:b90fb7c4-b0d0-41be-afe9-d736a6e74113' # Pages
       type: native
 email:
   fromEmail: jared@sotnf.com

@@ -12,4 +12,4 @@ license.key
 /src
 /vendor
 /storage
-/web/assets/uploads/transforms
+/web/assets/uploads/_transforms

@@ -734,6 +734,10 @@ img {
   margin-bottom: 0.25rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -788,14 +792,6 @@ img {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mb-28 {
-  margin-bottom: 7rem;
-}
-
-.mb-16 {
-  margin-bottom: 4rem;
 }
 
 .block {
@@ -1728,10 +1724,6 @@ img {
     margin-bottom: 0px;
   }
 
-  .sm\:mb-20 {
-    margin-bottom: 5rem;
-  }
-
   .sm\:flex {
     display: flex;
   }
@@ -1791,10 +1783,6 @@ img {
 
   .md\:order-2 {
     order: 2;
-  }
-
-  .md\:mb-28 {
-    margin-bottom: 7rem;
   }
 
   .md\:mt-0 {

@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+handle: socialMedia
+name: 'Social Media'
+propagationMethod: none
+siteSettings:
+  7babb8bc-f92d-42f6-9be7-fe2c12f147ac: # adoc-co
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  9e25abb4-53e1-486c-b2d7-4107ca3d6206: # jaredbudlong
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  44eb3684-3bb8-4859-b93d-0a245b4e98c9: # sotnf
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

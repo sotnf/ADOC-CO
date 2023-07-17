@@ -1,0 +1,43 @@
+fieldLayouts:
+  4194b0e6-a91f-4aba-830e-9448beee7bba:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: ec574100-b361-4d93-882d-1484a02b3d75
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0fcbec1f-9258-423b-894c-fdcb01803942
+        userCondition: null
+fs: socialIcons
+handle: socialMedia
+name: 'Social Media'
+sortOrder: 2
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: _transforms

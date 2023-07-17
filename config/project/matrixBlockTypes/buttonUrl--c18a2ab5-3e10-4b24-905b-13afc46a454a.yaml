@@ -1,0 +1,75 @@
+field: f9f27c6e-965b-4439-b418-231f96a83691 # Link Builder
+fieldLayouts:
+  8e0915d9-2df7-40f7-b851-ca231e318db0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: cdae8b0b-b588-4459-8b32-59a376d0d453 # Button Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c562354f-2176-4cfc-b1f1-6f25ce79de90
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: eeee74d7-7a29-4e24-8382-0fcd9da18bd3 # URL
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c96359b-47f6-41ff-8e83-f33ff54f8537
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ba21e1ff-4ae0-4791-ae48-4ccc02b5aa4d
+        userCondition: null
+fields:
+  cdae8b0b-b588-4459-8b32-59a376d0d453: # Button Text
+    columnSuffix: odtdumkq
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonText
+    instructions: null
+    name: 'Button Text'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  eeee74d7-7a29-4e24-8382-0fcd9da18bd3: # URL
+    columnSuffix: jderzpou
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: buttonUrl
+    instructions: null
+    name: URL
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - url
+        - tel
+        - email
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Url
+handle: buttonUrl
+name: 'Button URL'
+sortOrder: 2

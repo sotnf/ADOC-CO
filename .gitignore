@@ -6,7 +6,6 @@
 /src
 license.key
 /.ddev
-/config
 /dist
 /node_modules
 /src

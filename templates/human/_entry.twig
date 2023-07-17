@@ -15,6 +15,21 @@
 			{% set humanNote = entry.note %}
 			{% set humanAdocCOD = entry.causeOfDeath.one() %}
 			{% set humanAdocReports = entry.reports.type('report') %}
+			{% set human = entry %}
+			{% set humanUrl = human.url %}
+			{% set firstNFC = human.firstName | slice(0, 1) %}
+			{% set lastNFC = human.lastName | slice(0, 1) %}
+			{% set name = "" %}
+				{% if human.lastName %}
+					{% set name = human.lastName %}
+				{% endif %}
+				{% if human.firstName %}
+					{% set name = name ~ ", " ~ human.firstName %}
+				{% endif %}
+				{% if human.nickName %}
+					{% set name = name ~ " \"" ~ human.nickName ~ "\"" %}
+				{% endif %}
+
 			<section class="bg-white dark:bg-gray-900">
 				<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
 					<div class="mr-auto place-self-center lg:col-span-7">
@@ -26,33 +41,44 @@
 							</p>
 						{% endif %}
 						<div class="px-5 pb-5">
-
-						{% if entry.ais %}
-							<h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-								<strong>AIS#</strong>
-								{{entry.ais}}
-							</h2>
-						{% endif %}
-							{% if humanAdocFacility|length %}
-								<span class="text-gray-500 text-lg">
-									<strong>Facility:</strong>
-									{% if humanAdocFacility.url %}
+							<p class="my-1 text-lg text-gray-500">
+								<strong>AIS#
+								</strong>
+								{% if human.ais %}
+									{{human.ais}}
+								{% else %}
+									<SPAN class="text-sm">UNKNOWN</SPAN>
+								{% endif %}
+							</p>
+							<span class="text-gray-500 text-lg">
+								<strong>Facility:
+								</strong>
+								{% if humanAdocFacility %}
 									<a class="underline" href="{{ humanAdocFacility.url }}">{{ humanAdocFacility.title }}</a>
-									{% endif %}
+								{% else %}
+									<SPAN class="text-sm">UNKNOWN</SPAN>
+								{% endif %}
+							</span>
+							<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+								<span class="font-medium">Details:
 								</span>
-							{% endif %}
-							{% if humanDOD %}
-								<p class="my-2 font-light text-gray-500 dark:text-gray-400">
-									<span class="font-medium">Date of Death:</span>
-									{{humanDOD|date('F j, Y')}}
-								</p>
-							{% endif %}
-							{% if humanAdocCOD %}
-								<p class="my-2 font-light text-gray-500 dark:text-gray-400">
-									<span class="font-medium">COD:</span>
+								{% if humanNote %}
+									{{humanNote}}
+								{% else %}
+									<SPAN class="text-sm">UNKNOWN</SPAN>
+								{% endif %}
+							</p>
+							<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+								<span class="font-medium">COD:
+								</span>
+								{% if humanAdocCOD %}
 									{{humanAdocCOD}}
-								</p>
-							{% endif %}
+								{% else %}
+									<SPAN class="text-sm">UNKNOWN</SPAN>
+								{% endif %}
+							</p>
+
+
 							{% if humanAdocReports|length %}
 								<h2 class="my-2 text-xl text-gray-500 dark:text-gray-400 font-bold">Reports</h2>
 								<ul class="ml-4">
@@ -61,10 +87,12 @@
 											{% set reportLink = humanAdocReports.reportLink %}
 											{% if reportLink %}
 												<a href="{{ reportLink }}">
-													<h3 class="ml-2 mt-2 mb-1 underline font-light text-gray-500 dark:text-gray-400">{{ humanAdocReports.reportType.one().title }}</h3>
+<span class="ml-2 mt-2 mb-1 font-light text-gray-500 dark:text-gray-400">{{ humanAdocReports.reportType.one().title }}</span>
+
 												</a>
 											{% else %}
-												<h3 class="ml-2 mt-2 mb-1 font-light text-gray-500 dark:text-gray-400">{{ humanAdocReports.reportType.one().title }}</h3>
+<span class="ml-2 mt-2 mb-1 font-light text-gray-500 dark:text-gray-400">{{ humanAdocReports.reportType.one().title }}</span>
+
 											{% endif %}
 										</li>
 									{% endfor %}

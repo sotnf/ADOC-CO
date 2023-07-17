@@ -37,6 +37,9 @@ return GeneralConfig::create()
         '@SOTNFSiteUrl' => getenv('SOTNF_SITE_URL'),
         '@webADOC' => App::env('ADOC_SITE_URL'),
         // '@webrootSOTNF' => App::env('BASE_PATH'),
+        '@mailGunAPI'=> getenv('MAILGUN_API'),
         ])
+    ->testToEmailAddress(['jbudlong@gmail.com' => 'Craft Test Email'])
+
 
 ;

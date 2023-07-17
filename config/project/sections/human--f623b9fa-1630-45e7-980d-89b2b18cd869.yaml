@@ -2,11 +2,28 @@ defaultPlacement: end
 enableVersioning: true
 handle: human
 name: Humans
-propagationMethod: all
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - Main
+      -
+        - urlFormat
+        - 'human/{slug}'
+      -
+        - refresh
+        - '1'
+propagationMethod: none
 siteSettings:
   7babb8bc-f92d-42f6-9be7-fe2c12f147ac: # adoc-co
     enabledByDefault: true
     hasUrls: true
     template: human/_entry
     uriFormat: 'human/{slug}'
+  44eb3684-3bb8-4859-b93d-0a245b4e98c9: # sotnf
+    enabledByDefault: true
+    hasUrls: true
+    template: human/_entry
+    uriFormat: 'TESTING/human/{slug}'
 type: channel

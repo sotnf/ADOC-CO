@@ -11,7 +11,7 @@
 
 			{% set humanImage = entry.photos.one() %}
 			{% set humanAdocFacility = entry.facility.one() %}
-			{% set humanDOD = entry.dateOfDeath %}
+			{% set humanDOD = entry.dateOfStatus %}
 			{% set humanNote = entry.note %}
 			{% set humanAdocCOD = entry.causeOfDeath.one() %}
 			{% set humanAdocReports = entry.reports.type('report') %}

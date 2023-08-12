@@ -1,6 +1,6 @@
 {% set humanImage = human.photos.one() %}
 {% set humanAdocFacility = human.facility.one() %}
-{% set humanDOD = human.dateOfDeath %}
+{% set humanStatus = human.dateOfStatus %}
 {% set humanNote = human.note %}
 {% set humanAdocCOD = human.causeOfDeath.one() %}
 {% set humanAdocReports = human.reports.type('report') %}
@@ -68,11 +68,12 @@
 			{% endif %}
 		</span>
 		<p class="my-2 font-light text-gray-500 dark:text-gray-400">
-			<strong>DOD:</strong>
-			{% if human.dateOfDeath %}
-				{{ human.dateOfDeath|date }}
+			<strong>Status:{% if human.humanStatus|length %} {{human.humanStatus}}</strong>
+
+			{% if human.dateOfStatus %}
+				 ( {{ human.dateOfStatus|date }} )
 			{% else %}
-				<span class="text-sm">UNKNOWN</span>
+				<span class="text-sm">( UNKNOWN )</span>
 			{% endif %}
 		</p>
 		<p class="my-2 font-light text-gray-500 dark:text-gray-400">
@@ -112,5 +113,5 @@
 			<p class="ml-1 mt-2 mb-1 font-light text-gray-500 dark:text-gray-400">NONE</p>
 
 		{% endif %}
-	</p>
+	</div>
 </div>

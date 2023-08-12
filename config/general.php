@@ -19,14 +19,9 @@ return GeneralConfig::create()
     ->omitScriptNameInUrls()
     
     // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-<<<<<<< HEAD
     // ->devMode(App::env('DEV_MODE') ?? false)
     // ->devMode(false)
-    
-=======
-    //->devMode(App::env('DEV_MODE') ?? false)
-    ->devMode(true)
->>>>>>> PRODUCTION
+   
     // Preload Single entries as Twig variables
     ->preloadSingles()
     

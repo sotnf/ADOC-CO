@@ -31,7 +31,7 @@
 					.section('human')
 					.relatedTo(facilityQuery)
 					.limit(currentPerPage)
-					.orderBy('dateOfDeath DESC, postDate DESC')
+					.orderBy('dateOfStatus DESC, postDate DESC')
 				%}
 
 	{% else %}
@@ -39,7 +39,7 @@
 		{% set currentList = craft.entries()	
 					.section('human')
 					.limit(currentPerPage) 
-					.orderBy('dateOfDeath DESC, postDate DESC')
+					.orderBy('dateOfStatus DESC, postDate DESC')
 				%}
 	{% endif %}
 	{% paginate currentList as currentQuery, humanEntries %}
@@ -91,7 +91,6 @@
 				<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 					{% for human in humanEntries %}
 						{% include "_includes/_humanCard.twig" %}
-				</div>
 				{% endfor %}
 			</div>
 		</section>

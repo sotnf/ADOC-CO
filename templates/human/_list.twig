@@ -1,132 +1,103 @@
 {% extends "index.twig" %}
 
 {%~ block head %}
-{{parent()}}{% endblock %}
-{% block body %}
-
-{% block header %}
-	{{parent()}}
-{% endblock %}
-
-{% block article %}
-	{% set pageQuery = 'facility' %}
-	{% set facilityID = craft.app.request.getParam(pageQuery) %}
-	{% set currentPerPage = 12 %}
-	
-	{% set facilityQuery = craft.entries
+{{parent()}}{% endblock %}{% block body %}{% block header %}
+{{parent()}}{% endblock %}{% block article %}{% set pageQuery = 'facility' %}{% set facilityID = craft.app.request.getParam(pageQuery) %}{% set currentPerPage = 12 %}{% set facilityQuery = craft.entries
 						.section(pageQuery)
 						.id(facilityID)
 						.one()
-						 %}
-	{% set paramPresent = '' %}
-	{% set searchFacility = '' %}
-
-	{% if craft.app.request.getParam('')|length %}
-		{% set paramPresent = 'true' %}
-	{% endif %}
-
-	{% if facilityID and craft.entries.section(pageQuery).id(facilityID).one() %}
-		{% set searchFacility = 'true' %}
-		{% set currentList = craft.entries()
+						 %}{% set paramPresent = '' %}{% set searchFacility = '' %}{% if craft.app.request.getParam('')|length %}
+{% set paramPresent = 'true' %}{% endif %}{% if facilityID and craft.entries.section(pageQuery).id(facilityID).one() %}
+{% set searchFacility = 'true' %}
+{% set currentList = craft.entries()
 					.section('human')
 					.relatedTo(facilityQuery)
 					.limit(currentPerPage)
-					.orderBy('dateOfDeath DESC, postDate DESC')
-				%}
-
-	{% else %}
-		{% set searchFacility = 'false' %}
-		{% set currentList = craft.entries()	
+					.orderBy('dateOfStatus DESC, postDate DESC')
+				%}{% else %}
+{% set searchFacility = 'false' %}
+{% set currentList = craft.entries()	
 					.section('human')
 					.limit(currentPerPage) 
-					.orderBy('dateOfDeath DESC, postDate DESC')
-				%}
-	{% endif %}
-	{% paginate currentList as currentQuery, humanEntries %}
-		{# Page Header #}
-		<section id="header" class="bg-white dark:bg-gray-900">
-			<div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6">
-				<div class="mx-auto max-w-screen-lg text-center mb-8 lg:mb-8">
-					<h1 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
-						{% if facilityID and searchFacility == 'true' %}
-							{{ facilityQuery.title }}
-							has lost  at least
-							<span class="font-extrabold">{{ currentQuery.total }}</span>
-							Human(s).
-						{% elseif entry.alternateHeadline %}
-							{{ entry.alternateHeadline }}<span class="font-extrabold">
-								{{ currentQuery.total }}</span>
-						{% else %}
-							{{ entry.title}}
-						{% endif %}
-					</h1>
-					{% if entry.note %}
-						<div class="max-w-screen-md mx-auto">
-							<p class="font-light text-gray-500 sm:text-xl lg:mb-8 dark:text-gray-400">{{ entry.note}}</p>
-							{% if searchFacility == 'false' and facilityID|length %}
-								<p class="font-light text-gray-500 sm:text-lg lg:mb-8 dark:text-gray-400">
-									Your facility search returned
-									<span class="font-medium">no results</span>
-									for ID:
-									{{facilityID}}. We are displaying all available Humans.
-								</p>
-							{% elseif paramPresent|length %}
-								<p class="font-light text-gray-500 sm:text-lg lg:mb-8 dark:text-gray-400">
-									Your facility search returned
-									<span class="font-medium">no results</span>
-									for ID:
-									{{facilityID}}. We are displaying all available Humans.
-								</p>
-							{% endif %}
-							{% if searchFacility == 'true' %}
-								<a href="{{entry.url}}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">Remove Facility Filter</a>
-
-							{% endif %}
-
-						</div>
+					.orderBy('dateOfStatus DESC, postDate DESC')
+				%}{% endif %}{% paginate currentList as currentQuery, humanEntries %}
+{# Page Header #}
+<section id="header" class="bg-white dark:bg-gray-900">
+	<div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6">
+		<div class="mx-auto max-w-screen-lg text-center mb-8 lg:mb-8">
+			<h1 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
+				{% if facilityID and searchFacility == 'true' %}
+					{{ facilityQuery.title }}
+					has lost  at least
+					<span class="font-extrabold">{{ currentQuery.total }}</span>
+					Human(s).
+				{% elseif entry.alternateHeadline %}
+					{{ entry.alternateHeadline }}<span class="font-extrabold">
+						{{ currentQuery.total }}</span>
+				{% else %}
+					{{ entry.title}}
+				{% endif %}
+			</h1>
+			{% if entry.note %}
+				<div class="max-w-screen-md mx-auto">
+					<p class="font-light text-gray-500 sm:text-xl lg:mb-8 dark:text-gray-400">{{ entry.note}}</p>
+					{% if searchFacility == 'false' and facilityID|length %}
+						<p class="font-light text-gray-500 sm:text-lg lg:mb-8 dark:text-gray-400">
+							Your facility search returned
+							<span class="font-medium">no results</span>
+							for ID:
+							{{facilityID}}. We are displaying all available Humans.
+						</p>
+					{% elseif paramPresent|length %}
+						<p class="font-light text-gray-500 sm:text-lg lg:mb-8 dark:text-gray-400">
+							Your facility search returned
+							<span class="font-medium">no results</span>
+							for ID:
+							{{facilityID}}. We are displaying all available Humans.
+						</p>
 					{% endif %}
-				</div>
-				{# Start - Human Cards #}
-		{% if currentList.count() > 0 %}
-				<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-					{% for human in humanEntries %}
-						{% include "_includes/_humanCard.twig" %}
-				</div>
-				{% endfor %}
-			</div>
-		</section>
-			{# START - PAGINATION #}
-				{% include "_includes/_pagination.twig" %}
-			{# END - PAGINATION #}
-			{% else %}
-						<div class="py-4 px-4 flex flex-col items-center">
-							<div class="flex flex-col items-center">
-								<div>
-									<p class="text-xl mb-4">No loss of human life has been reported by the community inside
-										<span class="font-medium">{{facilityQuery}}</span>
-										at this time.</p>
-								</div>
-								{% if contactOptions.email %}
-									<div class="py-4 px-4 flex flex-col items-center bg-slate-100">
-										<div class="mx-auto flex flex-col items-stretch	 justify-evenly max-w-2x">
-											<p class="text-xl my-4">
-												Did we miss someone?</p>
-											<a href="{{contactOptions.email}}" class="inline-flex items-center justify-center px-5 py-3 mb-4 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-												Let Us Know
-												<svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-												</svg>
-											</a>
-										</div>
-									</div>
-								{% endif %}
-							</div>
-						</div>
-					</div>
-				</section>
+					{% if searchFacility == 'true' %}
+						<a href="{{entry.url}}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">Remove Facility Filter</a>
 
-	{% endif %}
-{% endblock %}
-{% block footer %}
-	{{parent()}}
-{% endblock %}{% endblock %}
+					{% endif %}
+
+				</div>
+			{% endif %}
+		</div>
+		{# Start - Human Cards #}
+		{% if currentList.count() > 0 %}
+			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+				{% for human in humanEntries %}
+					{% include "_includes/_humanCard.twig" %}
+			{% endfor %}
+		</div>
+	</section>
+	{# START - PAGINATION #}
+	{% include "_includes/_pagination.twig" %}
+	{# END - PAGINATION #}
+{% else %}
+	<div class="py-4 px-4 flex flex-col items-center">
+		<div class="flex flex-col items-center">
+			<div>
+				<p class="text-xl mb-4">No loss of human life has been reported by the community inside
+					<span class="font-medium">{{facilityQuery}}</span>
+					at this time.</p>
+			</div>
+			{% if contactOptions.email %}
+				<div class="py-4 px-4 flex flex-col items-center bg-slate-100">
+					<div class="mx-auto flex flex-col items-stretch	 justify-evenly max-w-2x">
+						<p class="text-xl my-4">
+							Did we miss someone?</p>
+						<a href="{{contactOptions.email}}" class="inline-flex items-center justify-center px-5 py-3 mb-4 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+							Let Us Know
+							<svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div></section>{% endif %}{% endblock %}{% block footer %}{{parent()}}{% endblock %}{% endblock %}
+

@@ -9,9 +9,6 @@
 		{% endblock %}
 	</head>
 	<body>
-{% if entry is not defined %}
-	{% exit 404 %}
-{% endif %}
 
 		<main class="flex flex-col min-h-screen">	
 		{% block body %}

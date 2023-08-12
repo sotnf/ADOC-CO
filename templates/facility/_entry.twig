@@ -17,7 +17,7 @@
 					.section('human')
 					.relatedTo(currentFacility)
 					.limit(12) 
-					.orderBy('dateOfDeath DESC, postDate DESC')
+					.orderBy('dateOfStatus DESC, postDate DESC')
 			%}
 		{% endif %}
 		
@@ -162,11 +162,11 @@
 						</svg>
 					</a>
 					{% if currentList.count() > 0 %}
-						<a href="{{ siteUrl }}currentList/?facility={{ entry.id }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+						<a href="{{ siteUrl }}humans/?facility={{ entry.id }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
 							View {{ currentList.count() }} Human(s) Lost
 						</a>
 						{% else %}
-						<div href="{{ siteUrl }}humans/?facility={{ entry.id }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:focus:ring-gray-800">
+						<div href="{{ siteUrl }}currentList/?facility={{ entry.id }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:focus:ring-gray-800">
 							{{ currentList.count() }} Humans Lost
 						</div>
 						

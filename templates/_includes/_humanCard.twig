@@ -1,6 +1,6 @@
 {% set humanImage = human.photos.one() %}
 {% set humanAdocFacility = human.facility.one() %}
-{% set humanDOD = human.dateOfDeath %}
+{% set humanStatusDate = human.dateOfStatus %}
 {% set humanNote = human.note %}
 {% set humanAdocCOD = human.causeOfDeath.one() %}
 {% set humanAdocReports = human.reports.type('report') %}
@@ -65,14 +65,16 @@
 				<a class="underline text-m font-bold" href="{{ humanAdocFacility.url }}">{{ humanAdocFacility.title }}</a>
 			{% else %}
 				<SPAN class="text-sm">UNKNOWN</SPAN>
-			{% endif %}
+			{% endif %}	
 		</span>
 		<p class="my-2 font-light text-gray-500 dark:text-gray-400">
-			<strong>DOD:</strong>
-			{% if human.dateOfDeath %}
-				{{ human.dateOfDeath|date }}
+			<strong>Status: {% if human.humanStatus|length %}{{human.humanStatus}}{% else %}
+				Dead{% endif %}</strong>
+
+			{% if human.dateOfStatus %}
+				 ({{ human.dateOfStatus|date }})
 			{% else %}
-				<span class="text-sm">UNKNOWN</span>
+				<span class="text-sm">(UNKNOWN)</span>
 			{% endif %}
 		</p>
 		<p class="my-2 font-light text-gray-500 dark:text-gray-400">
@@ -84,7 +86,7 @@
 				<SPAN class="text-sm">UNKNOWN</SPAN>
 			{% endif %}
 		</p>
-		<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+		{# <p class="my-2 font-light text-gray-500 dark:text-gray-400">
 			<span class="font-medium">COD:
 			</span>
 			{% if humanAdocCOD %}
@@ -92,25 +94,14 @@
 			{% else %}
 				<SPAN class="text-sm">UNKNOWN</SPAN>
 			{% endif %}
-		</p>
-		<h3 class="my-2 text-xl text-gray-500 dark:text-gray-400 font-bold">Reports</h3>
+		</p> #}
 		{% if humanAdocReports|length %}
-			<ul class="ml-2">
-				{% for humanAdocReports in humanAdocReports %}
-					<li class="list-decimal">
-						{% set reportLink = humanAdocReports.reportLink %}
-						{% if reportLink %}
-							<a href="{{ reportLink }}" class="ml-2 mt-2 mb-1 underline font-light text-gray-500 dark:text-gray-400">{{ humanAdocReports.reportType.one().title }}
-							</a>
-						{% else %}
-							<span class="ml-2 mt-2 mb-1 font-light text-gray-500 dark:text-gray-400">{{ humanAdocReports.reportType.one().title }}</span>
-						{% endif %}
-					</li>
-				{% endfor %}
-			</ul>
-		{% else %}
-			<p class="ml-1 mt-2 mb-1 font-light text-gray-500 dark:text-gray-400">NONE</p>
-
+		
+			<a href="{{ humanUrl }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+				View {{humanAdocReports.count()}} Report(s)
+				</a>	
+			{% else %}
+			<p class="my-2 text-l text-gray-500 dark:text-gray-400"><strong>Reports:</strong> 0</p>
 		{% endif %}
-	</p>
+	</div>
 </div>

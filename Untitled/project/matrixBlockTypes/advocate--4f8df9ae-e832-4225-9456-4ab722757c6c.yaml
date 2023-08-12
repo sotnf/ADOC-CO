@@ -1,0 +1,191 @@
+field: 767004c4-3598-46a3-ad68-bdfb06930ab5 # Contacts
+fieldLayouts:
+  d3d41cfb-aafa-45c0-82cf-bac1cca2a5c8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ce477fbc-eb08-4203-9540-b206a59fe09d # First Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd9cdf83-54bb-421a-ad18-a17a12f7b157
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f6d97247-dc2b-4576-bb40-a61f43a7d835 # Last Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ef2bf66f-3304-41a3-87d8-42346c196503
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c9403425-dcc5-44fc-a5b9-73cf175adb5b # Nickname
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9ac0e4ac-52c9-4f1f-9f74-d03abf85231c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 563c0bfc-c323-44b4-864d-04e0a0bd573c # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3e52c175-c466-4b9e-a4a8-2d95da992679
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bc5220fc-108c-44de-8be3-a34801b4047d # Phone
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c3351a0-3e4c-484c-b5c2-da520c7558f9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: adced8d4-609c-4743-b767-79951d8febb2 # Website
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42bbbd1b-5007-4524-b8ff-bdc232b43b23
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 574a5e1a-97e5-4f78-8448-a6dcf07bd76a
+        userCondition: null
+fields:
+  563c0bfc-c323-44b4-864d-04e0a0bd573c: # Email
+    columnSuffix: lsvmwytr
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: email
+    instructions: null
+    name: Email
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - email
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  adced8d4-609c-4743-b767-79951d8febb2: # Website
+    columnSuffix: tsshkggf
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: website
+    instructions: null
+    name: Website
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  bc5220fc-108c-44de-8be3-a34801b4047d: # Phone
+    columnSuffix: icnfzkgw
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: phone
+    instructions: null
+    name: Phone
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - tel
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  c9403425-dcc5-44fc-a5b9-73cf175adb5b: # Nickname
+    columnSuffix: ixhmlzrp
+    contentColumnType: text
+    fieldGroup: null
+    handle: nickName
+    instructions: null
+    name: Nickname
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ce477fbc-eb08-4203-9540-b206a59fe09d: # First Name
+    columnSuffix: kqgyowjh
+    contentColumnType: text
+    fieldGroup: null
+    handle: firstName
+    instructions: null
+    name: 'First Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f6d97247-dc2b-4576-bb40-a61f43a7d835: # Last Name
+    columnSuffix: ngysncud
+    contentColumnType: text
+    fieldGroup: null
+    handle: lastName
+    instructions: null
+    name: 'Last Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: advocate
+name: Advocate
+sortOrder: 2

@@ -38,7 +38,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ee793429-f1dd-4b57-b39b-b6a9f04ed34f
+            uid: 660caf55-1830-4dc0-9d67-8da78f143682
             userCondition: null
             warning: null
             width: 100
@@ -50,7 +50,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9932c465-84d5-46bb-9662-44d964754ef1
+            uid: d8fea5de-ca8f-47f0-85b0-f74b2c944079
             userCondition: null
             warning: null
             width: 100
@@ -62,30 +62,30 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e433232d-5680-4087-89c2-b916912eed84
+            uid: 00ce2528-7c05-4527-9fe4-37287c58a6a3
             userCondition: null
             warning: null
             width: 100
         name: Hero
-        uid: d4c443cf-bb1a-4e12-afce-f468334e08c0
+        uid: 20af5ace-c877-462d-ba57-288cff3f3691
         userCondition: null
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 53ea8e22-cc1f-4aaa-a8f5-586d3186f97d # Content Builder
+            fieldUid: 6b9cc9c1-225b-4adf-acb3-2d09c950592d # Content Builder
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 527392bb-57f3-4ac7-b010-93f2a9cf650e
+            uid: 2b9a0f51-221e-4f68-8243-2044166f22b2
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 20af5ace-c877-462d-ba57-288cff3f3691
+        uid: a2bac9ee-25b9-4c2d-9e98-9da818b35a3c
         userCondition: null
 handle: homepage
 hasTitleField: false

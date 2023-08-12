@@ -1,0 +1,96 @@
+field: 91c6f07a-7f7f-45a4-85ac-d2ea458da892 # Link Builder
+fieldLayouts:
+  e454b5ec-1b6a-4e80-a2d0-b779211a25cf:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1dc52e8-cf04-4a01-9bb9-13760ded72e0 # Alternate Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 82883b31-707c-4290-aa09-7790503e39b4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 08d9a170-a244-494d-9f6b-43f3f973d6e0 # Entry
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e6e98969-be52-4c89-8787-cf6103826553
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f7e6d7b6-5132-400e-9c4c-3586800e2841
+        userCondition: null
+fields:
+  08d9a170-a244-494d-9f6b-43f3f973d6e0: # Entry
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entry
+    instructions: null
+    name: Entry
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
+      showSiteMenu: false
+      sources:
+        - 'section:0b837dae-5965-4957-abf2-903eccda8b7b' # Facility
+        - 'section:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans
+        - singles
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  c1dc52e8-cf04-4a01-9bb9-13760ded72e0: # Alternate Title
+    columnSuffix: thulbjuw
+    contentColumnType: text
+    fieldGroup: null
+    handle: alternateTitle
+    instructions: null
+    name: 'Alternate Title'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: buttonEntry
+name: 'Button Entry'
+sortOrder: 3

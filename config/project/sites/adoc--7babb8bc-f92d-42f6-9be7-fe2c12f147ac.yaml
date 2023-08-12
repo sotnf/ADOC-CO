@@ -1,9 +1,9 @@
-baseUrl: $ADOC_SITE_URL
-enabled: '1'
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
 handle: adoc
 hasUrls: true
 language: en-US
 name: adoc-co
-primary: false
-siteGroup: 1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094 # Main
+primary: true
+siteGroup: 1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094 # adoc-co
 sortOrder: 1

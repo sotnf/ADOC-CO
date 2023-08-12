@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: causeOfDeath
+name: 'Cause of Death'
+propagationMethod: all
+siteSettings:
+  7babb8bc-f92d-42f6-9be7-fe2c12f147ac: # adoc-co
+    enabledByDefault: true
+    hasUrls: true
+    template: cause-of-death/_entry
+    uriFormat: 'cause-of-death/{slug}'
+type: channel

@@ -1,0 +1,19 @@
+columnSuffix: zdzveobl
+contentColumnType: text
+fieldGroup: cbe20d08-1e17-4b90-83f6-66c02103f74f # Address
+handle: state
+instructions: null
+name: State
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: Alabama
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

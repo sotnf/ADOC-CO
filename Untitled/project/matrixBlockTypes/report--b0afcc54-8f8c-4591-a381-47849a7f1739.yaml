@@ -1,0 +1,89 @@
+field: f7dd2378-fc93-4bf2-bd9d-e26856ca790e # Reports
+fieldLayouts:
+  f85d054f-e387-4047-a874-5f784e3c4ace:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 42f1b941-3332-420b-9ee9-38792ce458c1 # Report Type
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 023c8a7b-5733-4ce2-9fb2-c86c5e652991
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fb009506-1583-43fb-b530-a30d8c2d523f # Report Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5d9329a-91c9-4af4-be16-75a1a11553c6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f970be1c-ea89-4f3d-9764-681e6d6ff342
+        userCondition: null
+fields:
+  42f1b941-3332-420b-9ee9-38792ce458c1: # Report Type
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: reportType
+    instructions: null
+    name: 'Report Type'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'How did we find out?'
+      showSiteMenu: true
+      sources:
+        - 'section:7e4960eb-d761-4dfa-b93d-58db38369abd' # Report Type
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  fb009506-1583-43fb-b530-a30d8c2d523f: # Report Link
+    columnSuffix: zoqyxlrl
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: reportLink
+    instructions: null
+    name: 'Report Link'
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: report
+name: Report
+sortOrder: 1

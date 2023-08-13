@@ -1,15 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
-handle: socialMedia
-name: 'Social Media'
-propagationMethod: none
+handle: callToAction
+name: 'Call to Action'
+propagationMethod: all
 siteSettings:
   7babb8bc-f92d-42f6-9be7-fe2c12f147ac: # adoc-co
-    enabledByDefault: true
-    hasUrls: false
-    template: null
-    uriFormat: null
-  b681b236-e7a0-4b70-9831-cd91e74e516f:
     enabledByDefault: true
     hasUrls: false
     template: null

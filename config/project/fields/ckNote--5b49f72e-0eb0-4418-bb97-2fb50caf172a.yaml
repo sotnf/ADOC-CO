@@ -10,7 +10,7 @@ settings:
   availableVolumes: '*'
   ckeConfig: 94d54b14-300e-4fb9-bd82-3dd86d4fffb0 # Enhanced Note
   columnType: text
-  defaultTransform: 883ceb06-d923-4375-87ff-d2b0da252179 # 300x200 Crop
+  defaultTransform: 883ceb06-d923-4375-87ff-d2b0da252179
   enableSourceEditingForNonAdmins: false
   purifierConfig: null
   purifyHtml: true

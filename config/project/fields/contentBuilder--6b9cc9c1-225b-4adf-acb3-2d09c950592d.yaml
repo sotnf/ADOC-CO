@@ -8,7 +8,7 @@ searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
-  ckeConfig: d4091260-2611-458d-b5d5-55c79aa86a96 # Content Builder
+  ckeConfig: d4091260-2611-458d-b5d5-55c79aa86a96
   columnType: text
   defaultTransform: null
   enableSourceEditingForNonAdmins: false

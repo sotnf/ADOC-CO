@@ -15,11 +15,12 @@ return GeneralConfig::create()
     // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
     ->defaultWeekStartDay(1)
     // Prevent generated URLs from including "index.php"
-    ->omitScriptNameInUrls()
+    ->omitScriptNameInUrls(true)
     // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
+    ->pathParam(null)
 
-    //->devMode(App::env('DEV_MODE') ?? false)
-    ->devMode(false)
+    ->devMode(App::env('DEV_MODE') ?? false)
+    // ->devMode(true)
 
     // Preload Single entries as Twig variables
     ->preloadSingles()
@@ -31,7 +32,7 @@ return GeneralConfig::create()
         '@primarySiteUrl' => getenv('PRIMARY_SITE_URL'),
         '@web' => App::env('PRIMARY_SITE_URL'),
         '@webroot' => App::env('BASE_PATH'),
-        '@webADOC' => App::env('PRIMARY_SITE_URL'),
+        '@webADOC' => App::env('ADOC_SITE_URL'),
         ])
-
+    ->testToEmailAddress('jared+crafttest@sotnf.com')
 ;

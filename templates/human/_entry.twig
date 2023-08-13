@@ -45,11 +45,10 @@
 						.relatedTo(human)
 						.one() %}
 					{% if callToActionEntries|length > 0 %}
-					<div class="max-w-2xl w-full p-4 bg-red-100 rounded-md flex-col justify-center items-start gap-3 inline-flex">
+					<div class="max-w-2xl w-full mb-2 p-4 bg-red-100 rounded-md flex-col justify-center items-start gap-3 inline-flex">
 						<div class="flex-col justify-start items-start gap-1.5 flex">
 							<div class="self-stretch justify-start items-center gap-2 inline-flex">
-								<div class="relative"></div>
-								<div class="grow shrink basis-0 text-red-700 text-base font-semibold leading-normal">Public Help Needed</div>
+								<div class="grow shrink basis-0 text-red-800 text-base font-semibold leading-normal">Public Help Needed</div>
 								<div class="w-5 h-5 relative"></div>
 							</div>
 							<div class="text-red-800 text-sm font-normal leading-[21px] pb-2">Status Date: {{callToActionEntries.dateOfStatus | date("Y-m-d") }}</div>
@@ -89,24 +88,20 @@
 								<SPAN class="text-sm">UNKNOWN</SPAN>
 							{% endif %}
 						</span>
+						{% if humanNote %}
 						<p class="my-2 font-light text-gray-500 dark:text-gray-400">
 							<span class="font-medium">Details:
 							</span>
-							{% if humanNote %}
 								{{humanNote}}
-							{% else %}
-								<SPAN class="text-sm">UNKNOWN</SPAN>
-							{% endif %}
 						</p>
+						{% endif %}
+						{% if humanAdocCOD %}
 						<p class="my-2 font-light text-gray-500 dark:text-gray-400">
 							<span class="font-medium">COD:
 							</span>
-							{% if humanAdocCOD %}
 								{{humanAdocCOD}}
-							{% else %}
-								<SPAN class="text-sm">UNKNOWN</SPAN>
-							{% endif %}
 						</p>
+						{% endif %}
 
 
 						{% if humanAdocReports|length %}

@@ -1,0 +1,14 @@
+headingLevels:
+  - 2
+  - 3
+  - 4
+name: 'Enhanced Note'
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - underline
+  - strikethrough
+  - link
+  - horizontalLine

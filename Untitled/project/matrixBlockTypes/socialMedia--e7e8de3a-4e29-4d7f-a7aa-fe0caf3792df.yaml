@@ -1,0 +1,61 @@
+field: 91c6f07a-7f7f-45a4-85ac-d2ea458da892 # Link Builder
+fieldLayouts:
+  65167857-46af-4fe0-bf23-bae72ffba5d7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f0a5a36a-d66e-4168-84a1-eb0d58dba3da # Entries
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de837177-cc0d-4a74-b2f2-dc0566253321
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5274540a-1e33-4dbe-8ff9-3324d34ff5ea
+        userCondition: null
+fields:
+  f0a5a36a-d66e-4168-84a1-eb0d58dba3da: # Entries
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entries
+    instructions: null
+    name: Entries
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: 1
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Link a Profile'
+      showSiteMenu: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: socialMedia
+name: 'Social Media'
+sortOrder: 4

@@ -1,0 +1,75 @@
+field: 91c6f07a-7f7f-45a4-85ac-d2ea458da892 # Link Builder
+fieldLayouts:
+  c660600c-841c-454e-aa5c-32449931a0a7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f5000937-8c06-4b27-88a3-4e55809b1497 # Button Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e325d0c9-ad3c-41d7-8e96-c4b59e948a9d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 70e8107c-4cfe-4296-81cb-60ea04da6dd3 # Button URL
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd9f8f97-3a66-400c-8380-12ae85dc46ff
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e268dc16-e0d2-439c-ad40-752cc85f9cdd
+        userCondition: null
+fields:
+  70e8107c-4cfe-4296-81cb-60ea04da6dd3: # Button URL
+    columnSuffix: gpyqnubq
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: buttonUrl
+    instructions: null
+    name: 'Button URL'
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - url
+        - tel
+        - email
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Url
+  f5000937-8c06-4b27-88a3-4e55809b1497: # Button Text
+    columnSuffix: qnzfvyma
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonText
+    instructions: null
+    name: 'Button Text'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: buttonUrl
+name: 'Button URL'
+sortOrder: 2

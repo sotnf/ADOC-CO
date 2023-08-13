@@ -6,10 +6,9 @@
 /src
 license.key
 /.ddev
-/config
 /dist
 /node_modules
 /src
 /vendor
 /storage
-/web/assets/uploads/transforms
+/web/assets/uploads/_transforms

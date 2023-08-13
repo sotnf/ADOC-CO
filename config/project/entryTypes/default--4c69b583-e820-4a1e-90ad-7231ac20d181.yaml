@@ -1,0 +1,79 @@
+fieldLayouts:
+  ff7ea34a-0766-41a0-b322-c3636ca155e7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ff4d4bd6-d954-43a6-9fbd-83e1750c5478
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b60e3c63-a6f2-44c9-9561-79ef35de673a # Associate Human
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 522ed650-364c-40c0-8bde-3ca68faf22d0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 208f9b3c-0d64-40df-8ac3-bb5d65015616 # Date of Status
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 89e5a910-6518-4a47-a81f-9e6fe2e610cf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3df31a47-abd9-48f5-b236-0d7178731bfb # Note
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c7d4423e-4734-42aa-b756-4f2d25033df5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 93010df4-31e0-48a6-b7d0-e3d3f97cbd00
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 0f2073bd-978b-45da-ada7-652d44935585 # Call to Action
+sortOrder: 1
+titleFormat: '{associateHuman}-{dateOfStatus}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

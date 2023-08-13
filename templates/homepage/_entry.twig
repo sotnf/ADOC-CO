@@ -1,12 +1,1 @@
 {% extends "index.twig" %}
-
-{% block head %}
-    <title>{{ entry.title }}</title>
-    <meta content="{{entry.title}} HEAD content">
-	<div>{{parent()}}</div>
-{% endblock %}
-
-{% block body %}
-{{parent()}}
-{% endblock %}
-

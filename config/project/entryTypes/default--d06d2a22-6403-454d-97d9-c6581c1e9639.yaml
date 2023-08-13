@@ -44,6 +44,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 03db330d-c8e0-43d8-b1df-b19441140d21 # Nick Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 55673592-d225-454f-8650-c12f2e4503d8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 6e2fc37c-e5a0-49f2-b595-2a3789708767 # Middle Name
             instructions: null
             label: null
@@ -68,7 +80,32 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 208f9b3c-0d64-40df-8ac3-bb5d65015616 # Date of Death
+            fieldUid: 460b4205-a4fb-4e32-9637-14b9549e10e5 # Status
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 96b30df3-c6d8-4968-907c-ed48667e7c76
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 460b4205-a4fb-4e32-9637-14b9549e10e5 # Status
+                  operator: in
+                  uid: a1d04fd1-2b8f-4aac-8c97-81887ca9920b
+                  values:
+                    - dead
+                    - segregated
+                    - released
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 208f9b3c-0d64-40df-8ac3-bb5d65015616 # Date of Status
             instructions: null
             label: null
             required: false
@@ -80,25 +117,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 08d0c3ed-94bf-4311-a7a5-c99f216a0217 # Photo(s)
+            fieldUid: 5b49f72e-0eb0-4418-bb97-2fb50caf172a # Note+
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 31aace13-cd91-44cd-921d-4a4a28cc5387
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 03db330d-c8e0-43d8-b1df-b19441140d21 # Nick Name
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 55673592-d225-454f-8650-c12f2e4503d8
+            uid: c992a494-b3e0-4270-9dc8-15ba3f9996dd
             userCondition: null
             warning: null
             width: 100
@@ -111,6 +136,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 36aeb2f1-73b3-40b5-b058-301a01da62df
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 08d0c3ed-94bf-4311-a7a5-c99f216a0217 # Photo(s)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31aace13-cd91-44cd-921d-4a4a28cc5387
             userCondition: null
             warning: null
             width: 100

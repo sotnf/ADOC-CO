@@ -1,4 +1,4 @@
-name: ADOC-CO
+name: SOTNF
 type: craftcms
 docroot: web
 php_version: "8.0"
@@ -6,7 +6,9 @@ webserver_type: apache-fpm
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
-additional_hostnames: []
+additional_hostnames: 
+  - "adoc-co"
+  - "jaredbudlong"
 additional_fqdns: []
 database:
   type: mysql

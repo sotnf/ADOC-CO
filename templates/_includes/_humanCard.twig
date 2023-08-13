@@ -1,0 +1,123 @@
+{% set humanImage = human.photos.one() %}
+{% set humanAdocFacility = human.facility.one() %}
+{% set humanStatusDate = human.dateOfStatus %}
+{% set humanNote = human.note %}
+{% set humanAdocCOD = human.causeOfDeath.one() %}
+{% set humanAdocReports = human.reports.type('report') %}
+{% set humanUrl = human.url %}
+{% set firstNFC = human.firstName | slice(0, 1) %}
+{% set lastNFC = human.lastName | slice(0, 1) %}
+{% set name = "" %}
+{% if human.lastName %}
+	    {% set name = human.lastName %}
+    {% endif %}
+{% if human.firstName %}
+	    {% set name = name ~ ", " ~ human.firstName %}
+    {% endif %}
+{% if human.nickName %}
+	    {% set name = name ~ " \"" ~ human.nickName ~ "\"" %}
+    {% endif %}
+
+
+{% set callToActionEntries = craft.entries.section('callToAction')
+	.relatedTo(human)
+	.one() %}
+
+
+<div id="card-{{ loop.index }}" class="flex-grow-0 h-auto bg-slate-100 rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+{% if callToActionEntries|length > 0 %}
+	<a id="card--image" href="{{ human.url }}" class="absolute">
+		<div id="ctaBadge" class="w-full bg-red-800 text-red-100 m-2 text-sm font-medium mr-2 px-2.5 py-0.5 rounded text-center ">Urgent Public Help Needed</div>
+	</a>
+{% endif %}
+
+
+    {% if humanImage %}
+        {% do humanImage.setTransform('crop300x200') %}
+
+
+        <div class="p-4 h-[45%] max-h-48 w-full rounded-lg overflow-hidden">
+            <a id="card--image" href="{{ human.url }}">
+                <img src="{{ humanImage.url | raw }}" width="100%" alt="{{ humanImage.title }}">
+            </a>
+        </div>
+    {% else %}
+        <div class="p-4 h-[45%] max-h-48 w-full rounded-lg overflow-hidden">
+			<div class="py-8 h-full w-full relative inline-flex items-center justify-center">
+				<div class="absolute bg-white  inset-0 z-0 opacity-10">
+					<img src="{{ siteUrl }}assets/uploads/adoc_images/Humans/barbed-wire-g55336ea27_1920-1.jpg" width="100%" alt="Background Image">
+				</div>
+				<div class="relative inline-flex items-center justify-center w-24 h-24 overflow-hidden bg-gray-400 rounded-full dark:bg-gray-600">
+					<span class="font-medium text-2xl text-gray-600 dark:text-gray-300">
+						{{ firstNFC }}{{ lastNFC }}
+					</span>
+				</div>
+			</div>
+		</div>
+
+    {% endif %}
+    <div class="px-5 pb-5 h-auto pt-4">
+
+		{% if name %}
+			<h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+				<a href="{{ human.url }}">{{ name }}</a>
+			</h2>
+		{% endif %}
+
+		<p class="my-1 text-lg text-gray-500">
+			<strong>AIS#
+			</strong>
+			{% if human.ais %}
+				{{human.ais}}
+			{% else %}
+				<SPAN class="text-sm">UNKNOWN</SPAN>
+			{% endif %}
+		</p>
+		<span class="text-gray-500 text-lg">
+			<strong>Facility:
+			</strong>
+			{% if humanAdocFacility %}
+				<a class="underline text-m font-bold" href="{{ humanAdocFacility.url }}">{{ humanAdocFacility.title }}</a>
+			{% else %}
+				<SPAN class="text-sm">UNKNOWN</SPAN>
+			{% endif %}	
+		</span>
+		<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+			<strong>Status: {% if human.humanStatus|length %}{{human.humanStatus}}{% else %}
+				Dead{% endif %}</strong>
+
+			{% if human.dateOfStatus %}
+				 ({{ human.dateOfStatus|date }})
+			{% else %}
+				<span class="text-sm">(UNKNOWN)</span>
+			{% endif %}
+		</p>
+		<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+			<span class="font-medium">Details:
+			</span>
+			{% if humanNote %}
+				{{humanNote}}
+			{% else %}
+				<SPAN class="text-sm">UNKNOWN</SPAN>
+			{% endif %}
+		</p>
+		{# <p class="my-2 font-light text-gray-500 dark:text-gray-400">
+			<span class="font-medium">COD:
+			</span>
+			{% if humanAdocCOD %}
+				{{humanAdocCOD}}
+			{% else %}
+				<SPAN class="text-sm">UNKNOWN</SPAN>
+			{% endif %}
+		</p> #}
+		{% if humanAdocReports|length %}
+		
+			<a href="{{ humanUrl }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+				View {{humanAdocReports.count()}} Report(s)
+				</a>	
+			{% else %}
+			<p class="my-2 text-l text-gray-500 dark:text-gray-400"><strong>Reports:</strong> 0</p>
+		{% endif %}
+	</div>
+</div>

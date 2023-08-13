@@ -1,0 +1,11 @@
+fill: null
+format: null
+handle: crop300x200
+height: 200
+interlace: none
+mode: crop
+name: '300x200 Crop'
+position: center-center
+quality: null
+upscale: false
+width: 300

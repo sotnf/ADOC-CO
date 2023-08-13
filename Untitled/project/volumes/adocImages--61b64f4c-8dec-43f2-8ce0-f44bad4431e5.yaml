@@ -1,0 +1,43 @@
+fieldLayouts:
+  b4271ecd-3dfc-4304-a223-de6bfe89875c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: da7743d7-a5b3-432b-ae50-8cdf968c3140
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fdbd60b5-833c-4c4c-b3ed-ff77190c4f0a
+        userCondition: null
+fs: adocImages
+handle: adocImages
+name: 'ADOC Images'
+sortOrder: 2
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: _transforms

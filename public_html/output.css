@@ -494,10 +494,6 @@ a:hover {
   text-underline-offset: 4px;
 }
 
-img {
-  margin-bottom: 1rem;
-}
-
 /* ... */
 
 *, ::before, ::after {

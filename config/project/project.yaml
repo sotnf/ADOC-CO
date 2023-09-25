@@ -1,4 +1,4 @@
-dateModified: 1691906117
+dateModified: 1695659557
 elementSources:
   craft\elements\Entry:
     -
@@ -83,7 +83,7 @@ elementSources:
       type: native
 email:
   fromEmail: noreply@sotnf.com
-  fromName: SOTNF
+  fromName: $SITE_NAME
   replyToEmail: info@sotnf.com
   template: ''
   transportSettings:
@@ -118,7 +118,7 @@ meta:
     0b837dae-5965-4957-abf2-903eccda8b7b: Facility # Facility
     0f2073bd-978b-45da-ada7-652d44935585: 'Call to Action' # Call to Action
     1bafe2ee-068d-459e-b936-f6fba061fcc4: 'Last Name' # Last Name
-    1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094: Main # Main
+    1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094: Default # Default
     1c7c1479-2d25-459a-9ed8-a59a16211c72: Default # Default
     1c51896d-9e91-4685-9966-68859ac11b02: Default # Default
     1d74b11d-7ab2-4b65-97b3-48023ed39f23: crop450 # crop450
@@ -238,6 +238,7 @@ meta:
     f3880a1b-da42-49af-98fc-a3c6da5f1c7e: Facility # Facility
     f5000937-8c06-4b27-88a3-4e55809b1497: 'Button Text' # Button Text
     fb009506-1583-43fb-b530-a30d8c2d523f: 'Report Link' # Report Link
+    fdfd1717-9330-4a15-8f19-e15b694a8f51: sotnf # sotnf
     feeca86c-3550-4c62-b56c-e92a62145656: Links # Links
 plugins:
   ckeditor:

@@ -8,6 +8,7 @@
 	<article class="xl:flex-grow self-center">
 
 		{% set humanImage = entry.photos.one() %}
+		{% set humanImages = entry.photos.all()|filter(image => image.id != humanImage.id) %}
 		{% set humanAdocFacility = entry.facility.one() %}
 		{% set humanDOD = entry.dateOfStatus %}
 		{% set humanNote = entry.note %}
@@ -54,6 +55,23 @@
 							<div class="text-red-800 text-sm font-normal leading-[21px] pb-2">Status Date: {{callToActionEntries.dateOfStatus | date("Y-m-d") }}</div>
 							<div class="text-red-800 text-sm font-normal leading-[21px]">{{callToActionEntries.note}}</div>
 							
+							{% if humanImages %}
+				
+				
+					<section id="gallery" class="max-w-6l px-4">
+
+						<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+						{% for humanImage in humanImages %}
+							{% do humanImage.setTransform('crop450') %}
+							<div>
+								<img class="h-auto max-w-full rounded-lg" src="{{ humanImage.url }}" width="{{ humanImage.width }}" height="{{ humanImage.height }}" alt="{{ humanImage.title }}">
+							</div>
+							
+							{% endfor %}
+						</div>
+
+					</section>
+				{% endif %}
 
 						</div>
 						{% if humanAdocFacility|length %}
@@ -140,8 +158,10 @@
 						<img class="p-4 aspect-[450/450] rounded-lg border-2" src="{{ humanImage.url }}" width="{{ humanImage.width }}" height="{{ humanImage.height }}" alt="{{ humanImage.title }}">
 					</div>
 				{% endif %}
+				
 			</div>
 		</section>
+		
 	</article>
 {% endblock %}
 {% block footer %}

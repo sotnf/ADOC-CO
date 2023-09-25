@@ -35,4 +35,5 @@ return GeneralConfig::create()
         '@webADOC' => App::env('ADOC_SITE_URL'),
         ])
     ->testToEmailAddress('jared+crafttest@sotnf.com')
+
 ;

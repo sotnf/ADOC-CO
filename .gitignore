@@ -11,7 +11,7 @@ license.key
 /src
 /vendor
 /storage
-/web/assets/uploads/transforms
 /web/cpresources
+/web/assets/uploads/transforms
 /public_html/cpresources
 /public_html/assets/uploads/transforms

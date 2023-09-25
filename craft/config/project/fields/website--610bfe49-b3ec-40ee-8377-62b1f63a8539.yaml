@@ -1,0 +1,14 @@
+columnSuffix: cdjcutrv
+contentColumnType: string(255)
+fieldGroup: 4cda9b6f-f2fa-44ce-bc23-2c1b24cc4b1d # Common
+handle: website
+instructions: null
+name: Website
+searchable: true
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

@@ -1,22 +1,27 @@
 name: ADOC-CO
 type: craftcms
-docroot: web
+docroot: public_html
 php_version: "8.0"
 webserver_type: apache-fpm
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
-additional_hostnames: []
+additional_hostnames:
+    - jaredbudlong
+    - sotnf
 additional_fqdns: []
 database:
-  type: mysql
-  version: "5.7"
+    type: mysql
+    version: "5.7"
 nfs_mount_enabled: false
 mutagen_enabled: false
 upload_dir: assets/uploads
 use_dns_when_possible: true
 composer_version: "2"
-web_environment: []
+web_environment:
+    - CRAFT_CMD_ROOT=./craft
+    - BASE_PATH=/var/www/html/public_html/
+    - PRIMARY_SITE_URL=${DDEV_PRIMARY_URL}
 nodejs_version: "16"
 
 # Key features of ddev's config.yaml:

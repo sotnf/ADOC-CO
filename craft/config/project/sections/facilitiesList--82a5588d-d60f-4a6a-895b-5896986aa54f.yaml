@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: facilitiesList
+name: 'Facilities List'
+propagationMethod: all
+siteSettings:
+  7babb8bc-f92d-42f6-9be7-fe2c12f147ac: # adoc-co
+    enabledByDefault: true
+    hasUrls: true
+    template: facility/_list.twig
+    uriFormat: facilities
+type: single

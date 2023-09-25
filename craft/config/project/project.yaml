@@ -1,0 +1,179 @@
+dateModified: 1695663677
+elementSources:
+  craft\elements\Entry:
+    -
+      key: '*'
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      key: 'section:4118eb52-3c43-406c-bf9f-01c4542c8331' # Cause of Death
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:0b837dae-5965-4957-abf2-903eccda8b7b' # Facility
+      tableAttributes:
+        - postDate
+        - dateUpdated
+        - slug
+        - 'field:610bfe49-b3ec-40ee-8377-62b1f63a8539' # Website
+        - 'field:618ad16d-5035-4fbe-967a-2caf444256d9' # Email
+        - 'field:9b543804-c719-40ae-9f99-ca7356950124' # Address 1
+        - 'field:5710c8e1-8eb6-40ef-b0c7-5d0a27828c4e' # City
+        - 'field:22cd2e0e-1a9e-49f6-9a72-31a17bbc6b27' # State
+        - 'field:4064d00f-1ded-45d2-9032-e6385e7bdc36' # ZIP
+        - 'field:3df31a47-abd9-48f5-b236-0d7178731bfb' # Note
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans
+      tableAttributes:
+        - 'field:18f58c1c-5fe3-4755-b144-58ecd20650e3' # AIS#
+        - postDate
+        - dateUpdated
+        - 'field:3df31a47-abd9-48f5-b236-0d7178731bfb' # Note
+        - 'field:f3880a1b-da42-49af-98fc-a3c6da5f1c7e' # Facility
+        - 'field:cccb7bc7-0136-4564-86ca-5da3adfb5f88' # Cause of Death
+        - link
+      type: native
+    -
+      key: 'section:7e4960eb-d761-4dfa-b93d-58db38369abd' # Report Type
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:2016e348-9fd6-4b38-83b2-8257ad98ee78' # Navigation
+      tableAttributes:
+        - postDate
+        - type
+        - dateUpdated
+        - 'field:05fd0cd6-a8af-4734-90bf-6131cbedfbe1' # Internal Link
+        - 'field:610bfe49-b3ec-40ee-8377-62b1f63a8539' # Website
+        - link
+      type: native
+email:
+  fromEmail: jared@sotnf.com
+  fromName: adoc-co
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/assets/uploads'
+    type: craft\fs\Local
+    url: '@PrimarySiteUrl/assets/uploads/'
+  thumbnails:
+    hasUrls: true
+    name: Thumbnails
+    settings:
+      path: $DDEV_FILES_DIR
+    type: craft\fs\Local
+    url: '@primarySiteUrl/assets/transforms'
+meta:
+  __names__:
+    0b837dae-5965-4957-abf2-903eccda8b7b: Facility # Facility
+    1bafe2ee-068d-459e-b936-f6fba061fcc4: 'Last Name' # Last Name
+    1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094: Main # Main
+    1c7c1479-2d25-459a-9ed8-a59a16211c72: Default # Default
+    3ab0260c-3549-45c5-910d-d432011521f1: Email # Email
+    03db330d-c8e0-43d8-b1df-b19441140d21: 'Nick Name' # Nick Name
+    03ddb5c9-2334-459c-b398-ce8845bca7d2: 'Human Thumbnail' # Human Thumbnail
+    3df31a47-abd9-48f5-b236-0d7178731bfb: Note # Note
+    4cda9b6f-f2fa-44ce-bc23-2c1b24cc4b1d: Common # Common
+    4f8df9ae-e832-4225-9456-4ab722757c6c: Advocate # Advocate
+    5d8a0be5-824b-40ba-8e7d-25573f254bd5: 'Address 2' # Address 2
+    05fd0cd6-a8af-4734-90bf-6131cbedfbe1: 'Internal Link' # Internal Link
+    6bc9b592-26cf-436d-a594-9e321e2334d6: 'Public Schema' # Public Schema
+    6e2fc37c-e5a0-49f2-b595-2a3789708767: 'Middle Name' # Middle Name
+    7babb8bc-f92d-42f6-9be7-fe2c12f147ac: adoc-co # adoc-co
+    7d3ad6ba-4819-4bba-ad5a-0ea7eba95175: Phone # Phone
+    7e71c490-a737-4e05-b51e-5a9c0c3c3abd: 'Jared Budlong' # Jared Budlong
+    7e4960eb-d761-4dfa-b93d-58db38369abd: 'Report Type' # Report Type
+    08d0c3ed-94bf-4311-a7a5-c99f216a0217: Photo(s) # Photo(s)
+    9b543804-c719-40ae-9f99-ca7356950124: 'Address 1' # Address 1
+    9d1171fc-9c98-4610-988a-dc9d91b86151: 'Last Name' # Last Name
+    18f58c1c-5fe3-4755-b144-58ecd20650e3: 'AIS#' # AIS#
+    19a6fa2e-899b-4c96-a230-0f486ae0295b: 'Humans List' # Humans List
+    22cd2e0e-1a9e-49f6-9a72-31a17bbc6b27: State # State
+    22db129c-9898-4b4c-8f3c-9c5b73089d90: 'First Name' # First Name
+    42f1b941-3332-420b-9ee9-38792ce458c1: 'Report Type' # Report Type
+    53d0b91e-8add-4ac6-89a0-d53e998fa5ce: 'First Name' # First Name
+    82a5588d-d60f-4a6a-895b-5896986aa54f: 'Facilities List' # Facilities List
+    83ab8938-f287-4a0d-9365-f010ed540e4d: Humans # Humans
+    83e8d49f-8f26-4eeb-851e-e997ee1b92cc: 'Contact Options' # Contact Options
+    89f7002a-a51c-4109-bde3-60f37881945a: Default # Default
+    180a6f6d-ba8c-4567-97e5-4a0dcc491507: Phone # Phone
+    208f9b3c-0d64-40df-8ac3-bb5d65015616: 'Date of Death' # Date of Death
+    260e937f-426c-4da5-b2d4-260e4c279ebf: Facilities # Facilities
+    323be661-9ee7-4f57-976a-4a5032821248: Homepage # Homepage
+    563c0bfc-c323-44b4-864d-04e0a0bd573c: Email # Email
+    610bfe49-b3ec-40ee-8377-62b1f63a8539: Website # Website
+    618ad16d-5035-4fbe-967a-2caf444256d9: Email # Email
+    2016e348-9fd6-4b38-83b2-8257ad98ee78: Navigation # Navigation
+    4064d00f-1ded-45d2-9032-e6385e7bdc36: ZIP # ZIP
+    4118eb52-3c43-406c-bf9f-01c4542c8331: 'Cause of Death' # Cause of Death
+    5710c8e1-8eb6-40ef-b0c7-5d0a27828c4e: City # City
+    767004c4-3598-46a3-ad68-bdfb06930ab5: Contacts # Contacts
+    59884906-b9a5-4c4e-95b4-6a861d2af939: Warden # Warden
+    adced8d4-609c-4743-b767-79951d8febb2: Website # Website
+    b0afcc54-8f8c-4591-a381-47849a7f1739: Report # Report
+    b36b4142-8b37-464c-b6f7-153c434b90c6: 'Last Name' # Last Name
+    baef7271-cefd-4dab-8b7a-6fde35a5c8cb: Default # Default
+    bc5220fc-108c-44de-8be3-a34801b4047d: Phone # Phone
+    c506c8b9-2ee8-49d6-8734-615445bf46b1: 'Alternate Headline' # Alternate Headline
+    c2553642-988b-4223-9fd2-37d5d996a02d: 'Facilities List' # Facilities List
+    c9403425-dcc5-44fc-a5b9-73cf175adb5b: Nickname # Nickname
+    cbe20d08-1e17-4b90-83f6-66c02103f74f: Address # Address
+    cccb7bc7-0136-4564-86ca-5da3adfb5f88: 'Cause of Death' # Cause of Death
+    ce477fbc-eb08-4203-9540-b206a59fe09d: 'First Name' # First Name
+    d06d2a22-6403-454d-97d9-c6581c1e9639: Default # Default
+    d3c9ee5b-6826-4dd6-8ae6-b12ecd483794: Email # Email
+    da98bab4-69f8-4168-b0bb-18e3b1405043: 'First Name' # First Name
+    deacb3ec-310f-4577-9d5d-933ea4b08178: Phone # Phone
+    e5affbb1-ce5b-4a8f-a04c-b64edca2e94e: Homepage # Homepage
+    e54fbb1c-4ada-45eb-85b1-5ff583ee3d8a: 'Public Schema' # Public Schema
+    e170055a-d66a-4ff3-ae78-b62e4de3fe25: Images # Images
+    ea2140bf-a65e-4e8f-9a7c-578b41d0fab9: External # External
+    ed8f3b33-2671-4f22-baad-8295e8c4a828: SOTNF # SOTNF
+    ee7af9cb-a346-48d2-8b00-d209e9d32aae: 'Humans List' # Humans List
+    f4a9f4cd-3e3a-4cf9-89d3-fe59aba937d5: Internal # Internal
+    f6d97247-dc2b-4576-bb40-a61f43a7d835: 'Last Name' # Last Name
+    f7dd2378-fc93-4bf2-bd9d-e26856ca790e: Reports # Reports
+    f623b9fa-1630-45e7-980d-89b2b18cd869: Humans # Humans
+    f3880a1b-da42-49af-98fc-a3c6da5f1c7e: Facility # Facility
+    fb009506-1583-43fb-b530-a30d8c2d523f: 'Report Link' # Report Link
+plugins:
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.0.0
+system:
+  edition: pro
+  live: true
+  name: adoc-co
+  retryDuration: null
+  schemaVersion: 4.5.3.0
+  timeZone: America/Chicago
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

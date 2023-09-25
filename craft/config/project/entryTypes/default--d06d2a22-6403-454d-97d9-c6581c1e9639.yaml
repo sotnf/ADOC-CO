@@ -1,0 +1,181 @@
+fieldLayouts:
+  cc1ef8a3-7330-44f2-af55-eb3b6857362e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: __blank__
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ce8392f8-dbff-465f-b19e-7940854b8b27
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: da98bab4-69f8-4168-b0bb-18e3b1405043 # First Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72e0e9b8-1efc-4724-aa9f-1644fa6f2561
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6e2fc37c-e5a0-49f2-b595-2a3789708767 # Middle Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7bf6c796-7df7-476d-aefe-8cda93698608
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b36b4142-8b37-464c-b6f7-153c434b90c6 # Last Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 96cb4c9a-e18d-45be-9657-34db7b804aad
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 208f9b3c-0d64-40df-8ac3-bb5d65015616 # Date of Death
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcea02d2-4a96-4e06-b6af-6a95a53f0bbe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 08d0c3ed-94bf-4311-a7a5-c99f216a0217 # Photo(s)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31aace13-cd91-44cd-921d-4a4a28cc5387
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 03db330d-c8e0-43d8-b1df-b19441140d21 # Nick Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 55673592-d225-454f-8650-c12f2e4503d8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3df31a47-abd9-48f5-b236-0d7178731bfb # Note
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 36aeb2f1-73b3-40b5-b058-301a01da62df
+            userCondition: null
+            warning: null
+            width: 100
+        name: Humanity
+        uid: e52ca32b-29f7-4673-b732-345384687023
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 18f58c1c-5fe3-4755-b144-58ecd20650e3 # AIS#
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 98a517a1-827a-4d48-9a6c-782421c53be6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f3880a1b-da42-49af-98fc-a3c6da5f1c7e # Facility
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d29f446e-51d1-495e-a935-b492ea27de27
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cccb7bc7-0136-4564-86ca-5da3adfb5f88 # Cause of Death
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd6726cd-d916-4717-95d7-f963220cd947
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f7dd2378-fc93-4bf2-bd9d-e26856ca790e # Reports
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 281e71fe-bec8-4b78-a71d-4a10766b54f9
+            userCondition: null
+            warning: null
+            width: 100
+        name: ADOC
+        uid: 416e6d65-8754-42da-b1b7-f403f3bee70a
+        userCondition: null
+handle: default
+hasTitleField: false
+name: Default
+section: f623b9fa-1630-45e7-980d-89b2b18cd869 # Humans
+sortOrder: 1
+titleFormat: '{firstName} {lastName} - (AIS# {ais})'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

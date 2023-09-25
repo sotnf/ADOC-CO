@@ -1,17 +1,53 @@
-/.env
-/.idea
-/vendor
-.DS_Store
-/node_modules
-/src
-license.key
-/.ddev
-/dist
-/node_modules
-/src
-/vendor
-/storage
-/web/cpresources
-/web/assets/uploads/transforms
+# Keep DDEV Config
+!/.ddev/config.yaml
+
+# ignore image transforms and CP Resources
 /public_html/cpresources
-/public_html/assets/uploads/transforms
+/public_html/assets/uploads/**/transforms
+
+
+node_modules
+.DS_Store
+.idea
+
+# dont't ignore htaccess
+!/public_html/.htaccess
+
+# ignore local build folder and files
+*.code-workspace
+/node_modules/*
+package-lock.json
+*.key
+
+
+# ignore craft files
+/craft/.env
+!/craft/.env.example*
+/craft/.idea
+/craft/vendor
+
+# ignore license.key
+/craft/config/license.key*
+
+# ignore storage dirs
+/craft/storage/*
+!/craft/storage/rebrand
+!/craft/storage/.gitignore
+
+# ignore craft cpresources dir
+/public_html/cpresources/
+
+# ignore dist files
+/public_html/assets/css/maps/
+/public_html/assets/css/*.min.css
+
+!/public_html/assets/uploads/.gitkeep
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+

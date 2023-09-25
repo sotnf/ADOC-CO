@@ -1,0 +1,25 @@
+{## https://craftsnippets.com/articles/using-template-ui-elements-to-extend-craft-cms-control-panel ##}
+
+{% set currentImage = element %}
+{% set entriesAssociatedWithImage = craft.entries()
+    .relatedTo(currentImage)
+    .orderBy('dateCreated')
+    .all() %}
+
+<hr>
+<strong>Related Entries:</strong><br><br>
+
+{# {% if entriesAssociatedWithImage|length %} #}
+
+    <ul style="list-style: square; margin-left: 1rem;">
+        {% for singleEntry in entriesAssociatedWithImage %}
+            <li>
+                <a href="{{ singleEntry.getCpEditUrl() }}">{{ singleEntry.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{# {% else %}
+    No relationships exist for this image.<br>
+    {{ element.id }}
+{% endif %} #}

@@ -1,0 +1,50 @@
+fieldLayouts:
+  55c3f984-ccd0-4d2e-92fb-21e0825fe85c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 5134d7ff-300d-4637-9a20-cbcd418e2bf7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            template: _uiElements/_relatedEntries.twig
+            type: craft\fieldlayoutelements\Template
+            uid: 568fc6d9-949c-49d3-a392-41c66725c603
+            userCondition: null
+            width: 100
+        name: Content
+        uid: c76cb475-a57d-401f-8935-2d98870bf1d6
+        userCondition: null
+fs: adocImages
+handle: adocImages
+name: 'ADOC Images'
+sortOrder: 3
+titleTranslationKeyFormat: null
+titleTranslationMethod: none
+transformFs: ''
+transformSubpath: _transforms

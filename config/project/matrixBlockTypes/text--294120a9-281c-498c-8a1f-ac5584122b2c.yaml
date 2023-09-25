@@ -1,0 +1,78 @@
+field: f9f27c6e-965b-4439-b418-231f96a83691 # Link Builder
+fieldLayouts:
+  ebe2953b-3865-492d-9bb0-6b434ceaf021:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3b593700-17e8-4ac2-aa10-d55f5dd6e296 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 273743f5-beaa-4195-8e34-15f855630798
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 239d0390-17ff-4caa-a987-cc44028eb456 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 48183684-2431-4d9c-a992-ddfff93778ac
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3aa90f5f-7eb2-4d79-ac15-33f0068e1498
+        userCondition: null
+fields:
+  3b593700-17e8-4ac2-aa10-d55f5dd6e296: # Heading
+    columnSuffix: mohvecwy
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  239d0390-17ff-4caa-a987-cc44028eb456: # Text
+    columnSuffix: yulmkxaf
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 2
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: text
+name: Text
+sortOrder: 1

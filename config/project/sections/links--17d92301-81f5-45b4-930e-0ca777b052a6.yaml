@@ -1,0 +1,34 @@
+defaultPlacement: end
+enableVersioning: true
+handle: links
+name: Links
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  7babb8bc-f92d-42f6-9be7-fe2c12f147ac: # adoc-co
+    enabledByDefault: true
+    hasUrls: true
+    template: links/_entryAdoc
+    uriFormat: '{slug}'
+  9e25abb4-53e1-486c-b2d7-4107ca3d6206: # jaredbudlong
+    enabledByDefault: true
+    hasUrls: true
+    template: links/_entryJared
+    uriFormat: '{slug}'
+  44eb3684-3bb8-4859-b93d-0a245b4e98c9: # sotnf
+    enabledByDefault: true
+    hasUrls: true
+    template: links/_entrySotnf
+    uriFormat: '{slug}'
+type: single

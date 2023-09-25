@@ -34,9 +34,6 @@ package-lock.json
 !/craft/storage/rebrand
 !/craft/storage/.gitignore
 
-# ignore craft cpresources dir
-/public_html/cpresources/
-
 # ignore dist files
 /public_html/assets/css/maps/
 /public_html/assets/css/*.min.css
@@ -50,4 +47,4 @@ package-lock.json
 *.flv
 *.mov
 *.wmv
-
+/src

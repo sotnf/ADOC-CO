@@ -1,0 +1,12 @@
+isPublic: false
+name: ADOC-Import
+scope:
+  - 'sites.7babb8bc-f92d-42f6-9be7-fe2c12f147ac:read' # adoc-co
+  - 'sections.f623b9fa-1630-45e7-980d-89b2b18cd869:read' # Humans
+  - 'entrytypes.d06d2a22-6403-454d-97d9-c6581c1e9639:read' # Default
+  - 'volumes.3719fbc3-056c-4ca7-b8fd-8e2049c14a58:read' # ADOC Images
+  - 'sections.f623b9fa-1630-45e7-980d-89b2b18cd869:edit' # Humans
+  - 'entrytypes.d06d2a22-6403-454d-97d9-c6581c1e9639:edit' # Default
+  - 'entrytypes.d06d2a22-6403-454d-97d9-c6581c1e9639:create' # Default
+  - 'volumes.3719fbc3-056c-4ca7-b8fd-8e2049c14a58:edit' # ADOC Images
+  - 'volumes.3719fbc3-056c-4ca7-b8fd-8e2049c14a58:create' # ADOC Images

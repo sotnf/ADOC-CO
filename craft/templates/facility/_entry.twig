@@ -1,18 +1,23 @@
 {% extends "index.twig" %}
 {%~ block head %}
-{{parent()}}{% endblock %}{% block body %}
+{{parent()}}{% endblock %}
+{% block body %}
+
 {% block header %}
 	{{parent()}}
 {% endblock %}
+
 {% block article %}
 
 
 		{% set currentFacility = entry %}
-
+		{% set currentPerPage = 12 %}
 		{% if currentFacility and currentFacility.section.handle == 'facility' %}
-			{% set humans = craft.entries()
-				.section('human')
-				.relatedTo(currentFacility)
+			{% set currentList = craft.entries()	
+					.section('human')
+					.relatedTo(currentFacility)
+					.limit(12) 
+					.orderBy('dateOfStatus DESC, postDate DESC')
 			%}
 		{% endif %}
 		
@@ -156,13 +161,13 @@
 							<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
 						</svg>
 					</a>
-					{% if humans.count() > 0 %}
-						<a href="{{ siteUrl }}humans/?facility={{ entry.id }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-							View {{ humans.count() }} Human(s) Lost
+					{% if currentList.count() > 0 %}
+						<a href="{{ siteUrl }}currentList/?facility={{ entry.id }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+							View {{ currentList.count() }} Human(s) Lost
 						</a>
 						{% else %}
 						<div href="{{ siteUrl }}humans/?facility={{ entry.id }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:focus:ring-gray-800">
-							{{ humans.count() }} Humans Lost
+							{{ currentList.count() }} Humans Lost
 						</div>
 						
 					{% endif %}
@@ -187,6 +192,23 @@
 				{% endif %} #}
 			</div>
 		</section>
+		{# Start - Human Cards #}
+		{% paginate currentList as currentQuery, humanEntries %}
+		{% if currentList.count() > 0 %}
+	<section id="header" class="bg-white dark:bg-gray-900">
+		<div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6">
+
+			<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+				{% for human in humanEntries %}
+					{% include "_includes/_humanCard.twig" %}
+			</div>
+				{% endfor %}
+		</div>
+	</section>
+		{# START - PAGINATION #}
+			{% include "_includes/_pagination.twig" %}
+		{# END - PAGINATION #}
+		{% endif %}
 	</article>
 {% endblock %}
 {% block footer %}

@@ -48,7 +48,7 @@ fieldLayouts:
 handle: links
 hasTitleField: false
 name: Links
-section: d12b5dba-3d80-40e6-ab92-71dc0f96a5f3
+section: d12b5dba-3d80-40e6-ab92-71dc0f96a5f3 # Links
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

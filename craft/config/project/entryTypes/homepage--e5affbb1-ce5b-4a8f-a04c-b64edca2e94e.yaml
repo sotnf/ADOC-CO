@@ -74,7 +74,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 6b9cc9c1-225b-4adf-acb3-2d09c950592d
+            fieldUid: 6b9cc9c1-225b-4adf-acb3-2d09c950592d # Content Builder
             instructions: null
             label: null
             required: false

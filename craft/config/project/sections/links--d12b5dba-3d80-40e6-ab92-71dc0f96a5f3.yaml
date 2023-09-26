@@ -21,7 +21,7 @@ siteSettings:
     hasUrls: true
     template: links/_entryAdoc
     uriFormat: links
-  b681b236-e7a0-4b70-9831-cd91e74e516f:
+  b681b236-e7a0-4b70-9831-cd91e74e516f: # jaredbudlong
     enabledByDefault: true
     hasUrls: true
     template: links/_entryJared

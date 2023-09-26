@@ -1,5 +1,6 @@
 # Keep DDEV Config
 !/.ddev/config.yaml
+/.ddev
 
 # ignore image transforms and CP Resources
 /public_html/cpresources
@@ -48,3 +49,4 @@ package-lock.json
 *.mov
 *.wmv
 /src
+

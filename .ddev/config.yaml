@@ -1,4 +1,4 @@
-name: SOTNF
+name: ADOC-CO
 type: craftcms
 docroot: public_html
 php_version: "8.0"
@@ -8,7 +8,7 @@ router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames:
     - jaredbudlong
-    - adoc-co
+    - sotnf
 additional_fqdns: []
 database:
     type: mysql
@@ -17,13 +17,17 @@ nfs_mount_enabled: false
 mutagen_enabled: false
 upload_dir: assets/uploads
 use_dns_when_possible: true
+composer_root: ./craft
 composer_version: "2"
 web_environment:
     - CRAFT_CMD_ROOT=./craft
     - BASE_PATH=/var/www/html/public_html/
     - PRIMARY_SITE_URL=${DDEV_PRIMARY_URL}
 nodejs_version: "16"
-composer_root: craft
+hooks:
+    post-start:
+        - exec: npm install
+        - composer: install
 
 # Key features of ddev's config.yaml:
 

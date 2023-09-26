@@ -57,7 +57,7 @@
 
 						{% set humanImage = human.photos.one() %}
 						{% set humanAdocFacility = human.facility.one() %}
-						{% set humanDOD = human.dateOfStatus %}
+						{% set humanDOD = human.dateOfDeath %}
 						{% set humanNote = human.note %}
 						{% set humanAdocCOD = human.causeOfDeath.one() %}
 						{% set humanAdocReports = human.reports.type('report') %}

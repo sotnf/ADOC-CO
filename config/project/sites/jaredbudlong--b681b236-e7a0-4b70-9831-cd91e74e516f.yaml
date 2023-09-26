@@ -1,9 +1,0 @@
-baseUrl: $JAREDBUDLONG_SITE_URL
-enabled: '1'
-handle: jaredbudlong
-hasUrls: true
-language: en-US
-name: jaredbudlong
-primary: false
-siteGroup: 1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094 # Main
-sortOrder: 2

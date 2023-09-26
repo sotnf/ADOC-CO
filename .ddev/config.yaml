@@ -15,10 +15,19 @@ database:
   version: "5.7"
 nfs_mount_enabled: false
 mutagen_enabled: false
+hooks:
+    post-start:
+        - exec: npm i
+        - composer: install
+        # - composer: run-script craft-setup
 upload_dir: assets/uploads
 use_dns_when_possible: true
+composer_root: ./craft
 composer_version: "2"
-web_environment: []
+web_environment:
+    - CRAFT_CMD_ROOT=./craft
+    - BASE_PATH=/var/www/html/public_html/
+    - PRIMARY_SITE_URL=${DDEV_PRIMARY_URL}    
 nodejs_version: "16"
 
 # Key features of ddev's config.yaml:

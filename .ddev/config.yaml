@@ -1,13 +1,13 @@
-name: SOTNF
+name: adoc-co
 type: craftcms
-docroot: web
+docroot: public_html
 php_version: "8.0"
 webserver_type: apache-fpm
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: 
-  - "adoc-co"
+  - "sotnf"
   - "jaredbudlong"
 additional_fqdns: []
 database:
@@ -26,7 +26,6 @@ composer_root: ./craft
 composer_version: "2"
 web_environment:
     - CRAFT_CMD_ROOT=./craft
-    - BASE_PATH=/var/www/html/public_html/
     - PRIMARY_SITE_URL=${DDEV_PRIMARY_URL}    
 nodejs_version: "16"
 

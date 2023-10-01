@@ -84,13 +84,8 @@
 			{% endif %}	
 		</span>
 		<p class="my-2 font-light text-gray-500 dark:text-gray-400">
-<<<<<<< HEAD
-			<strong class="capitalize">Status: {% if human.humanStatus|length %}{{human.humanStatus}}{% else %}
-				Dead{% endif %}</strong>
-=======
 			<strong>Status: {% if human.humanStatus|length %}<span class="uppercase">{{human.humanStatus}}</span>{% else %}
 				Presumed Dead{% endif %}</strong>
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 
 			{% if human.dateOfStatus %}
 				 ({{ human.dateOfStatus|date }})

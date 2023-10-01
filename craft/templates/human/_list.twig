@@ -1,11 +1,9 @@
 {% extends "index.twig" %}
 
-<<<<<<< HEAD
-{%~ block head %}{{parent()}}{% endblock %}{% block body %}
-=======
 {%~ block head %}
-{{parent()}}{% endblock %}{% block body %}
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
+{{parent()}}
+{% endblock %}
+{% block body %}
 {% block header %}
 	{{parent()}}
 {% endblock %}
@@ -14,12 +12,6 @@
 	{% set facilityID = craft.app.request.getParam(pageQuery) %}
 	{% set currentPerPage = 12 %}
 	{% set facilityQuery = craft.entries
-<<<<<<< HEAD
-								.section(pageQuery)
-								.id(facilityID)
-								.one()
-								%}
-=======
 						.section(pageQuery)
 						.id(facilityID)
 						.one()
@@ -29,115 +21,11 @@
 							.all()
 							%}
 
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 	{% set paramPresent = '' %}
 	{% set searchFacility = '' %}
 	{% if craft.app.request.getParam('')|length %}
 		{% set paramPresent = 'true' %}
 	{% endif %}
-<<<<<<< HEAD
-
-	{% set callToActionEntries = craft.entries.section('callToAction')
-			.all() %}
-
-	{% set currentList = [] %}
-	{% set currentCTAList = [] %}
-
-	{% if facilityID and craft.entries.section(pageQuery).id(facilityID).one() %}
-		{% set searchFacility = 'true' %}
-		{% set currentList = craft.entries()
-								.section('human')
-								.relatedTo(facilityQuery)
-								.limit(currentPerPage)
-								.orderBy(', dateOfStatus DESC, postDate DESC')
-							%}
-	{% else %}
-		{% set searchFacility = 'false' %}
-		{% set currentList = craft.entries()	
-								.section('human')
-								.limit(currentPerPage) 
-								.humanStatus('dead')
-								.orderBy('dateOfStatus DESC, postDate DESC')
-							%}
-		{% set currentCTAList = craft.entries()	
-								.section('human')
-								.limit(4) 
-								.relatedTo(callToActionEntries)
-								.orderBy('dateOfStatus DESC, postDate DESC')
-							%}
-	{% endif %}
-	{% if currentList|length %}
-		{% paginate currentList as currentQuery, humanEntries %}{% endif %}
-		{% if currentCTAList|length %}
-			{% paginate currentCTAList as currentCTAQuery, humanCTAEntries %}{% endif %}
-
-			{# Page Header #}
-			<section id="header" class="bg-white dark:bg-gray-900">
-				<div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6">
-					<div class="mx-auto max-w-screen-lg text-center mb-8 lg:mb-8">
-						<h1 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
-							{% if facilityID and searchFacility == 'true' %}
-								{{ facilityQuery.title }}
-								has lost  at least
-								<span class="font-extrabold">{{ currentQuery.total }}</span>
-								Human(s).
-							{% elseif entry.alternateHeadline %}
-								{{ entry.alternateHeadline }}<span class="font-extrabold">
-									{{ currentQuery.total }}</span>
-							{% else %}
-								{{ entry.title}}
-							{% endif %}
-						</h1>
-						{% if entry.note %}
-							<div class="max-w-screen-md mx-auto">
-								<p class="font-light text-gray-500 sm:text-xl lg:mb-8 dark:text-gray-400">{{ entry.note}}</p>
-								{% if searchFacility == 'false' and facilityID|length %}
-									<p class="font-light text-gray-500 sm:text-lg lg:mb-8 dark:text-gray-400">
-										Your facility search returned
-										<span class="font-medium">no results</span>
-										for ID:
-										{{facilityID}}. We are displaying all available Humans.
-									</p>
-								{% elseif paramPresent|length %}
-									<p class="font-light text-gray-500 sm:text-lg lg:mb-8 dark:text-gray-400">
-										Your facility search returned
-										<span class="font-medium">no results</span>
-										for ID:
-										{{facilityID}}. We are displaying all available Humans.
-									</p>
-								{% endif %}
-								{% if searchFacility == 'true' %}
-									<a href="{{entry.url}}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">Remove Facility Filter</a>
-
-								{% endif %}
-
-							</div>
-						{% endif %}
-					</div>
-					{# Start - Human Cards #}
-					{# CTA Humans #}
-					{% if currentCTAList|length %}
-						<div class="mt-4">
-							<h1>These humans need our help.</h1>
-						</div>
-						<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-							{% for human in humanCTAEntries %}
-								{% include "_includes/_humanCard.twig" %}
-							{% endfor %}
-						</div>
-					{% endif %}
-					{% if currentList|length %}
-						<div class="mt-4">
-							<h1>Humans we've lost.</h1>
-						</div>
-						<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-							{% for human in humanEntries %}
-								{% include "_includes/_humanCard.twig" %}
-							{% endfor %}
-						</div>
-
-
-=======
 	{% if facilityID and craft.entries.section(pageQuery).id(facilityID).one() %}
 		{% set searchFacility = 'true' %}
 		{% set currentList = craft.entries()
@@ -153,8 +41,8 @@
 					.limit(currentPerPage) 
 					.orderBy('humanStatus ASC, dateOfStatus DESC, postDate DESC')
 				%}
-{% endif %}
-{% paginate currentList as currentQuery, humanEntries %}	
+	{% endif %}
+	{% paginate currentList as currentQuery, humanEntries %}	
 		{# Page Header #}
 		<section id="header" class="bg-white dark:bg-gray-900">
 			<div class="py-4 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6">
@@ -204,7 +92,6 @@
 						{% for human in humanEntries %}
 							{% include "_includes/_humanCard.twig" %}
 						{% endfor %}
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 					</div>
 				</section>
 				{# START - PAGINATION #}
@@ -241,7 +128,3 @@
 {% block footer %}
 	{{parent()}}
 {% endblock %}{% endblock %}
-<<<<<<< HEAD
-
-=======
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949

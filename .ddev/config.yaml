@@ -26,12 +26,7 @@ composer_root: ./craft
 composer_version: "2"
 web_environment:
     - CRAFT_CMD_ROOT=./craft
-<<<<<<< HEAD
-    - BASE_PATH=/var/www/html/public_html/
-    - PRIMARY_SITE_URL=${DDEV_PRIMARY_URL} 
-=======
     - PRIMARY_SITE_URL=${DDEV_PRIMARY_URL}    
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 nodejs_version: "16"
 
 # Key features of ddev's config.yaml:

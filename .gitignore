@@ -32,6 +32,7 @@ package-lock.json
 /public_html/assets/css/*.min.css
 
 !/public_html/assets/uploads/.gitkeep
+!/public_html/output.css
 
 # Large media files
 *.mp4

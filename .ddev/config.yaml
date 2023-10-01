@@ -26,7 +26,6 @@ composer_root: ./craft
 composer_version: "2"
 web_environment:
     - CRAFT_CMD_ROOT=./craft
-    - BASE_PATH=/var/www/html/public_html/
     - PRIMARY_SITE_URL=${DDEV_PRIMARY_URL}    
 nodejs_version: "16"
 

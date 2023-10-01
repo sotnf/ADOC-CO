@@ -1,7 +1,7 @@
 headingLevels:
   - 4
 listPlugin: List
-name: 'Enhanced Note'
+name: Enhanced
 toolbar:
   - heading
   - '|'

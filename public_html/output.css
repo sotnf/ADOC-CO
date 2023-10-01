@@ -483,6 +483,10 @@ a {
   text-underline-offset: 2px;
 }
 
+u {
+  text-underline-offset: 2px;
+}
+
 p {
   margin-bottom: 1rem;
   --tw-text-opacity: 1;
@@ -504,6 +508,11 @@ hr {
   border-bottom-width: 1px;
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+#ckSimpleNote {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 /* ... */
@@ -776,11 +785,6 @@ div#cta :not(:first).accordion-content:first-child {
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .mx-auto {
@@ -1669,6 +1673,11 @@ div#cta :not(:first).accordion-content:first-child {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2208,6 +2217,10 @@ div#cta {
 
   .lg\:mt-0 {
     margin-top: 0px;
+  }
+
+  .lg\:mb-4 {
+    margin-bottom: 1rem;
   }
 
   .lg\:flex {

@@ -1,14 +1,14 @@
 columnSuffix: jncxotvf
 contentColumnType: text
 fieldGroup: 4cda9b6f-f2fa-44ce-bc23-2c1b24cc4b1d # Common
-handle: ckNote
+handle: ckEnhancedNote
 instructions: null
-name: Note+
+name: 'Enhanced Note'
 searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
-  ckeConfig: 94d54b14-300e-4fb9-bd82-3dd86d4fffb0 # Enhanced Note
+  ckeConfig: 94d54b14-300e-4fb9-bd82-3dd86d4fffb0 # Enhanced
   columnType: text
   defaultTransform: 883ceb06-d923-4375-87ff-d2b0da252179 # 300x200 Crop
   enableSourceEditingForNonAdmins: false
@@ -17,6 +17,7 @@ settings:
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   showWordCount: true
+  wordLimit: null
 translationKeyFormat: null
 translationMethod: site
 type: craft\ckeditor\Field

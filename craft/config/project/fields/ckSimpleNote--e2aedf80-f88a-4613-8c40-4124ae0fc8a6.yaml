@@ -1,0 +1,23 @@
+columnSuffix: oydqclzl
+contentColumnType: text
+fieldGroup: 4cda9b6f-f2fa-44ce-bc23-2c1b24cc4b1d # Common
+handle: ckSimpleNote
+instructions: null
+name: 'Simple Note'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 61e6ed49-c92f-4105-96be-07ba9d6fa7e2 # Simple
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: true
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\ckeditor\Field

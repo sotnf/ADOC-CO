@@ -15,7 +15,7 @@ return GeneralConfig::create()
     // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
     ->defaultWeekStartDay(1)
     // Prevent generated URLs from including "index.php"
-    ->omitScriptNameInUrls()
+    ->omitScriptNameInUrls(true)
     // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
 
     //->devMode(App::env('DEV_MODE') ?? false)

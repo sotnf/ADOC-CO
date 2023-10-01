@@ -1,9 +1,9 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 83ab8938-f287-4a0d-9365-f010ed540e4d # Humans
-handle: associateHuman
-instructions: null
-name: 'Associate Human'
+handle: associateCTA
+instructions: 'previously "associateHuman"'
+name: 'Associate CTA'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -26,7 +26,7 @@ settings:
   selectionLabel: 'Associate a Human'
   showSiteMenu: false
   sources:
-    - 'section:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans
+    - 'section:0f2073bd-978b-45da-ada7-652d44935585' # Call to Action
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

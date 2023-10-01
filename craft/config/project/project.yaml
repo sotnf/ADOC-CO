@@ -1,4 +1,4 @@
-dateModified: 1696093191
+dateModified: 1696111020
 elementSources:
   craft\elements\Entry:
     -
@@ -134,6 +134,7 @@ meta:
     4f8df9ae-e832-4225-9456-4ab722757c6c: Advocate # Advocate
     5b49f72e-0eb0-4418-bb97-2fb50caf172a: Note+ # Note+
     5d8a0be5-824b-40ba-8e7d-25573f254bd5: 'Address 2' # Address 2
+    5f5c9d04-ed1b-4bc0-a0ff-e33edb4650ad: Facilities # Facilities
     05fd0cd6-a8af-4734-90bf-6131cbedfbe1: 'Internal Link' # Internal Link
     6b9cc9c1-225b-4adf-acb3-2d09c950592d: 'Content Builder' # Content Builder
     6bc9b592-26cf-436d-a594-9e321e2334d6: 'Public Schema' # Public Schema
@@ -142,6 +143,7 @@ meta:
     7d3ad6ba-4819-4bba-ad5a-0ea7eba95175: Phone # Phone
     7d4eb720-ef43-42e4-9ed1-f3cef6aabdc0: Small # Small
     7e4960eb-d761-4dfa-b93d-58db38369abd: 'Report Type' # Report Type
+    8b01bdc4-ad2a-41af-876d-c94f8cd4c5a6: 'Contact Email' # Contact Email
     08d0c3ed-94bf-4311-a7a5-c99f216a0217: Photo(s) # Photo(s)
     08d9a170-a244-494d-9f6b-43f3f973d6e0: Entry # Entry
     8dec767a-fcd4-452e-acf7-dc12519a56cc: 'Button Entry' # Button Entry
@@ -151,6 +153,7 @@ meta:
     9d1171fc-9c98-4610-988a-dc9d91b86151: 'Last Name' # Last Name
     9e25abb4-53e1-486c-b2d7-4107ca3d6206: jaredbudlong # jaredbudlong
     9ee40c3e-c86e-4508-b0d5-d56d328b33f0: Default # Default
+    13d89986-9f89-4f72-8911-f1dbcadda645: 'Organization Website' # Organization Website
     17d92301-81f5-45b4-930e-0ca777b052a6: Links # Links
     18f58c1c-5fe3-4755-b144-58ecd20650e3: 'AIS#' # AIS#
     19a6fa2e-899b-4c96-a230-0f486ae0295b: 'Humans List' # Humans List
@@ -181,32 +184,39 @@ meta:
     239d0390-17ff-4caa-a987-cc44028eb456: Text # Text
     260e937f-426c-4da5-b2d4-260e4c279ebf: Facilities # Facilities
     323be661-9ee7-4f57-976a-4a5032821248: Homepage # Homepage
+    458c0316-90ec-4678-b3f1-132b8023e6cd: 'Organization Name' # Organization Name
     460b4205-a4fb-4e32-9637-14b9549e10e5: Status # Status
     528e2427-a8c6-40bb-b462-54d99c4f0041: Large # Large
     563c0bfc-c323-44b4-864d-04e0a0bd573c: Email # Email
     610bfe49-b3ec-40ee-8377-62b1f63a8539: Website # Website
     618ad16d-5035-4fbe-967a-2caf444256d9: Email # Email
     883ceb06-d923-4375-87ff-d2b0da252179: '300x200 Crop' # 300x200 Crop
+    1591ee1d-3fff-4d58-aa18-a10a988f4462: 'Contact First Name' # Contact First Name
     2016e348-9fd6-4b38-83b2-8257ad98ee78: Navigation # Navigation
     3719fbc3-056c-4ca7-b8fd-8e2049c14a58: 'ADOC Images' # ADOC Images
     4064d00f-1ded-45d2-9032-e6385e7bdc36: ZIP # ZIP
     4118eb52-3c43-406c-bf9f-01c4542c8331: 'Cause of Death' # Cause of Death
     5710c8e1-8eb6-40ef-b0c7-5d0a27828c4e: City # City
+    56623e2b-7fb6-41f2-8e12-a635cbc2522a: 'Organization Note' # Organization Note
+    56898fae-77df-4fb1-a7eb-33b9bc015925: 'Contact Phone' # Contact Phone
     294120a9-281c-498c-8a1f-ac5584122b2c: Text # Text
     583847b3-88c3-4e76-80c7-0e070db0bf98: XSmall # XSmall
     767004c4-3598-46a3-ad68-bdfb06930ab5: Contacts # Contacts
     59884906-b9a5-4c4e-95b4-6a861d2af939: Warden # Warden
+    a6eec7ea-6581-4bdf-af3d-cbef7b28b567: 'Points of Contact' # Points of Contact
     a112a8f4-4945-4b9a-8f3e-8e4568e6a339: Entry # Entry
     a8961e26-c4b9-4c0e-9aac-c648112bf612: 'Social Media' # Social Media
+    ad14c983-625e-43c9-8c51-c278fffb43ce: Facilities # Facilities
     ada94301-769d-488e-9cb8-c05c292d9509: ADOC-Import # ADOC-Import
     adced8d4-609c-4743-b767-79951d8febb2: Website # Website
     b0afcc54-8f8c-4591-a381-47849a7f1739: Report # Report
     b0328ad7-de80-4150-8594-1431bb30a28b: Text # Text
     b7f745a8-d92f-4477-a982-2796a52d6ba3: Simple # Simple
     b36b4142-8b37-464c-b6f7-153c434b90c6: 'Last Name' # Last Name
-    b60e3c63-a6f2-44c9-9561-79ef35de673a: 'Associate Human' # Associate Human
+    b60e3c63-a6f2-44c9-9561-79ef35de673a: 'Associate CTA' # Associate CTA
     b90fb7c4-b0d0-41be-afe9-d736a6e74113: Pages # Pages
     b681b236-e7a0-4b70-9831-cd91e74e516f: jaredbudlong # jaredbudlong
+    baa54619-b8c5-4c54-b38a-18a93980b2de: 'Organization Phone' # Organization Phone
     baef7271-cefd-4dab-8b7a-6fde35a5c8cb: Default # Default
     bc5220fc-108c-44de-8be3-a34801b4047d: Phone # Phone
     becc8c09-e2cc-4316-bfe4-614c5d4e708a: 'Social Media' # Social Media
@@ -245,10 +255,12 @@ meta:
     f6d97247-dc2b-4576-bb40-a61f43a7d835: 'Last Name' # Last Name
     f7dd2378-fc93-4bf2-bd9d-e26856ca790e: Reports # Reports
     f9f27c6e-965b-4439-b418-231f96a83691: 'Link Builder' # Link Builder
+    f99acd79-41ba-458a-aa4a-75a717cbd502: Contact # Contact
     f623b9fa-1630-45e7-980d-89b2b18cd869: Humans # Humans
     f3880a1b-da42-49af-98fc-a3c6da5f1c7e: Facility # Facility
     f5000937-8c06-4b27-88a3-4e55809b1497: 'Button Text' # Button Text
     fb009506-1583-43fb-b530-a30d8c2d523f: 'Report Link' # Report Link
+    fde6ec4d-b9e8-4718-a4c3-a3cc7f3957fd: 'Contact Last Name' # Contact Last Name
     feeca86c-3550-4c62-b56c-e92a62145656: Links # Links
 plugins:
   ckeditor:

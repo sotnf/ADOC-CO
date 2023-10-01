@@ -1,0 +1,5 @@
+div#cta {
+
+    @apply border-red-500 border-2 border-spacing-10 bg-red-500;
+
+}

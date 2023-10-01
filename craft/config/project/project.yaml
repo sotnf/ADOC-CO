@@ -1,4 +1,4 @@
-dateModified: 1696111020
+dateModified: 1696183554
 elementSources:
   craft\elements\Entry:
     -
@@ -132,7 +132,7 @@ meta:
     4cda9b6f-f2fa-44ce-bc23-2c1b24cc4b1d: Common # Common
     4ce13bd8-0fb7-4a44-a95c-918922fa0f82: 'Social Icon' # Social Icon
     4f8df9ae-e832-4225-9456-4ab722757c6c: Advocate # Advocate
-    5b49f72e-0eb0-4418-bb97-2fb50caf172a: Note+ # Note+
+    5b49f72e-0eb0-4418-bb97-2fb50caf172a: 'Enhanced Note' # Enhanced Note
     5d8a0be5-824b-40ba-8e7d-25573f254bd5: 'Address 2' # Address 2
     5f5c9d04-ed1b-4bc0-a0ff-e33edb4650ad: Facilities # Facilities
     05fd0cd6-a8af-4734-90bf-6131cbedfbe1: 'Internal Link' # Internal Link
@@ -176,7 +176,7 @@ meta:
     084e9175-1a64-407f-aaa6-371c49320c98: Medium # Medium
     89f7002a-a51c-4109-bde3-60f37881945a: Default # Default
     91c6f07a-7f7f-45a4-85ac-d2ea458da892: 'Link Builder' # Link Builder
-    94d54b14-300e-4fb9-bd82-3dd86d4fffb0: 'Enhanced Note' # Enhanced Note
+    94d54b14-300e-4fb9-bd82-3dd86d4fffb0: Enhanced # Enhanced
     99f2ce1d-b773-4150-a39c-24863e4e70c7: 'Button Entry' # Button Entry
     180a6f6d-ba8c-4567-97e5-4a0dcc491507: Phone # Phone
     186b9fb3-aa4a-40e0-8504-79beddea39d4: Links # Links
@@ -241,6 +241,7 @@ meta:
     d4091260-2611-458d-b5d5-55c79aa86a96: 'Content Builder' # Content Builder
     da98bab4-69f8-4168-b0bb-18e3b1405043: 'First Name' # First Name
     deacb3ec-310f-4577-9d5d-933ea4b08178: Phone # Phone
+    e2aedf80-f88a-4613-8c40-4124ae0fc8a6: 'Simple Note' # Simple Note
     e5affbb1-ce5b-4a8f-a04c-b64edca2e94e: Homepage # Homepage
     e7e8de3a-4e29-4d7f-a7aa-fe0caf3792df: 'Social Media' # Social Media
     e54fbb1c-4ada-45eb-85b1-5ff583ee3d8a: 'Public Schema' # Public Schema

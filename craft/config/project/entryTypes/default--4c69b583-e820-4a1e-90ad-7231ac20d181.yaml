@@ -32,7 +32,19 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 5b49f72e-0eb0-4418-bb97-2fb50caf172a # Note+
+            fieldUid: e2aedf80-f88a-4613-8c40-4124ae0fc8a6 # Simple Note
+            instructions: 'Use this to give the general public instructions on what to do to help out. '
+            label: 'Instructions for the Public'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de72b246-8147-42a6-9b4c-e9fe8dd170ea
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5b49f72e-0eb0-4418-bb97-2fb50caf172a # Enhanced Note
             instructions: 'Use this to give the general public instructions on what to do to help out. '
             label: 'Instructions for the Public'
             required: false

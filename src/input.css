@@ -34,6 +34,10 @@
         @apply text-red-800 underline underline-offset-2;
     }
 
+    u {
+        @apply underline-offset-2;
+    }
+
     p {
         @apply mb-4 text-gray-800;
     }
@@ -52,6 +56,10 @@
 
     hr {
         @apply bg-gray-200 border-b my-2;
+    }
+
+    #ckSimpleNote {
+        @apply text-base;
     }
     
     /* ... */

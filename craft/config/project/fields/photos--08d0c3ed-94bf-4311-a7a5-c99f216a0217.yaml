@@ -12,7 +12,7 @@ settings:
   allowedKinds:
     - image
   branchLimit: null
-  defaultUploadLocationSource: 'volume:61b64f4c-8dec-43f2-8ce0-f44bad4431e5'
+  defaultUploadLocationSource: 'volume:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
   defaultUploadLocationSubpath: '{section}'
   localizeRelations: false
   maintainHierarchy: false
@@ -40,7 +40,7 @@ settings:
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
-    - 'volume:61b64f4c-8dec-43f2-8ce0-f44bad4431e5'
+    - 'volume:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

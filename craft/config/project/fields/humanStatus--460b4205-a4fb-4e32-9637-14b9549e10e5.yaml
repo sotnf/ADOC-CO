@@ -4,7 +4,7 @@ fieldGroup: 83ab8938-f287-4a0d-9365-f010ed540e4d # Humans
 handle: humanStatus
 instructions: null
 name: Status
-searchable: false
+searchable: true
 settings:
   options:
     -

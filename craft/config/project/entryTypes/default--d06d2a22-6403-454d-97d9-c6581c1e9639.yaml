@@ -80,43 +80,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 460b4205-a4fb-4e32-9637-14b9549e10e5 # Status
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 96b30df3-c6d8-4968-907c-ed48667e7c76
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition:
-              class: craft\elements\conditions\entries\EntryCondition
-              conditionRules:
-                -
-                  class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: 460b4205-a4fb-4e32-9637-14b9549e10e5 # Status
-                  operator: in
-                  uid: a1d04fd1-2b8f-4aac-8c97-81887ca9920b
-                  values:
-                    - dead
-                    - segregated
-                    - released
-              elementType: craft\elements\Entry
-              fieldContext: global
-            fieldUid: 208f9b3c-0d64-40df-8ac3-bb5d65015616 # Date of Status
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: dcea02d2-4a96-4e06-b6af-6a95a53f0bbe
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 5b49f72e-0eb0-4418-bb97-2fb50caf172a # Note+
             instructions: null
             label: null
@@ -159,6 +122,71 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: b60e3c63-a6f2-44c9-9561-79ef35de673a # Associate CTA
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eec57ee3-e9d6-4341-98e2-aed3fc9148eb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 208f9b3c-0d64-40df-8ac3-bb5d65015616 # Date of Status
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcea02d2-4a96-4e06-b6af-6a95a53f0bbe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 460b4205-a4fb-4e32-9637-14b9549e10e5 # Status
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 96b30df3-c6d8-4968-907c-ed48667e7c76
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 460b4205-a4fb-4e32-9637-14b9549e10e5 # Status
+                  operator: in
+                  uid: 1dec89dd-72f2-44a7-a384-7d7ab1772825
+                  values:
+                    - dead
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: cccb7bc7-0136-4564-86ca-5da3adfb5f88 # Cause of Death
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd6726cd-d916-4717-95d7-f963220cd947
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Status & CTA'
+        uid: a1a83447-28f9-4df9-8a65-1f3099f99e26
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
             fieldUid: 18f58c1c-5fe3-4755-b144-58ecd20650e3 # AIS#
             instructions: null
             label: null
@@ -183,18 +211,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: cccb7bc7-0136-4564-86ca-5da3adfb5f88 # Cause of Death
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: bd6726cd-d916-4717-95d7-f963220cd947
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: f7dd2378-fc93-4bf2-bd9d-e26856ca790e # Reports
             instructions: null
             label: null
@@ -212,6 +228,9 @@ handle: default
 hasTitleField: false
 name: Default
 section: f623b9fa-1630-45e7-980d-89b2b18cd869 # Humans
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{firstName} {lastName} - (AIS# {ais})'
 titleTranslationKeyFormat: null

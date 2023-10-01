@@ -1,0 +1,11 @@
+{% set facilityEmail = entry.email %}
+{% set facilityPhone = entry.phone %}
+{% set facilityWebsite = entry.website %}
+{% set facilityAddress1 = entry.address1 %}
+{% set facilityAddress2 = entry.address2 %}
+{% set facilityCity = entry.city %}
+{% set facilityState = entry.state %}
+{% set facilityZip = entry.zip %}
+{% set facilityNote = entry.note %}
+{% set facilityAdvocate = entry.contacts.type('advocate') %}
+{% set facilityWarden = entry.contacts.type('warden') %}

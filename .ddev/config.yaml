@@ -1,13 +1,13 @@
-name: SOTNF
+name: adoc-co
 type: craftcms
-docroot: web
+docroot: public_html
 php_version: "8.0"
 webserver_type: apache-fpm
 router_http_port: "80"
 router_https_port: "443"
 xdebug_enabled: false
 additional_hostnames: 
-  - "adoc-co"
+  - "sotnf"
   - "jaredbudlong"
 additional_fqdns: []
 database:

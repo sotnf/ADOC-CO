@@ -4,7 +4,7 @@ fieldGroup: 4cda9b6f-f2fa-44ce-bc23-2c1b24cc4b1d # Common
 handle: contentBuilder
 instructions: null
 name: 'Content Builder'
-searchable: false
+searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
@@ -18,5 +18,5 @@ settings:
   showUnpermittedVolumes: false
   showWordCount: true
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\ckeditor\Field

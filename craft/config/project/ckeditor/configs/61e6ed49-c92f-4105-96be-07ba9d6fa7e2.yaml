@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 headingLevels:
   - 1
   - 2
@@ -11,4 +12,15 @@ toolbar:
   - '|'
   - bold
   - italic
+=======
+headingLevels: false
+listPlugin: List
+name: Simple
+toolbar:
+  - '|'
+  - bold
+  - italic
+  - underline
+  - strikethrough
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
   - link

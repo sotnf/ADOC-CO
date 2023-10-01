@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "09696a6803e1628bdea2a5d678f918c2",
+=======
+    "content-hash": "5e8579723cd2bc201410e7f365230c31",
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
     "packages": [
         {
             "name": "cakephp/core",
@@ -281,11 +285,19 @@
         },
         {
             "name": "composer/composer",
+<<<<<<< HEAD
             "version": "2.6.3",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/composer/composer/zipball/ff477832e6d838a736556d4a39a3b80f4412abfd",
                 "reference": "ff477832e6d838a736556d4a39a3b80f4412abfd",
+=======
+            "version": "2.6.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/composer/zipball/d75d17c16a863438027d1d96401cddcd6aa5bb60",
+                "reference": "d75d17c16a863438027d1d96401cddcd6aa5bb60",
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
                 "shasum": ""
             },
             "require": {
@@ -357,7 +369,11 @@
                 "dependency",
                 "package"
             ],
+<<<<<<< HEAD
             "time": "2023-09-15T07:38:22+00:00"
+=======
+            "time": "2023-09-29T08:54:47+00:00"
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
         },
         {
             "name": "composer/metadata-minifier",
@@ -634,11 +650,19 @@
         },
         {
             "name": "craftcms/cms",
+<<<<<<< HEAD
             "version": "4.5.5",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/craftcms/cms/zipball/906e011df5c248174770050ee598f620005f6623",
                 "reference": "906e011df5c248174770050ee598f620005f6623",
+=======
+            "version": "4.5.6.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/fac7353b79c771d1d6ceb62e5addb10d4f5c0eb3",
+                "reference": "fac7353b79c771d1d6ceb62e5addb10d4f5c0eb3",
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
                 "shasum": ""
             },
             "require": {
@@ -726,7 +750,11 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
+<<<<<<< HEAD
             "time": "2023-09-15T04:55:07+00:00"
+=======
+            "time": "2023-09-27T12:28:01+00:00"
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
         },
         {
             "name": "craftcms/feed-me",
@@ -1081,11 +1109,11 @@
         },
         {
             "name": "doctrine/deprecations",
-            "version": "v1.1.1",
+            "version": "1.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
-                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/4f2d4f2836e7ec4e7a8625e75c6aa916004db931",
+                "reference": "4f2d4f2836e7ec4e7a8625e75c6aa916004db931",
                 "shasum": ""
             },
             "require": {
@@ -1105,7 +1133,7 @@
             ],
             "description": "A small layer on top of trigger_error(E_USER_DEPRECATED) or PSR-3 logging with options to disable all deprecations or selectively for packages.",
             "homepage": "https://www.doctrine-project.org/",
-            "time": "2023-06-03T09:27:29+00:00"
+            "time": "2023-09-27T20:04:15+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -1769,11 +1797,11 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.2.12",
+            "version": "v5.2.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/ad87d5a5ca981228e0e205c2bc7dfb8e24559b60",
-                "reference": "ad87d5a5ca981228e0e205c2bc7dfb8e24559b60",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/fbbe7e5d79f618997bc3332a6f49246036c45793",
+                "reference": "fbbe7e5d79f618997bc3332a6f49246036c45793",
                 "shasum": ""
             },
             "require": {
@@ -1820,7 +1848,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2022-04-13T08:02:27+00:00"
+            "time": "2023-09-26T02:20:38+00:00"
         },
         {
             "name": "league/csv",
@@ -2037,11 +2065,14 @@
         {
             "name": "nesbot/carbon",
             "version": "2.71.0",
+<<<<<<< HEAD
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
                 "reference": "98276233188583f2ff845a0f992a235472d9466a"
             },
+=======
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/98276233188583f2ff845a0f992a235472d9466a",
@@ -2059,6 +2090,7 @@
             "provide": {
                 "psr/clock-implementation": "1.0"
             },
+<<<<<<< HEAD
             "require-dev": {
                 "doctrine/dbal": "^2.0 || ^3.1.4",
                 "doctrine/orm": "^2.7",
@@ -2072,6 +2104,8 @@
                 "phpunit/phpunit": "^7.5.20 || ^8.5.26 || ^9.5.20",
                 "squizlabs/php_codesniffer": "^3.4"
             },
+=======
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
             "bin": [
                 "bin/carbon"
             ],
@@ -2119,6 +2153,7 @@
                 "datetime",
                 "time"
             ],
+<<<<<<< HEAD
             "support": {
                 "docs": "https://carbon.nesbot.com/docs",
                 "issues": "https://github.com/briannesbitt/Carbon/issues",
@@ -2138,6 +2173,8 @@
                     "type": "tidelift"
                 }
             ],
+=======
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
             "time": "2023-09-25T11:31:05+00:00"
         },
         {
@@ -2397,11 +2434,19 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
+<<<<<<< HEAD
             "version": "1.24.1",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/9f854d275c2dbf84915a5c0ec9a2d17d2cd86b01",
                 "reference": "9f854d275c2dbf84915a5c0ec9a2d17d2cd86b01",
+=======
+            "version": "1.24.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/bcad8d995980440892759db0c32acae7c8e79442",
+                "reference": "bcad8d995980440892759db0c32acae7c8e79442",
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
                 "shasum": ""
             },
             "require": {
@@ -2419,7 +2464,11 @@
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
+<<<<<<< HEAD
             "time": "2023-09-18T12:18:02+00:00"
+=======
+            "time": "2023-09-26T12:28:12+00:00"
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
         },
         {
             "name": "pixelandtonic/imagine",
@@ -4478,11 +4527,24 @@
         },
         {
             "name": "symfony/var-dumper",
+<<<<<<< HEAD
             "version": "v5.4.28",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/var-dumper/zipball/684b36ff415e1381d4a943c3ca2502cd2debad73",
                 "reference": "684b36ff415e1381d4a943c3ca2502cd2debad73",
+=======
+            "version": "v5.4.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "6172e4ae3534d25ee9e07eb487c20be7760fcc65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/6172e4ae3534d25ee9e07eb487c20be7760fcc65",
+                "reference": "6172e4ae3534d25ee9e07eb487c20be7760fcc65",
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
                 "shasum": ""
             },
             "require": {
@@ -4492,6 +4554,14 @@
             },
             "conflict": {
                 "symfony/console": "<4.4"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "symfony/console": "^4.4|^5.0|^6.0",
+                "symfony/http-kernel": "^4.4|^5.0|^6.0",
+                "symfony/process": "^4.4|^5.0|^6.0",
+                "symfony/uid": "^5.1|^6.0",
+                "twig/twig": "^2.13|^3.0.4"
             },
             "suggest": {
                 "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
@@ -4513,6 +4583,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4532,7 +4603,28 @@
                 "debug",
                 "dump"
             ],
+<<<<<<< HEAD
             "time": "2023-08-24T13:38:36+00:00"
+=======
+            "support": {
+                "source": "https://github.com/symfony/var-dumper/tree/v5.4.29"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-09-12T10:09:58+00:00"
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
         },
         {
             "name": "symfony/yaml",

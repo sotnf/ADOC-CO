@@ -1,7 +1,11 @@
 {
   "require": {
     "craftcms/ckeditor": "3.6.0",
+<<<<<<< HEAD
     "craftcms/cms": "4.5.5",
+=======
+    "craftcms/cms": "4.5.6.1",
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
     "craftcms/feed-me": "5.2.0",
     "craftcms/mailgun": "3.0.0",
     "vlucas/phpdotenv": "^5.4.0"

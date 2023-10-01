@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: cbe20d08-1e17-4b90-83f6-66c02103f74f # Address
+fieldGroup: 4cda9b6f-f2fa-44ce-bc23-2c1b24cc4b1d # Common
 handle: linkBuilder
 instructions: null
 name: 'Link Builder'
@@ -10,7 +10,7 @@ settings:
   maxBlocks: null
   minBlocks: null
   propagationKeyFormat: null
-  propagationMethod: all
+  propagationMethod: none
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

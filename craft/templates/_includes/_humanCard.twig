@@ -22,13 +22,13 @@
 {% set callToActionEntries = craft.entries.section('callToAction')
 	.relatedTo(human)
 	.one() %}
-
+ 
 
 <div id="card-{{ loop.index }}" class="flex-grow-0 h-auto bg-slate-100 rounded-lg border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700">
 
 {% if callToActionEntries|length > 0 %}
 	<a id="card--image" href="{{ human.url }}" class="absolute">
-		<div id="ctaBadge" class="w-full bg-red-800 text-red-100 m-2 text-sm font-medium mr-2 px-2.5 py-0.5 rounded text-center ">Urgent Public Help Needed</div>
+		<div id="ctaBadge" class="w-full bg-red-800 text-red-100 m-2 text-sm font-medium mr-2 px-2.5 py-0.5 rounded text-center ">This Human Needs Help!</div>
 	</a>
 {% endif %}
 
@@ -84,8 +84,13 @@
 			{% endif %}	
 		</span>
 		<p class="my-2 font-light text-gray-500 dark:text-gray-400">
+<<<<<<< HEAD
 			<strong class="capitalize">Status: {% if human.humanStatus|length %}{{human.humanStatus}}{% else %}
 				Dead{% endif %}</strong>
+=======
+			<strong>Status: {% if human.humanStatus|length %}<span class="uppercase">{{human.humanStatus}}</span>{% else %}
+				Presumed Dead{% endif %}</strong>
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 
 			{% if human.dateOfStatus %}
 				 ({{ human.dateOfStatus|date }})

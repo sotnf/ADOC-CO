@@ -22,9 +22,8 @@ services:
       - CRAFT_DB_PORT="3306"
       - CRAFT_DB_DATABASE="sotnfadmin_cc"
       - CRAFT_DB_USER="sotnfadmin_admin"
-      - CRAFT_DB_PASSWORD="bony1-espionage-guru"
+      - CRAFT_DB_PASSWORD=""
 
-      - BASE_PATH=/var/www/html/public_html
 
       # General settings (see config/general.php)
       - DEV_MODE=true

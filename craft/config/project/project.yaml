@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-dateModified: 1695707723
-=======
 dateModified: 1696183554
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 elementSources:
   craft\elements\Entry:
     -
@@ -122,11 +118,7 @@ meta:
     0b837dae-5965-4957-abf2-903eccda8b7b: Facility # Facility
     0f2073bd-978b-45da-ada7-652d44935585: 'Call to Action' # Call to Action
     1bafe2ee-068d-459e-b936-f6fba061fcc4: 'Last Name' # Last Name
-<<<<<<< HEAD
-    1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094: Default # Default
-=======
     1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094: adoc-co # adoc-co
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
     1c7c1479-2d25-459a-9ed8-a59a16211c72: Default # Default
     1c51896d-9e91-4685-9966-68859ac11b02: Default # Default
     1d74b11d-7ab2-4b65-97b3-48023ed39f23: crop450 # crop450
@@ -199,10 +191,7 @@ meta:
     610bfe49-b3ec-40ee-8377-62b1f63a8539: Website # Website
     618ad16d-5035-4fbe-967a-2caf444256d9: Email # Email
     883ceb06-d923-4375-87ff-d2b0da252179: '300x200 Crop' # 300x200 Crop
-<<<<<<< HEAD
-=======
     1591ee1d-3fff-4d58-aa18-a10a988f4462: 'Contact First Name' # Contact First Name
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
     2016e348-9fd6-4b38-83b2-8257ad98ee78: Navigation # Navigation
     3719fbc3-056c-4ca7-b8fd-8e2049c14a58: 'ADOC Images' # ADOC Images
     4064d00f-1ded-45d2-9032-e6385e7bdc36: ZIP # ZIP
@@ -227,10 +216,7 @@ meta:
     b60e3c63-a6f2-44c9-9561-79ef35de673a: 'Associate CTA' # Associate CTA
     b90fb7c4-b0d0-41be-afe9-d736a6e74113: Pages # Pages
     b681b236-e7a0-4b70-9831-cd91e74e516f: jaredbudlong # jaredbudlong
-<<<<<<< HEAD
-=======
     baa54619-b8c5-4c54-b38a-18a93980b2de: 'Organization Phone' # Organization Phone
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
     baef7271-cefd-4dab-8b7a-6fde35a5c8cb: Default # Default
     bc5220fc-108c-44de-8be3-a34801b4047d: Phone # Phone
     becc8c09-e2cc-4316-bfe4-614c5d4e708a: 'Social Media' # Social Media
@@ -275,11 +261,7 @@ meta:
     f3880a1b-da42-49af-98fc-a3c6da5f1c7e: Facility # Facility
     f5000937-8c06-4b27-88a3-4e55809b1497: 'Button Text' # Button Text
     fb009506-1583-43fb-b530-a30d8c2d523f: 'Report Link' # Report Link
-<<<<<<< HEAD
-    fdfd1717-9330-4a15-8f19-e15b694a8f51: sotnf # sotnf
-=======
     fde6ec4d-b9e8-4718-a4c3-a3cc7f3957fd: 'Contact Last Name' # Contact Last Name
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
     feeca86c-3550-4c62-b56c-e92a62145656: Links # Links
 plugins:
   ckeditor:

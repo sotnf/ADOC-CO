@@ -138,11 +138,9 @@
 														</span>
 														{{callToAction.ckSimpleNote}}
 													</div>
+													{% if callToAction.pointsOfContact|length %}
 													{% set pointsOfContactBlocks = callToAction.pointsOfContact.all() %}
-
-													{% if pointsOfContactBlocks|length %}
 														<hr class="mx-2 bg-gray-200">
-
 														<div id="contact-block" class="mx-2 self-stretch justify-start items-center gap-2 flex-col">
 															{% for contactBlock in pointsOfContactBlocks %}
 															<div class="py-2 last:pb-0 border-b last:border-b-0 border-gray-200">

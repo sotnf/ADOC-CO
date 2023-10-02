@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-baseUrl: $ADOC_SITE_URL
-=======
 baseUrl: $PRIMARY_SITE_URL
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 enabled: true
 handle: adoc
 hasUrls: true
 language: en-US
 name: adoc-co
 primary: true
-<<<<<<< HEAD
-siteGroup: 1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094 # Default
-=======
 siteGroup: 1c2d5d1f-ad2c-4985-8ed1-5fcd88a96094 # adoc-co
->>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 sortOrder: 1

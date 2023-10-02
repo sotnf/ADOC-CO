@@ -83,7 +83,7 @@ elementSources:
       type: native
 email:
   fromEmail: noreply@sotnf.com
-  fromName: $SITE_NAME
+  fromName: SOTNF
   replyToEmail: info@sotnf.com
   template: ''
   transportSettings:

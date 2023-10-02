@@ -1,4 +1,4 @@
-name: SOTNF
+name: adoc-co
 type: craftcms
 docroot: public_html
 php_version: "8.0"

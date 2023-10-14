@@ -16,16 +16,16 @@ return GeneralConfig::create()
     ->defaultWeekStartDay(1)
     
     // // Prevent generated URLs from including "index.php"
-    // ->omitScriptNameInUrls(true)
+    ->omitScriptNameInUrls(true)
     
     // // Allow upscaling of images
-    // ->upscaleImages(false)
+    ->upscaleImages(false)
 
     // Enable GQL (GraphQL) queries
     ->enableGql(true)
    
     // // Preload Single entries as Twig variables
-    // ->preloadSingles(true)
+    // ->preloadSingles(tru e)
     
     // Allow administrative changes
     ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
@@ -49,10 +49,10 @@ return GeneralConfig::create()
     ->aliases([    
         '@web' => App::env('PRIMARY_SITE_URL'),
         '@webroot' => App::env('BASE_PATH'),
-        // '@PrimarySiteUrl' => getenv('PRIMARY_SITE_URL'),
-        // '@SOTNFSiteUrl' => getenv('SOTNF_SITE_URL'),
-        // '@webADOC' => App::env('ADOC_SITE_URL'),
-        // '@webrootSOTNF' => App::env('BASE_PATH'),
+        '@PrimarySiteUrl' => getenv('PRIMARY_SITE_URL'),
+        '@SOTNFSiteUrl' => getenv('SOTNF_SITE_URL'),
+        '@webADOC' => App::env('ADOC_SITE_URL'),
+        '@webrootSOTNF' => App::env('BASE_PATH'),
         '@mailGunAPI'=> getenv('MAILGUN_API'),
         ])
     // Email to use for ALL emails when not in production

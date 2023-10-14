@@ -27,9 +27,6 @@
   "scripts": {
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
-    ],
-    "run-css": [
-      "npx tailwindcss -i ./src/input.css -o ./public_html/output.css --watch"
     ]
   }
 }

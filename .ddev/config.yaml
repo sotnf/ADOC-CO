@@ -1,4 +1,4 @@
-name: ADOC-CO
+name: adoc-co
 type: craftcms
 docroot: public_html
 php_version: "8.0"
@@ -21,13 +21,13 @@ composer_root: ./craft
 composer_version: "2"
 web_environment:
     - CRAFT_CMD_ROOT=./craft
-    - BASE_PATH=/var/www/html/public_html/
     - PRIMARY_SITE_URL=${DDEV_PRIMARY_URL}
 nodejs_version: "16"
 hooks:
     post-start:
         - exec: npm install
         - composer: install
+        - exec: npm run build-css
 
 # Key features of ddev's config.yaml:
 

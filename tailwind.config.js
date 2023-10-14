@@ -4,7 +4,7 @@ module.exports = {
     content: [
       "./src/**/*.{html,js}",
       "./node_modules/flowbite/**/*.js",
-      "./templates/**/*.{html,js,twig}",
+      "./**/templates/**/*.{html,js,twig}",
     ],
     darkMode: 'class',
     theme: {

@@ -1,5 +1,5 @@
 fieldLayouts:
-  0060d92b-2e8f-4c3f-b0af-f50cf8af06b8:
+  ff7ea34a-0766-41a0-b322-c3636ca155e7:
     tabs:
       -
         elementCondition: null
@@ -26,22 +26,58 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: ca43c8d3-9c34-412c-af93-4bd27e2a8124
+            uid: ff4d4bd6-d954-43a6-9fbd-83e1750c5478
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: c506c8b9-2ee8-49d6-8734-615445bf46b1 # Alternate Headline
+            fieldUid: e2aedf80-f88a-4613-8c40-4124ae0fc8a6 # Simple Note
+            instructions: 'Use this to give the general public instructions on what to do to help out. '
+            label: 'Instructions for the Public'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de72b246-8147-42a6-9b4c-e9fe8dd170ea
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5b49f72e-0eb0-4418-bb97-2fb50caf172a # Enhanced Note
+            instructions: 'Use this to give the general public instructions on what to do to help out. '
+            label: 'Instructions for the Public'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d73ee32-07f3-4edc-8e1c-7497b044f943
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 93010df4-31e0-48a6-b7d0-e3d3f97cbd00
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a6eec7ea-6581-4bdf-af3d-cbef7b28b567 # Points of Contact
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 660caf55-1830-4dc0-9d67-8da78f143682
+            uid: 34239f32-e0be-4fa3-822a-c95b7d13af1e
             userCondition: null
             warning: null
             width: 100
+        name: Contacts
+        uid: deeb64f0-5611-4289-be42-5ce6bda9a549
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             elementCondition: null
             fieldUid: 3df31a47-abd9-48f5-b236-0d7178731bfb # Note
@@ -50,48 +86,21 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d8fea5de-ca8f-47f0-85b0-f74b2c944079
+            uid: c7d4423e-4734-42aa-b756-4f2d25033df5
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: 05fd0cd6-a8af-4734-90bf-6131cbedfbe1 # Internal Link
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 00ce2528-7c05-4527-9fe4-37287c58a6a3
-            userCondition: null
-            warning: null
-            width: 100
-        name: Hero
-        uid: 20af5ace-c877-462d-ba57-288cff3f3691
+        name: Deprecating
+        uid: dc7eed3d-4ef0-4ddf-ad83-7a90d6d84c0c
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 6b9cc9c1-225b-4adf-acb3-2d09c950592d # Content Builder
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2b9a0f51-221e-4f68-8243-2044166f22b2
-            userCondition: null
-            warning: null
-            width: 100
-        name: Content
-        uid: a2bac9ee-25b9-4c2d-9e98-9da818b35a3c
-        userCondition: null
-handle: homepage
-hasTitleField: false
-name: Homepage
-section: 323be661-9ee7-4f57-976a-4a5032821248 # Homepage
+handle: default
+hasTitleField: true
+name: Default
+section: 0f2073bd-978b-45da-ada7-652d44935585 # Call to Action
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
-titleFormat: '{section.name|raw}'
+titleFormat: '{associateHuman}-{dateOfStatus}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

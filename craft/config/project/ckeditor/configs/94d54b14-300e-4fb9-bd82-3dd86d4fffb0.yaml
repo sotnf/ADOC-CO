@@ -1,0 +1,13 @@
+headingLevels:
+  - 4
+listPlugin: List
+name: Enhanced
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - underline
+  - strikethrough
+  - link
+  - horizontalLine

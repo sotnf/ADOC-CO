@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 4cda9b6f-f2fa-44ce-bc23-2c1b24cc4b1d # Common
+handle: pointsOfContact
+instructions: 'Only the first "Facilities" block will be used. You can associate multiple Facilities inside one block.'
+name: 'Points of Contact'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_pointsofcontact}}'
+  maxBlocks: null
+  minBlocks: 1
+  propagationKeyFormat: null
+  propagationMethod: none
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

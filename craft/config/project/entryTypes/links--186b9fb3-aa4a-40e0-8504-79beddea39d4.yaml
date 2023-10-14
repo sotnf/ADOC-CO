@@ -1,5 +1,5 @@
 fieldLayouts:
-  a073c208-a876-487a-b695-28f831cd912c:
+  c57b03c4-9dd8-4eb7-80b5-60a150f550a1:
     tabs:
       -
         elementCondition: null
@@ -25,42 +25,31 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 95d7d315-5b23-4ad5-9714-3f92742d4dd4
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 589be240-6cfb-4fba-b36f-b3ac973e7405
             userCondition: null
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            disabled: false
             elementCondition: null
-            id: null
+            fieldUid: 91c6f07a-7f7f-45a4-85ac-d2ea458da892 # Link Builder
             instructions: null
             label: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: true
             required: false
-            rows: null
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: b67702c6-bc7d-422c-a8d9-22c088869f66
+            type: craft\fieldlayoutelements\CustomField
+            uid: accc6069-8c36-4f60-ab56-1907770c8089
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 76d36908-f6c0-4dcc-9005-ab1fff6b75a9
+        uid: c58e229b-d33a-4e25-8446-18085b6d809e
         userCondition: null
-fs: images
-handle: images
-name: Images
+handle: links
+hasTitleField: false
+name: Links
+section: d12b5dba-3d80-40e6-ab92-71dc0f96a5f3 # Links
 sortOrder: 1
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: images
-transformSubpath: _transforms

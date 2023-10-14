@@ -1,5 +1,5 @@
 fieldLayouts:
-  a073c208-a876-487a-b695-28f831cd912c:
+  8053aa6f-2c57-4488-b49a-ef0a88e57756:
     tabs:
       -
         elementCondition: null
@@ -25,42 +25,43 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 95d7d315-5b23-4ad5-9714-3f92742d4dd4
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 161a99d1-d39b-4dc4-bdec-b6252bdb1f4c
             userCondition: null
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            disabled: false
             elementCondition: null
-            id: null
+            fieldUid: 4ce13bd8-0fb7-4a44-a95c-918922fa0f82 # Social Icon
             instructions: null
             label: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: true
             required: false
-            rows: null
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: b67702c6-bc7d-422c-a8d9-22c088869f66
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4315d0e-626e-4271-b9fb-2e2d403d4eab
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 610bfe49-b3ec-40ee-8377-62b1f63a8539 # Website
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 80c66c49-4402-4970-8bd1-4dcb8ad95d17
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 76d36908-f6c0-4dcc-9005-ab1fff6b75a9
+        uid: 7b2bdd7f-ccf3-470c-b602-708c97ff5b73
         userCondition: null
-fs: images
-handle: images
-name: Images
+handle: default
+hasTitleField: true
+name: Default
+section: c98d6a89-3b56-4b37-a372-766360d59c7a # Social Media
 sortOrder: 1
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: images
-transformSubpath: _transforms

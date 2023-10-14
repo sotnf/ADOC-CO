@@ -1,0 +1,67 @@
+columnSuffix: hkobwnyd
+contentColumnType: string
+fieldGroup: 83ab8938-f287-4a0d-9365-f010ed540e4d # Humans
+handle: humanStatus
+instructions: null
+name: Status
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Dead
+        -
+          - value
+          - dead
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Alive
+        -
+          - value
+          - alive
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Segregated
+        -
+          - value
+          - segregated
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Released
+        -
+          - value
+          - released
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Unknown
+        -
+          - value
+          - unknown
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

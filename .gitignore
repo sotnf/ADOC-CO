@@ -4,7 +4,7 @@
 
 # ignore image transforms and CP Resources
 /public_html/cpresources
-/public_html/assets/uploads/**/transforms
+/public_html/assets/uploads/**/
 
 
 node_modules

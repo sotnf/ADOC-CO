@@ -1,28 +1,27 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 83ab8938-f287-4a0d-9365-f010ed540e4d # Humans
-handle: photos
-instructions: 'The photos will be displayed in order shown. The first image will be used for larger displays or when only one image can be shown.'
-name: Photo(s)
+fieldGroup: cbe20d08-1e17-4b90-83f6-66c02103f74f # Address
+handle: socialIcon
+instructions: null
+name: 'Social Icon'
 searchable: true
 settings:
   allowSelfRelations: false
   allowSubfolders: false
   allowUploads: true
-  allowedKinds:
-    - image
+  allowedKinds: null
   branchLimit: null
-  defaultUploadLocationSource: 'volume:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
-  defaultUploadLocationSubpath: '{section}'
+  defaultUploadLocationSource: 'volume:a8961e26-c4b9-4c0e-9aac-c648112bf612' # Social Media
+  defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   previewMode: full
-  restrictFiles: true
-  restrictLocation: false
+  restrictFiles: false
+  restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:e170055a-d66a-4ff3-ae78-b62e4de3fe25' # Images
+  restrictedLocationSource: 'volume:a8961e26-c4b9-4c0e-9aac-c648112bf612' # Social Media
   restrictedLocationSubpath: null
   selectionCondition:
     __assoc__:
@@ -35,12 +34,12 @@ settings:
       -
         - class
         - craft\elements\conditions\assets\AssetCondition
-  selectionLabel: 'Add image(s)'
-  showSiteMenu: true
+  selectionLabel: null
+  showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
-    - 'volume:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
+    - 'volume:a8961e26-c4b9-4c0e-9aac-c648112bf612' # Social Media
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

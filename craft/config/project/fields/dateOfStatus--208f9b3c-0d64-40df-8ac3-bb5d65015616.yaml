@@ -1,9 +1,9 @@
 columnSuffix: yqykfvgg
 contentColumnType: datetime
 fieldGroup: 83ab8938-f287-4a0d-9365-f010ed540e4d # Humans
-handle: dateOfDeath
+handle: dateOfStatus
 instructions: null
-name: 'Date of Death'
+name: 'Date of Status'
 searchable: true
 settings:
   max: null

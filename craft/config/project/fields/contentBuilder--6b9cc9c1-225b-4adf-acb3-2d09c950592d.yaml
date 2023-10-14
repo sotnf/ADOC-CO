@@ -1,0 +1,22 @@
+columnSuffix: enbuduhd
+contentColumnType: text
+fieldGroup: 4cda9b6f-f2fa-44ce-bc23-2c1b24cc4b1d # Common
+handle: contentBuilder
+instructions: null
+name: 'Content Builder'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: d4091260-2611-458d-b5d5-55c79aa86a96 # Content Builder
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: true
+translationKeyFormat: null
+translationMethod: site
+type: craft\ckeditor\Field

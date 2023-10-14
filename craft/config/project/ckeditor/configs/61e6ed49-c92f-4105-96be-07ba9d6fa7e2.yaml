@@ -1,0 +1,10 @@
+headingLevels: false
+listPlugin: List
+name: Simple
+toolbar:
+  - '|'
+  - bold
+  - italic
+  - underline
+  - strikethrough
+  - link

@@ -1,5 +1,5 @@
 fieldLayouts:
-  a073c208-a876-487a-b695-28f831cd912c:
+  b1c30008-bb54-4480-b849-86cad3f36e33:
     tabs:
       -
         elementCondition: null
@@ -26,41 +26,18 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 95d7d315-5b23-4ad5-9714-3f92742d4dd4
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            attribute: alt
-            class: null
-            cols: null
-            disabled: false
-            elementCondition: null
-            id: null
-            instructions: null
-            label: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: true
-            required: false
-            rows: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: b67702c6-bc7d-422c-a8d9-22c088869f66
+            uid: ccbdbd79-a3da-4c86-b5ae-8bb53c85af4d
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 76d36908-f6c0-4dcc-9005-ab1fff6b75a9
+        uid: 6b16972b-b7c0-4201-a83e-a9de4e82b977
         userCondition: null
-fs: images
-handle: images
-name: Images
-sortOrder: 1
+fs: socialIcons
+handle: socialMedia
+name: 'Social Media'
+sortOrder: 3
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: images
+transformFs: ''
 transformSubpath: _transforms

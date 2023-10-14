@@ -1,5 +1,5 @@
 fieldLayouts:
-  a073c208-a876-487a-b695-28f831cd912c:
+  b4271ecd-3dfc-4304-a223-de6bfe89875c:
     tabs:
       -
         elementCondition: null
@@ -26,41 +26,18 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 95d7d315-5b23-4ad5-9714-3f92742d4dd4
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            attribute: alt
-            class: null
-            cols: null
-            disabled: false
-            elementCondition: null
-            id: null
-            instructions: null
-            label: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: true
-            required: false
-            rows: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: b67702c6-bc7d-422c-a8d9-22c088869f66
+            uid: da7743d7-a5b3-432b-ae50-8cdf968c3140
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 76d36908-f6c0-4dcc-9005-ab1fff6b75a9
+        uid: fdbd60b5-833c-4c4c-b3ed-ff77190c4f0a
         userCondition: null
-fs: images
-handle: images
-name: Images
-sortOrder: 1
+fs: adocImages
+handle: adocImages
+name: 'ADOC Images'
+sortOrder: 2
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: images
+transformFs: ''
 transformSubpath: _transforms

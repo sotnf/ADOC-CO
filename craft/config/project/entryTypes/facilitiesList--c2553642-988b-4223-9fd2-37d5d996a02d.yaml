@@ -61,6 +61,9 @@ handle: facilitiesList
 hasTitleField: false
 name: 'Facilities List'
 section: 82a5588d-d60f-4a6a-895b-5896986aa54f # Facilities List
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

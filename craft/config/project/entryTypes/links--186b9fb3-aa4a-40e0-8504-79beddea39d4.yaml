@@ -49,6 +49,9 @@ handle: links
 hasTitleField: false
 name: Links
 section: d12b5dba-3d80-40e6-ab92-71dc0f96a5f3 # Links
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

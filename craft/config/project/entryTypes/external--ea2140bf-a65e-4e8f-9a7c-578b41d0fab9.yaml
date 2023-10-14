@@ -49,6 +49,9 @@ handle: external
 hasTitleField: true
 name: External
 section: 2016e348-9fd6-4b38-83b2-8257ad98ee78 # Navigation
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 2
 titleFormat: null
 titleTranslationKeyFormat: null

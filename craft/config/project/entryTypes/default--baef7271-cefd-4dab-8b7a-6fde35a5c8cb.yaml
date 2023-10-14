@@ -37,6 +37,9 @@ handle: default
 hasTitleField: true
 name: Default
 section: 4118eb52-3c43-406c-bf9f-01c4542c8331 # Cause of Death
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

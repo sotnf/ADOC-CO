@@ -49,6 +49,9 @@ handle: internal
 hasTitleField: true
 name: Internal
 section: 2016e348-9fd6-4b38-83b2-8257ad98ee78 # Navigation
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

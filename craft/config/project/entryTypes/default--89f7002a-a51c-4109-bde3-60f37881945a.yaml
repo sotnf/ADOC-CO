@@ -37,6 +37,9 @@ handle: default
 hasTitleField: true
 name: Default
 section: 7e4960eb-d761-4dfa-b93d-58db38369abd # Report Type
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

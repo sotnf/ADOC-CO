@@ -80,18 +80,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 3df31a47-abd9-48f5-b236-0d7178731bfb # Note
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 36aeb2f1-73b3-40b5-b058-301a01da62df
-            userCondition: null
-            warning: null
-            width: 75
-          -
-            elementCondition: null
             fieldUid: e2aedf80-f88a-4613-8c40-4124ae0fc8a6 # Simple Note
             instructions: null
             label: null
@@ -99,18 +87,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 74783c22-efd3-416b-bdf1-a944befd0931
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 5b49f72e-0eb0-4418-bb97-2fb50caf172a # Enhanced Note
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c992a494-b3e0-4270-9dc8-15ba3f9996dd
             userCondition: null
             warning: null
             width: 100

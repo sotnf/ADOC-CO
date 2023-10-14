@@ -1,3 +1,4 @@
+
 # Keep DDEV Config
 !/.ddev/config.yaml
 /.ddev
@@ -33,13 +34,28 @@ package-lock.json
 # ignore storage dirs
 /craft/storage/*
 !/craft/storage/rebrand
+
 !/craft/storage/.gitignore
+
+!/craft/storage/.gitkeep
+
+# ignore craft cpresources dir
+/public_html/cpresources/
 
 # ignore dist files
 /public_html/assets/css/maps/
 /public_html/assets/css/*.min.css
 
 !/public_html/assets/uploads/.gitkeep
+/public_html/assets/uploads/
+!/public_html/assets/uploads/adoc_images/*
+
+
+# dont't ignore htaccess
+!/public_html/.htaccess
+
+!/public_html/assets/uploads/.gitkeep
+!/public_html/output.css    
 
 # Large media files
 *.mp4

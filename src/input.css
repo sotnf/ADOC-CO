@@ -8,7 +8,7 @@
     }
 
     h2 {
-        @apply text-3xl mb-5;
+        @apply text-3xl mb-1;
     }
 
     h3 {
@@ -34,6 +34,10 @@
         @apply text-red-800 underline underline-offset-2;
     }
 
+    u {
+        @apply underline-offset-2;
+    }
+
     p {
         @apply mb-4 text-gray-800;
     }
@@ -49,11 +53,56 @@
     a.ck-btn {
         @apply inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover: bg-primary-800 focus:ring-4 focus:ring-primary-300;
     }
+
+    hr {
+        @apply bg-gray-200 border-b my-2;
+    }
+
+    #ckSimpleNote {
+        @apply text-base;
+    }
+    
     /* ... */
 }
 
 @layer utilities {
     a.ck-btn {
         @apply inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover: bg-primary-800 focus:ring-4 focus:ring-primary-300;
+    }
+    div#cta h2 {
+            @apply text-2xl mb-1 text-red-800;
+    }
+
+    div#cta h3 {
+            @apply text-xl mb-0 text-red-950 font-semibold;
+    }
+    
+    div#cta h4 {
+            @apply text-lg mb-1;
+    }
+
+    div#cta hr {   
+        @apply mb-4;
+    }
+
+    div#cta {
+        @apply leading-[21px];
+    }
+    
+}
+
+@layer components {
+    div#cta {
+        @apply border-red-300 border-2 border-spacing-10 bg-red-200;
+    }
+    div#contact-block>div {
+        /* @apply p-1; */
+    }
+
+    div#contact-block>div>span {
+        @apply first:text-lg first:font-medium;
+    }   
+    div#cta :not(:first).accordion-content {
+        @apply first:hidden;
     }
 }

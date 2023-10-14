@@ -1,131 +1,292 @@
 {% extends "index.twig" %}
 {%~ block head %}
-{{parent()}}{% endblock %}{% block body %}
-{% block header %}
-	{{parent()}}
-{% endblock %}
-{% block article %}
-	<article class="flex-grow">
+{{parent()}}{% endblock %}
+{% block body %}
+	{% block header %}
+		{{parent()}}
+	{% endblock %}
+	{% block article %}
+		<article class="xl:flex-grow self-center">
+			{% set humanImage = entry.photos.one() %}
+			{% set humanStatus = entry.humanStatus.value %}
+			{% set humanAdocFacility = entry.facility.one() %}
+			{% set humanDOD = entry.dateOfStatus %}
+			{% set humanNote = entry.ckSimpleNote %}
+			{% set humanAdocCOD = entry.causeOfDeath.one() %}
+			{% set humanAdocReports = entry.reports.type('report') %}
+			{% set human = entry %}
+			{% set humanUrl = human.url %}
+			{% set firstNFC = human.firstName | slice(0, 1) %}
+			{% set lastNFC = human.lastName | slice(0, 1) %}
+			{% set name = "" %}
+			{% if human.lastName %}
+				{% set name = human.lastName %}
+			{% endif %}
+			{% if human.nickName %}
+				{% set name = " \"" ~ human.nickName ~ "\"" ~ " " ~ name %}
+			{% endif %}
+			{% if human.firstName %}
+				{% set name = human.firstName ~ " " ~ name %}
+			{% endif %}
 
-		{% set humanImage = entry.photos.one() %}
-		{% set humanAdocFacility = entry.facility.one() %}
-		{% set humanDOD = entry.dateOfStatus %}
-		{% set humanNote = entry.note %}
-		{% set humanAdocCOD = entry.causeOfDeath.one() %}
-		{% set humanAdocReports = entry.reports.type('report') %}
-		{% set human = entry %}
-		{% set humanUrl = human.url %}
-		{% set firstNFC = human.firstName | slice(0, 1) %}
-		{% set lastNFC = human.lastName | slice(0, 1) %}
-		{% set name = "" %}
-		{% if human.lastName %}
-			{% set name = human.lastName %}
-		{% endif %}
-		{% if human.firstName %}
-			{% set name = name ~ ", " ~ human.firstName %}
-		{% endif %}
-		{% if human.nickName %}
-			{% set name = name ~ " \"" ~ human.nickName ~ "\"" %}
-		{% endif %}
-
-		<section class="bg-white dark:bg-gray-900">
-			<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
-				<div class="mr-auto place-self-center lg:col-span-7">
-					<h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-						{{entry.firstName}}
-						{{entry.lastName}}</h1>
-					{% if humanNote %}
-						<p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-							<span class="font-bold uppercase">About
-								{{entry.firstName}}:</span>
-							{{humanNote}}
-						</p>
-					{% endif %}
-					<div class="px-5 pb-5">
-						<p class="my-1 text-lg text-gray-500">
-							<strong>AIS#
-							</strong>
-							{% if human.ais %}
-								{{human.ais}}
-							{% else %}
-								<SPAN class="text-sm">UNKNOWN</SPAN>
-							{% endif %}
-						</p>
-						<span class="text-gray-500 text-lg">
-							<strong>Facility:
-							</strong>
-							{% if humanAdocFacility %}
-								<a class="underline" href="{{ humanAdocFacility.url }}">{{ humanAdocFacility.title }}</a>
-							{% else %}
-								<SPAN class="text-sm">UNKNOWN</SPAN>
-							{% endif %}
-						</span>
-						<p class="my-2 font-light text-gray-500 dark:text-gray-400">
-							<span class="font-medium">Details:
-							</span>
-							{% if humanNote %}
-								{{humanNote}}
-							{% else %}
-								<SPAN class="text-sm">UNKNOWN</SPAN>
-							{% endif %}
-						</p>
-						<p class="my-2 font-light text-gray-500 dark:text-gray-400">
-							<span class="font-medium">COD:
-							</span>
-							{% if humanAdocCOD %}
-								{{humanAdocCOD}}
-							{% else %}
-								<SPAN class="text-sm">UNKNOWN</SPAN>
-							{% endif %}
-						</p>
-
-
-						{% if humanAdocReports|length %}
-							<h2 class="my-2 text-xl text-gray-500 dark:text-gray-400 font-bold">Reports</h2>
-							<ul class="ml-4">
-								{% for humanAdocReports in humanAdocReports %}
-									<li class="list-decimal">
-										{% set reportLink = humanAdocReports.reportLink %}
-										{% if reportLink %}
-											<a href="{{ reportLink }}">
-												<span class="ml-2 mt-2 mb-1 font-light text-gray-500 dark:text-gray-400">{{ humanAdocReports.reportType.one().title }}</span>
-
-											</a>
+			<section class="bg-white ">
+				<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-8 grid-cols-7 xl:grid-cols-12">
+					<div id="details" class="mr-auto place-self-center col-span-7">
+						<h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl ">
+							{{name}}
+							</h1>
+							<div class="flex justify-between">
+								<div class="my-1 text-lg text-gray-500 mx-2">
+									<strong>Status:
+									</strong>
+									<SPAN class="uppercase font-medium">
+										{% if humanStatus|length %}
+											{% if humanStatus == 'alive' %}
+											<span class="text-red-600">{{humanStatus}}</span>
+											{% else %}
+											{{humanStatus}}
+											{% endif %}
 										{% else %}
-											<span class="ml-2 mt-2 mb-1 font-light text-gray-500 dark:text-gray-400">{{ humanAdocReports.reportType.one().title }}</span>
-
+											UNKNOWN
 										{% endif %}
-									</li>
-								{% endfor %}
-							</ul>
+									</SPAN>
+								</div>
+								<div class="my-1 text-lg text-gray-500 mx-2">
+									<strong>AIS#
+									</strong>
+									{% if human.ais %}
+										{{human.ais}}
+									{% else %}
+										<SPAN class="text-sm">UNKNOWN</SPAN>
+									{% endif %}
+								</div>
+								<div class="my-1 text-lg text-gray-500 mx-2">
+									<strong>Facility:
+									</strong>
+									{% if humanAdocFacility %}
+										<a class="underline" href="{{ humanAdocFacility.url }}">{{ humanAdocFacility.title }}</a>
+									{% else %}
+										<SPAN class="text-sm">UNKNOWN</SPAN>
+									{% endif %}
+								</div>
+								{% if humanAdocCOD %}
+									<div class="my-1 text-lg text-gray-500 mx-2">
+										<strong>COD:
+										</strong>
+										{{humanAdocCOD}}
+									</div>
+								{% endif %}
+							</div>
+							{% if humanAdocReports|length %}
+								<div class="my-1 text-base text-gray-500 mx-2">
+									<h2 class="my-2 text-lg text-gray-500  font-bold">Reports</h2>
+									<ul class="ml-4">
+										{% for humanAdocReports in humanAdocReports %}
+											<li class="list-decimal">
+												{% set reportLink = humanAdocReports.reportLink %}
+												{% if reportLink %}
+													<a href="{{ reportLink }}">
+														<span class="ml-2 mt-2 mb-1 font-light text-gray-500 ">{{ humanAdocReports.reportType.one().title }}</span>
+
+													</a>
+												{% else %}
+													<span class="ml-2 mt-2 mb-1 font-light text-gray-500 ">{{ humanAdocReports.reportType.one().title }}</span>
+
+												{% endif %}
+											</li>
+										{% endfor %}
+									</ul>
+								</div>
+								{% endif %}
+						<hr>
+
+						{% if humanNote %}
+							<div id="ckSimpleNote" class="w-full mt-6 mb-2 mx-2 font-light text-sm text-gray-500 lg:mb-4 md:text-lg lg:text-xl">
+								{{humanNote}}
+							</div>
 						{% endif %}
+						<div class="px-5 py-2">
+							{% set callToActionEntries = craft.entries.section('callToAction')
+								.relatedTo(human)
+								.all() %}
+							{% if callToActionEntries|length > 0 %}
+								<div id="cta" class="w-full mb-2 p-4 rounded-md flex-col justify-center items-start inline-flex border-b">
+									<div class="mb-3">
+										<h2 class="text-lg font-bold">WAYS YOU CAN HELP</h2>
+									</div>
+									{% for callToAction in callToActionEntries %}
+										<div id="accordion-flush" data-accordion="collapse" data-inactive-classes="" data-active-classes="bg-white" class="bg-white w-full flex-col justify-start items-start gap-1.5 flex py-2 last:pb-4">
+											<div id="accordion-flush-heading-{{loop.index}}" id="cta-item" class="px-4 self-stretch justify-start items-center gap-2 inline-flex">
+												<button type="button" id="cta-item" class="flex my-auto items-end w-full py-2 font-medium text-left border-b border-gray-400" data-accordion-target="#accordion-flush-body-{{loop.index}}" aria-controls="accordion-flush-body-{{loop.index}}">
+													<h3 class="w-full m-0">{{callToAction.title}}</h3>
+													<div class="text-red-800 text-sm font-normal w-full text-right mr-2 my-auto">
+														<div>Updated:
+															{{callToAction.dateUpdated | date("Y-m-d") }}
+														</div>
+													</div>
+													<div class="my-auto">
+														<svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+														</svg>
+													</div>
+												</button>
+											</div>
+											<div id="accordion-flush-body-{{loop.index}}" class="px-3 accordion-content w-full hidden" aria-labelledby="accordion-flush-heading-{{loop.index}}">
+												<div class="border-b pb-2 border-gray-400">
+													<div class="text-red-800 text-base font-normal mt-2 mx-2">
+														<span class="font-semibold">Instructions:
+														</span>
+														{{callToAction.ckSimpleNote}}
+													</div>
+													{% if callToAction.pointsOfContact|length %}
+													{% set pointsOfContactBlocks = callToAction.pointsOfContact.all() %}
+														<hr class="mx-2 bg-gray-200">
+														<div id="contact-block" class="mx-2 self-stretch justify-start items-center gap-2 flex-col">
+															{% for contactBlock in pointsOfContactBlocks %}
+															<div class="py-2 last:pb-0 border-b last:border-b-0 border-gray-200">
+																{% set type = contactBlock.type.handle %}
+
+																{% if type == 'contactBlock' %}
+																	{% set phone = contactBlock.contactPhone %}
+																	{% set email = contactBlock.contactEmail %}
+																	{% set contactFullName = contactBlock.contactFirstName 
+																		~ ' ' 
+																		~ contactBlock.contactLastName %}
+																	{% set orgName = contactBlock.organizationName %}
+																	{% set orgPhone = contactBlock.organizationPhone %}
+																	{% set orgUrl = contactBlock.organizationWebsite %}
+																	{% set orgNote = contactBlock.organizationNote %}
+
+																	
+																	<div class="pb-2">
+																		{% if orgName %}
+																			<h4>{{orgName}}</h4>
+																		{% endif %}
+
+																		{% if orgPhone %}
+																			{{ tag('a', {
+																			text: 'Call',
+																			href: orgPhone,
+																			}) }}
+																		{% endif %}
+																		{% if orgNote %}
+																			{{ tag('a', {
+																			text: 'Visit Website',
+																			href: orgUrl,
+																			}) }}
+																		{% endif %}
+																	</div>
+																	<span class="font-semibold">Contact:</span>
+
+																	{% if contactFullName %}
+																		<div class="pl-1">{{contactFullName}}</div>
+																	{% endif %}
+																	<div class="pl-1 pt-1 flex-row space-x-2">
+																		{% if phone %}
+																			{{ tag('a', {
+																			text: 'Call',
+																			href: phone,
+																			}) }}
+																		{% endif %}
+																		{% if email %}
+																			{{ tag('a', {
+																			text: 'Email',
+																			href: email,
+																			}) }}
+																		{% endif %}
+																	</div>
+																	
+																{% elseif type == 'facilitiesBlock' %}
+																	{% set facilities = contactBlock.facilities.all() %}
+																	{% if facilities|length %}
+																		{% for facility in facilities %}
+																			<div class="py-2 border-b last:border-b-0 border-gray-200">
+																				<span>{{facility.title}}
+																					Facility</span>
+
+																				{# Warden List #}
+																				{% for contact in facility
+																					.contacts
+																					.type('warden')
+																					.all() %}
+																					{% set wardenFullName = contact.firstName ~ ' ' ~ contact.lastName %}
+																					{% set wardenPhone = contact.phone %}
+																					{% set wardenEmail = contact.email %}
+																					{% if wardenFullName	 %}
+																						<div class="pl-4">Warden:
+																							{{contactFullName}}
+																						</div>
+																					{% endif %}
+																					
+																					{% if wardenPhone %}
+																					<div class="pl-4 pt-1 flex-row space-x-2">
+																						{{ tag('a', {
+																						text: 'Call',
+																						href: wardenPhone,
+																						}) }}
+																						</div>
+																					{% endif %}
+																					{% if wardenEmail %}
+																					<div class="pl-4 pt-1 flex-row space-x-2">
+																						{{ tag('a', {
+																						text: 'Email',
+																						href: wardenEmail,
+																						}) }}
+																						</div>
+																					{% endif %}
+																					
+																				{% endfor %}
+																				<div class="py-2">
+																					<a href=" {{facility.url}} " class="px-3 no-underline py-2 bg-red-700 rounded-lg justify-center items-center gap-2 inline-flex">
+																						<div class="text-white text-xs font-medium leading-[18px]">Contact
+																							{{facility}}
+																						</div>
+																					</a>
+																				</div>
+																			</div>
+																		{% endfor %}
+																	{% endif %}
+																{% endif %}
+															</div>
+															{% endfor %}
+														</div>
+													{% endif %}
+												</div>
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+							{% endif %}
+							<a href="{{ siteUrl }}humans" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 ">
+								View All Humans
+								<svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+								</svg>
+							</a>
+							{% if humanAdocFacility|length %}
+								<a href=" {{humanAdocFacility.url}} " class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
+									View
+									{{humanAdocFacility}}
+								</a>
+							{% endif %}
+						</div>
+
 					</div>
 
+					<div id="tk"></div>
+					
+					{% if humanImage %}
+						{% do humanImage.setTransform('crop450') %}
+						<div id="image" class="aspect-[450/450] lg:mt-0 lg:col-span-4 lg:flex">
 
-					<a href="{{ siteUrl }}humans" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-						View All Humans
-						<svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-						</svg>
-					</a>
-					{% if humanAdocFacility|length %}
-						<a href=" {{humanAdocFacility.url}} " class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-							View
-							{{humanAdocFacility}}
-						</a>
+							<img class="p-4 aspect-[450/450] rounded-lg border-2" src="{{ humanImage.url }}" width="{{ humanImage.width }}" height="{{ humanImage.height }}" alt="{{ humanImage.title }}">
+						</div>
 					{% endif %}
 				</div>
-				{% if humanImage %}
-					{% do humanImage.setTransform('crop300x200') %}
-					<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-						<img class="p-4 w-full rounded-lg border-2" src="{{ humanImage.url }}" width="{{ humanImage.width }}" height="{{ humanImage.height }}" alt="{{ humanImage.title }}">
-					</div>
-				{% endif %}
-			</div>
-		</section>
-	</article>
+			</section>
+		</article>
+	{% endblock %}
+	{% block footer %}
+		{{parent()}}
+	{% endblock %}
 {% endblock %}
-{% block footer %}
-	{{parent()}}
-{% endblock %}{% endblock %}
-

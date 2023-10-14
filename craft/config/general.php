@@ -25,11 +25,10 @@ return GeneralConfig::create()
     ->enableGql(true)
    
     // // Preload Single entries as Twig variables
-    // ->preloadSingles(tru e)
+    // ->preloadSingles(true)
     
     // Allow administrative changes
     ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
-    
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
     ->verificationCodeDuration(432000) // 5 days    

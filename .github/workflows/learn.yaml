@@ -1,4 +1,4 @@
-name: Deploy GitHub repository to cPanel
+name: Deploy Repository to SOTNF (Directory "$GITHUB_REF_NAME")
 on:
   push:
     branches:
@@ -19,4 +19,4 @@ jobs:
           server: ${{ secrets.FTP_STAGING_SERVER }}
           username: ${{ secrets.FTP_STAGING_USERNAME }}
           password: ${{ secrets.FTP_STAGING_PASSWORD }}
-          remote-dir: "/${{ github.ref_name }}"  # This will create a subfolder based on the branch name
+          # remote-dir: "/$GITHUB_REF_NAME"  # This will create a subfolder based on the branch name

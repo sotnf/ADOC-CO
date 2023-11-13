@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Test Variable
-        run: echo "REMOTE-DIR $GITHUB_REF_NAME"
+        run: echo "REMOTE-DIR ${{ github.ref_name }}"
 #      - name: 🚚 Get latest code
 #        uses: actions/checkout@v3
 #        with:

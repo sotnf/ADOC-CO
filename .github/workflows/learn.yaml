@@ -9,16 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test Variable
-        run: echo "REMOTE-DIR ${{ github.ref_name }}"
-#      - name: 🚚 Get latest code
-#        uses: actions/checkout@v3
-#        with:
-#          fetch-depth: 2
-#      - name: 📂 Sync folders and files to the server
-#        uses: SamKirkland/FTP-Deploy-Action@4.3.3
-#        with:
-#          server: ${{ secrets.FTP_STAGING_SERVER }}
-#          username: ${{ secrets.FTP_STAGING_USERNAME }}
-#          password: ${{ secrets.FTP_STAGING_PASSWORD }}
-          # remote-dir: "/$GITHUB_REF_NAME"  # This will create a subfolder based on the branch name
+#      - name: Test Variable
+#        run: echo "REMOTE-DIR ${{ github.ref_name }}"
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+      - name: 📂 Sync folders and files to the server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_STAGING_SERVER }}
+          username: ${{ secrets.FTP_STAGING_USERNAME }}
+          password: ${{ secrets.FTP_STAGING_PASSWORD }}
+          server-dir: "/${{ github.ref_name }}"  # This will create a subfolder based on the branch name

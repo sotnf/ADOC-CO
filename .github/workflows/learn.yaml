@@ -21,4 +21,4 @@ jobs:
           server: ${{ secrets.FTP_STAGING_SERVER }}
           username: ${{ secrets.FTP_STAGING_USERNAME }}
           password: ${{ secrets.FTP_STAGING_PASSWORD }}
-          server-dir: "/${{ github.ref_name }}"  # This will create a subfolder based on the branch name
+          server-dir: "/${{ github.ref_name }}/"  # This will create a subfolder based on the branch name

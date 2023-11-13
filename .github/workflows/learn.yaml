@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Test Variable
-        run: echo "This step will be skipped on Monday and Wednesday"
+        run: echo "REMOTE-DIR: $GITHUB_REF_NAME"
 #      - name: 🚚 Get latest code
 #        uses: actions/checkout@v3
 #        with:

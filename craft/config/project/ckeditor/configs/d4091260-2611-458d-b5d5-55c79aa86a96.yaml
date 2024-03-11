@@ -33,6 +33,28 @@ options:
         model: heading4
         title: 'Heading 4'
         view: h4
+  htmlSupport:
+    allow:
+      -
+        name: img
+        styles: true
+      -
+        classes:
+          - img-float
+        name: img
+  image:
+    toolbar:
+      - transformImage
+      - '|'
+      - 'imageStyle:wrapText'
+      - 'imageStyle:breakText'
+      - '|'
+      - 'imageStyle:blue'
+      - '|'
+      - toggleImageCaption
+      - imageTextAlternative
+      - '|'
+      - linkImage
   link:
     addTargetToExternalLinks: true
     decorators:

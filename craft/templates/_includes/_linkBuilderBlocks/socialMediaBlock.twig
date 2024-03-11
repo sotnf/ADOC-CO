@@ -1,0 +1,29 @@
+<div id="socialMedia" class="py-4">
+
+	<h2 class="font-bold">{{heading|default('Social Media')}}</h2>
+
+<div>
+	{% for block in currentEntry.linkBuilder %}
+		{% if block.entries|length %}
+			{% set socialMediaEntries = block.entries.all() %}
+			{% for socialMediaEntry in socialMediaEntries %}
+				{% set buttonLabel = socialMediaEntry.title %}
+				{% set buttonLink = socialMediaEntry.website %}
+				{% set buttonIcon = socialMediaEntry.socialIcon.one() %}
+				<a href="{{ buttonLink }}" class="rounded-lg inline-flex items-center py-3 mb-1 px-5 bg-red-800 hover:bg-red-900 focus:ring-4 focus:bg-red-900 dark:focus:bg-red-950 text-base font-medium text-center text-white">
+					{{ buttonLabel }}
+					{% if block.type == 'socialMedia' %}
+						{% if buttonIcon %}
+							<img class="h-5 w-5 flex m-0 ml-2 -mr-1 w-5 h-5 items-center justify-center" src="{{ buttonIcon.url }}" alt="{{ buttonLabel }}">
+						{% endif %}
+					{% else %}
+						<svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+						</svg>
+					{% endif %}
+				</a>
+			{% endfor %}
+		{% endif %}
+	{% endfor %}
+</div>
+</div>

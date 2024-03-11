@@ -1,6 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* -- provide theme styles -- */
+@import url("./css/index.css");
+
+
+@import "tailwindcss/utilities";
 
 @layer base {
     h1 {
@@ -106,3 +111,4 @@
         @apply first:hidden;
     }
 }
+

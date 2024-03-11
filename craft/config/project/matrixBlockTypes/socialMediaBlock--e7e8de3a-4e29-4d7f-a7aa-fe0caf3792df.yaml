@@ -1,0 +1,118 @@
+field: 91c6f07a-7f7f-45a4-85ac-d2ea458da892 # Link Builder
+fieldLayouts:
+  65167857-46af-4fe0-bf23-bae72ffba5d7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 2259f202-ccad-4b51-a3eb-8e685ab930d5 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a563b80d-a455-45e8-a19d-f218301b93e5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cb9456f3-411e-4d93-a9b6-ead966be7c52 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cab40c13-7ea5-40a8-aec2-fbea0d62ab62
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f0a5a36a-d66e-4168-84a1-eb0d58dba3da # Entries
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de837177-cc0d-4a74-b2f2-dc0566253321
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5274540a-1e33-4dbe-8ff9-3324d34ff5ea
+        userCondition: null
+fields:
+  2259f202-ccad-4b51-a3eb-8e685ab930d5: # Heading
+    columnSuffix: bqsiusaf
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cb9456f3-411e-4d93-a9b6-ead966be7c52: # Description
+    columnSuffix: gmhttuuo
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: d4091260-2611-458d-b5d5-55c79aa86a96 # Content Builder
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  f0a5a36a-d66e-4168-84a1-eb0d58dba3da: # Entries
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entries
+    instructions: null
+    name: Entries
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: 1
+      selectionLabel: 'Link a Profile'
+      showSiteMenu: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: socialMediaBlock
+name: 'Social Media'
+sortOrder: 4

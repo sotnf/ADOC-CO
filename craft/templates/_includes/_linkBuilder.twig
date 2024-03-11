@@ -3,77 +3,14 @@
 
 {% if currentEntry.linkBuilder|length %}
 
-	<div class="px-6 lg:max-w-screen-md justify-self-center">
+	<div class="px-2 justify-self-center">
 		{% set buttonLink = '' %}
-		{% set buttonLabel = '' %}
+		{% set buttonLabel = ''|default('Learn More') %}
 		{% for block in currentEntry.linkBuilder %}
 			{# Accessing the fields within the matrix block #}
-			{% set text = block.text %}
-			{% set buttonUrl = block.buttonUrl %}
-
-
-			{# {% set buttonEntry = block.linkToEntry %} #}
-
-
-			{% if block.type == 'buttonEntry' %}
-
-				{% set buttonLabel = buttonEntry.alternateTitle ?? entry.title %}
-				{% set buttonLink = entry.url %}
-
-			{% elseif buttonUrl %}
-				{% set buttonLabel = block.buttonText %}
-				{% set buttonLink = block.buttonUrl %}
-			{% endif %}
-
-			{# Render the content based on the matrix block type #}
-			{% if block.type == 'text' %}
-				<div class="py-4">
-                    <div class="text-lg font-bold">
-                        <h2>{{ block.heading }}<h2>
-                    </div>
-                    <div>
-                        <p class="text-lg">{{ block.text }}</p>
-                    </div>
-                </div>
-            
-            {% elseif block.type == 'socialMedia' %}
-                <div class="text-lg font-bold">
-                    <h2>Social Media</h2>
-                </div>
-                <div>
-                    {% for block in currentEntry.linkBuilder %}
-                        {% if block.entries|length %}
-                            {% set socialMediaEntries = block.entries.all() %}
-                            {% for socialMediaEntry in socialMediaEntries %}
-                                {% set buttonLabel = socialMediaEntry.title %}
-                                {% set buttonLink = socialMediaEntry.website %}
-                                {% set buttonIcon = socialMediaEntry.socialIcon.one() %}
-                                <a href="{{ buttonLink }}" class="rounded-lg inline-flex items-center py-3 mb-1 px-5 bg-red-800 hover:bg-red-900 focus:ring-4 focus:bg-red-900 dark:focus:bg-red-950 text-base font-medium text-center text-white">
-                                    {{ buttonLabel }}   
-                                    {% if block.type == 'socialMedia' %}
-                                        {% if buttonIcon %}
-                                            <img class="h-5 w-5 flex m-0 ml-2 -mr-1 w-5 h-5 items-center justify-center" src="{{ buttonIcon.url }}" alt="{{ buttonLabel }}">
-                                        {% endif %}
-                                    {% else %}
-                                        <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    {% endif %}
-                                </a>
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            {% else %}
-                <div>
-                    <a href="{{ buttonLink }}" class="rounded-lg inline-flex items-center py-3 px-5 mb-1 bg-red-800 hover:bg-red-900 focus:ring-4 focus:bg-red-900 dark:focus:bg-red-950 text-base font-medium text-center text-white">
-						{{ buttonLabel }}
-                        <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
-                </div>
-			{% endif %}
+			{% set heading = block.heading %}
+			{% set description = block.description %}
+			{% include "_includes/_linkBuilderBlocks/" ~ block.type %}
 		{% endfor %}
 	</div>
 {% endif %}

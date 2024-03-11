@@ -1,0 +1,261 @@
+field: 91c6f07a-7f7f-45a4-85ac-d2ea458da892 # Link Builder
+fieldLayouts:
+  c660600c-841c-454e-aa5c-32449931a0a7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9a3df3ee-9202-4b2e-9bee-1fd7b78e832b # Block Style
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4b7a3b8-52ee-47ce-9e77-d6d861c5c354
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ce31da6e-5e79-4935-bc5e-fdddae322eda # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 580b2bbc-a226-4b87-a544-c004e8d0a5a8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a4245537-02c5-4548-bc4d-8fc5d94435a5 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ca3efbd-285a-48e1-baef-e8c568651832
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 729254e3-5268-4836-a893-239fb9e7988d # Button Style
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d7cfd3b8-8e1a-4f10-97d7-508b94efcc3a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f5000937-8c06-4b27-88a3-4e55809b1497 # Button Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e325d0c9-ad3c-41d7-8e96-c4b59e948a9d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 70e8107c-4cfe-4296-81cb-60ea04da6dd3 # Button URL
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd9f8f97-3a66-400c-8380-12ae85dc46ff
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e268dc16-e0d2-439c-ad40-752cc85f9cdd
+        userCondition: null
+fields:
+  9a3df3ee-9202-4b2e-9bee-1fd7b78e832b: # Block Style
+    columnSuffix: tvjnijcv
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: blockStyle
+    instructions: null
+    name: 'Block Style'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Default
+            -
+              - value
+              - default
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Light
+            -
+              - value
+              - light
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Dark
+            -
+              - value
+              - dark
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  70e8107c-4cfe-4296-81cb-60ea04da6dd3: # Button URL
+    columnSuffix: gpyqnubq
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: buttonUrl
+    instructions: null
+    name: 'Button URL'
+    searchable: true
+    settings:
+      maxLength: 255
+      types:
+        - url
+        - tel
+        - email
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Url
+  729254e3-5268-4836-a893-239fb9e7988d: # Button Style
+    columnSuffix: zlayxxrv
+    contentColumnType: string(7)
+    fieldGroup: null
+    handle: buttonStyle
+    instructions: null
+    name: 'Button Style'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Solid
+            -
+              - value
+              - solid
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Outline
+            -
+              - value
+              - outline
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Gray
+            -
+              - value
+              - gray
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  a4245537-02c5-4548-bc4d-8fc5d94435a5: # Description
+    columnSuffix: bzdefnkl
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: d4091260-2611-458d-b5d5-55c79aa86a96 # Content Builder
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  ce31da6e-5e79-4935-bc5e-fdddae322eda: # Heading
+    columnSuffix: nkjdvoqq
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f5000937-8c06-4b27-88a3-4e55809b1497: # Button Label
+    columnSuffix: qnzfvyma
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonLabel
+    instructions: null
+    name: 'Button Label'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: buttonUrlBlock
+name: 'Button URL'
+sortOrder: 2

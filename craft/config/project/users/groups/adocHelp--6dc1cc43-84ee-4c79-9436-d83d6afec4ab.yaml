@@ -1,0 +1,47 @@
+description: null
+handle: adocHelp
+name: 'ADOC Help'
+permissions:
+  - accesscp
+  - 'createentries:0f2073bd-978b-45da-ada7-652d44935585' # Call to Action
+  - 'createentries:4118eb52-3c43-406c-bf9f-01c4542c8331' # Cause of Death
+  - 'createentries:7e4960eb-d761-4dfa-b93d-58db38369abd' # Report Type
+  - 'createentries:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans
+  - 'createfolders:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
+  - 'editimages:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
+  - 'editpeerimages:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
+  - 'editsite:7babb8bc-f92d-42f6-9be7-fe2c12f147ac' # adoc-co
+  - 'replacefiles:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
+  - 'saveassets:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
+  - 'saveentries:0b837dae-5965-4957-abf2-903eccda8b7b' # Facility
+  - 'saveentries:0f2073bd-978b-45da-ada7-652d44935585' # Call to Action
+  - 'saveentries:4118eb52-3c43-406c-bf9f-01c4542c8331' # Cause of Death
+  - 'saveentries:7e4960eb-d761-4dfa-b93d-58db38369abd' # Report Type
+  - 'saveentries:d12b5dba-3d80-40e6-ab92-71dc0f96a5f3' # Links
+  - 'saveentries:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans
+  - 'savepeerassets:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
+  - 'savepeerentries:0b837dae-5965-4957-abf2-903eccda8b7b' # Facility
+  - 'savepeerentries:0f2073bd-978b-45da-ada7-652d44935585' # Call to Action
+  - 'savepeerentries:4118eb52-3c43-406c-bf9f-01c4542c8331' # Cause of Death
+  - 'savepeerentries:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans
+  - 'savepeerentrydrafts:0f2073bd-978b-45da-ada7-652d44935585' # Call to Action
+  - 'savepeerentrydrafts:4118eb52-3c43-406c-bf9f-01c4542c8331' # Cause of Death
+  - 'savepeerentrydrafts:d12b5dba-3d80-40e6-ab92-71dc0f96a5f3' # Links
+  - 'savepeerentrydrafts:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans
+  - 'viewassets:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
+  - 'viewentries:0b837dae-5965-4957-abf2-903eccda8b7b' # Facility
+  - 'viewentries:0f2073bd-978b-45da-ada7-652d44935585' # Call to Action
+  - 'viewentries:4118eb52-3c43-406c-bf9f-01c4542c8331' # Cause of Death
+  - 'viewentries:7e4960eb-d761-4dfa-b93d-58db38369abd' # Report Type
+  - 'viewentries:d12b5dba-3d80-40e6-ab92-71dc0f96a5f3' # Links
+  - 'viewentries:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans
+  - 'viewpeerassets:61b64f4c-8dec-43f2-8ce0-f44bad4431e5' # ADOC Images
+  - 'viewpeerentries:0b837dae-5965-4957-abf2-903eccda8b7b' # Facility
+  - 'viewpeerentries:0f2073bd-978b-45da-ada7-652d44935585' # Call to Action
+  - 'viewpeerentries:4118eb52-3c43-406c-bf9f-01c4542c8331' # Cause of Death
+  - 'viewpeerentries:7e4960eb-d761-4dfa-b93d-58db38369abd' # Report Type
+  - 'viewpeerentries:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans
+  - 'viewpeerentrydrafts:0f2073bd-978b-45da-ada7-652d44935585' # Call to Action
+  - 'viewpeerentrydrafts:4118eb52-3c43-406c-bf9f-01c4542c8331' # Cause of Death
+  - 'viewpeerentrydrafts:d12b5dba-3d80-40e6-ab92-71dc0f96a5f3' # Links
+  - 'viewpeerentrydrafts:f623b9fa-1630-45e7-980d-89b2b18cd869' # Humans

@@ -1,0 +1,19 @@
+.linkBlock {
+@apply p-6 border-2 rounded-lg;
+}
+
+.blockStyle-default {
+@apply bg-white;
+}
+
+.blockStyle-light { 
+@apply bg-gray-100 border-gray-300;
+}
+
+.blockStyle-dark {
+@apply bg-gray-700 border-gray-400 text-white;
+}
+
+.blockStyle-dark a {
+@apply text-white;
+}

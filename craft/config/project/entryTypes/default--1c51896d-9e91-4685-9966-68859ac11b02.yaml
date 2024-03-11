@@ -61,6 +61,9 @@ handle: default
 hasTitleField: true
 name: Default
 section: c98d6a89-3b56-4b37-a372-766360d59c7a # Social Media
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

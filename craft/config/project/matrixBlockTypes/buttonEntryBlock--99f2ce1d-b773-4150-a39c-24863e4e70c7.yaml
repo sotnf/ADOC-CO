@@ -7,6 +7,30 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: 45979944-c486-42b3-b061-050494fc7e2a # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 80b4ba2e-846e-4507-9dce-94b224bbc1e7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b494badf-fe13-49ff-a323-3392eb161e3b # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 532b3755-a6da-4674-9946-c3f12b9193ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: c1dc52e8-cf04-4a01-9bb9-13760ded72e0 # Alternate Title
             instructions: null
             label: null
@@ -48,17 +72,6 @@ fields:
       maintainHierarchy: false
       maxRelations: 1
       minRelations: 1
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Entry
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\entries\EntryCondition
       selectionLabel: null
       showSiteMenu: false
       sources:
@@ -71,6 +84,50 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
+  45979944-c486-42b3-b061-050494fc7e2a: # Heading
+    columnSuffix: fmzgrdkp
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b494badf-fe13-49ff-a323-3392eb161e3b: # Description
+    columnSuffix: yrmqlpfo
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: d4091260-2611-458d-b5d5-55c79aa86a96 # Content Builder
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
   c1dc52e8-cf04-4a01-9bb9-13760ded72e0: # Alternate Title
     columnSuffix: thulbjuw
     contentColumnType: text
@@ -91,6 +148,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\PlainText
-handle: buttonEntry
+handle: buttonEntryBlock
 name: 'Button Entry'
 sortOrder: 3

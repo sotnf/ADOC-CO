@@ -91,6 +91,9 @@ handle: homepage
 hasTitleField: false
 name: Homepage
 section: 323be661-9ee7-4f57-976a-4a5032821248 # Homepage
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

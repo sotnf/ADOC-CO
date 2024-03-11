@@ -19,7 +19,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8f3a2af6-b66f-4435-95b0-75f4fbcbcdb5 # Text
+            fieldUid: 8f3a2af6-b66f-4435-95b0-75f4fbcbcdb5 # Description
             instructions: null
             label: null
             required: false
@@ -33,26 +33,30 @@ fieldLayouts:
         uid: bae2b6be-49a5-4434-b7f8-be5a3fd5ee44
         userCondition: null
 fields:
-  8f3a2af6-b66f-4435-95b0-75f4fbcbcdb5: # Text
+  8f3a2af6-b66f-4435-95b0-75f4fbcbcdb5: # Description
     columnSuffix: jjaffhin
     contentColumnType: text
     fieldGroup: null
-    handle: text
+    handle: description
     instructions: null
-    name: Text
+    name: Description
     searchable: true
     settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: true
-      placeholder: null
-      uiMode: normal
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: d4091260-2611-458d-b5d5-55c79aa86a96 # Content Builder
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\PlainText
+    translationMethod: none
+    type: craft\ckeditor\Field
   45bbcd4e-abac-46d7-affe-24ad296b740f: # Heading
     columnSuffix: ammlydbt
     contentColumnType: text
@@ -73,6 +77,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\PlainText
-handle: text
+handle: textBlock
 name: Text
 sortOrder: 1

@@ -40,3 +40,15 @@
     @apply block w-fit float-right;
     margin: 0 0 1em 1em;
 }
+
+.btn {
+    @apply rounded-lg inline-flex items-center py-3 px-5 mb-1 shadow-md text-base font-medium text-center;
+}
+
+.btn-solid {
+    @apply  bg-red-800 hover:bg-red-900 focus:bg-red-900 text-white;
+}
+
+.btn-outline {
+    @apply bg-transparent bg-black bg-opacity-10 hover:bg-opacity-20 focus:bg-opacity-30;
+}

@@ -1,3 +1,4 @@
+css: ".btn-outline {\r\n  background-color: unset;\r\n  border: 2px;\r\n  border-color: gray;\r\n}"
 headingLevels:
   - 2
   - 3
@@ -81,6 +82,18 @@ options:
           - ck-altH4
         element: h4
         name: 'Alt H4'
+      -
+        classes:
+          - btn
+          - btn-solid
+        element: a
+        name: 'Button (Solid)'
+      -
+        classes:
+          - btn
+          - btn-outline
+        element: a
+        name: 'Button (Outline)'
 toolbar:
   - heading
   - style

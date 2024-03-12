@@ -81,12 +81,6 @@ options:
           - ck-altH4
         element: h4
         name: 'Alt H4'
-      -
-        classes:
-          - ck-btn
-          - ck-btn--primary
-        element: a
-        name: 'Button Primary'
 toolbar:
   - heading
   - style

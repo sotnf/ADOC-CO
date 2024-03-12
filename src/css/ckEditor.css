@@ -1,0 +1,42 @@
+.ckContent {
+    clear: both;
+}
+
+/* .ckContent .image {
+    @apply w-full flex flex-col justify-center;
+} */
+
+.ckContent .image {
+    @apply relative;
+    clear: both;
+    display: table;
+    margin: .9em auto;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* .ckContent .image img {
+    @apply mx-auto;
+} */
+
+.ckContent .image-style-block-align-left {
+    @apply ml-0 mr-auto;
+}
+
+.ckContent .image-style-block-align-right {
+    @apply mr-0 ml-auto;
+}
+
+.ckContent .image figcaption {
+    @apply pr-2 pt-2 mx-auto w-fit border-r-2 border-b-2 border-gray-100 text-gray-700 text-sm text-right leading-loose;
+}
+
+.ckContent .image-style-align-left { 
+    @apply block w-fit float-left;
+    margin: 0 1em 1em 0;
+}
+
+.ckContent .image-style-align-right {
+    @apply block w-fit float-right;
+    margin: 0 0 1em 1em;
+}

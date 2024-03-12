@@ -1,6 +1,11 @@
 .DS_Store
 .idea
 
+<<<<<<< HEAD
+# dont't ignore htaccess
+!/public_html/.htaccess
+=======
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 
 # ignore local build folder and files
 *.code-workspace
@@ -20,7 +25,11 @@ package-lock.json
 # ignore storage dirs
 /craft/storage/*
 !/craft/storage/rebrand
+<<<<<<< HEAD
+!/craft/storage/.gitignore
+=======
 !/craft/storage/.gitkeep
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 
 # ignore craft cpresources dir
 /public_html/cpresources/
@@ -29,6 +38,9 @@ package-lock.json
 /public_html/assets/css/maps/
 /public_html/assets/css/*.min.css
 
+<<<<<<< HEAD
+!/public_html/assets/uploads/.gitkeep
+=======
 /public_html/assets/uploads/
 !/public_html/assets/uploads/adoc_images/*
 
@@ -39,6 +51,7 @@ package-lock.json
 !/public_html/assets/uploads/.gitkeep
 !/public_html/output.css    
 
+>>>>>>> 9de14736472c24b8e529fc52fa2da8c1dec01949
 
 # Large media files
 *.mp4

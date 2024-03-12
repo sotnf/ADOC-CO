@@ -1,4 +1,4 @@
-name: Deploy GitHub repository to cPanel
+name: Deploy Repository to SOTNF (Directory "$GITHUB_REF_NAME")
 on:
   push:
     branches:
@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+#      - name: Test Variable
+#        run: echo "REMOTE-DIR ${{ github.ref_name }}"
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
         with:
@@ -19,3 +21,4 @@ jobs:
           server: ${{ secrets.FTP_STAGING_SERVER }}
           username: ${{ secrets.FTP_STAGING_USERNAME }}
           password: ${{ secrets.FTP_STAGING_PASSWORD }}
+          server-dir: "/${{ github.ref_name }}/"  # This will create a subfolder based on the branch name
